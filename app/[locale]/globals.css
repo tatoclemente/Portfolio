@@ -1,3 +1,28 @@
+:root {
+  --primary-glow: conic-gradient(
+    from 180deg at 50% 50%,
+    #16ff1615 0deg,
+    #08ff9c24 55deg,
+    #54ffcf18 120deg,
+    #00ffd533 160deg,
+    transparent 360deg
+  );
+  --secondary-glow: conic-gradient(
+    from 180deg at 50% 50%,
+    #16abff33 0deg,
+    #0885ff33 55deg,
+    #54d6ff33 120deg,
+    #0071ff33 160deg,
+    transparent 360deg
+  );
+
+
+  --heyTitleFontSize: 6.1rem; 
+  --heyTitleFontSize1200: 5.8rem; 
+  --heyTitleFontSize1100: 5.5rem; 
+  --heyTitleFontSize540: 4.7rem; 
+
+}
 * {
   margin: 0;
   padding: 0;

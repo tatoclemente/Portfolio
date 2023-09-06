@@ -2,7 +2,8 @@
   "NavBar": {
     "About": "About",
     "Proyects": "Proyects",
-    "Contact": "Contact"
+    "Contact": "Contact",
+    "AllRight": "All rights reserved"
   },
   "Index": {
     "hello": "Hey, i'm",
@@ -12,8 +13,7 @@
       "p1": "Front-End development is my true passion, where I feel completely at ease. This determination and enthusiasm drive the creation of visual and functional solutions that enhance the user experience.",
       "p2": "Always open to new connections and exciting opportunities.",
       "contact": "Contact me here!"
-    }
-    
-    
+    },
+    "loading": "Loading"
   }
 }

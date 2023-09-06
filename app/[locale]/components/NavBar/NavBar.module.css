@@ -4,27 +4,12 @@
     position: fixed;
     display: flex;
     justify-content: space-between;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
+    z-index: 999;
     align-items: center;
 }
 
 .navBarLogo h1 {
     padding: 0 !important;
     margin: 0 !important;
-}
-
-.navBarLinks {
-    display: flex;
-    gap: 6rem;
-    /* font-style: italic; */
-}
-
-.navBarLinks a {
-    /* transform: rotate(-10deg); */
-    font-weight: 500;
-}
-.navBarSwetchers {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
 }

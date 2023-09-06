@@ -2,7 +2,8 @@
   "NavBar": {
     "About": "Sobre mí",
     "Proyects": "Proyectos",
-    "Contact": "Contacto"
+    "Contact": "Contacto",
+    "AllRight": "Todos los derechos resrvados"
   },
   "Index": {
     "hello": "Hola, soy",
@@ -13,6 +14,6 @@
       "p2": "Siempre receptivo a nuevas conexiones y oportunidades emocionantes.",
       "contact": "¡Contáctame aquí!"
     },
-    "richText": "This is <important><very>very</very> important</important>"
+    "loading": "Loading"
   }
 }

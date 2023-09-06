@@ -1,27 +1,23 @@
 import React from 'react'
-import ThemeSwitcher from './ThemeSwitcher/ThemeSwitcher'
-import IntlSwitcher from './IntlSwitcher/IntlSwitcher'
 import style from './NavBar.module.css'
-import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import Menu from './Menu/Menu'
 
-const NavBar = () => {
+const NavBar = ({locale}) => {
     const t = useTranslations('NavBar')
+    const menuItems = {
+      about: t('About'),
+      proyects: t('Proyects'),
+      contact: t('Contact'),
+      allRight: t('AllRight')
+    }
   return (
     <div className={style.navBarContainer}>
         <div className={style.navBarLogo}>
             {/* <img src="/logo.png" alt="logo" /> */}
             <h1>GC</h1>
         </div>
-        <div className={style.navBarLinks}>
-            <Link href="#">{t('About')}</Link>
-            <Link href="#">{t('Proyects')}</Link>
-            <Link href="#">{t('Contact')}</Link>
-        </div>
-        <div className={style.navBarSwetchers}>
-        <IntlSwitcher />
-        <ThemeSwitcher />
-        </div>
+        <Menu menuItems={menuItems} locale={locale} />
     </div>
   )
 }

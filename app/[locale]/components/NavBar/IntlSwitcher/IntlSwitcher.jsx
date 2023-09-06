@@ -1,16 +1,22 @@
+'use client'
 import Link from 'next-intl/link'
-import React from 'react'
+import React, { useState } from 'react'
+import style from './IntlSwitcher.module.css'
+import { AiOutlineGlobal } from 'react-icons/ai'
 
-const IntlSwitcher = () => {
+const IntlSwitcher = ({locale}) => {
+  const [show, setShow] = useState(false)
   return (
-    <div>
-      <Link href='/' locale='en'>
+    <div className={style.mainContainer}>
+      <AiOutlineGlobal onClick={() => setShow(!show)} className={style.global} />
+      <div style={show === false ? { display: 'none' } : {}} className={style.linksContainer}>
+      <Link className={locale === 'en' ? style.active : style.inactive} href='/' locale='en'>
         EN
-      </Link>{" "}
-      |{" "}
-      <Link href='/' locale='es'>
+      </Link>
+      <Link className={locale === 'es' ? style.active : style.inactive} href='/' locale='es'>
         ES
       </Link>
+      </div>
     </div>
   )
 }
