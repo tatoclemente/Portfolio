@@ -29,7 +29,7 @@ const About = ({ t }) => {
           <p style={locale === 'en' ? { letterSpacing: '.9px' } : null} className={style.description}>{t('description.p1')}</p>
           <p className={style.description}>{t('description.p2')}</p>
           <Link href="#" className={style.button}>
-            {t('description.contact')}
+            <span>{t('description.contact')}</span>
           </Link>
         </div>
       </section>
