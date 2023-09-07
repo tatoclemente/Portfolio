@@ -1,0 +1,23 @@
+/* HTML: <div class="loader"></div> */
+.arrowScroll {
+    font-size: 3rem;
+    color: #1a1a46;
+    animation: l9 .7s infinite linear alternate;
+    position: absolute;
+    bottom: 10px;
+  }
+
+  [data-theme='dark'] .arrowScroll {
+    color: #b1e2ec;
+  }
+  @keyframes l9 {
+    0%   {transform: translateY(-10px)}
+    100% {transform: translateY( 10px)}
+  }
+
+  @media (max-width: 970px) {
+    .arrowScroll {
+      bottom: 50px;
+    }
+  }
+  
