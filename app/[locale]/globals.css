@@ -50,3 +50,49 @@ a {
 [data-theme='dark'] a {
   color: #fff;
 }
+
+body::-webkit-scrollbar {
+  width: 7px;     /* Tamaño del scroll en vertical */
+  height: 7px;    /* Tamaño del scroll en horizontal */
+
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+body::-webkit-scrollbar-thumb {
+  background: #3755c4b0;
+  border-radius: 4px;
+}
+[data-theme='dark'] body::-webkit-scrollbar-thumb {
+  background: #045b6d9a;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(232, 184, 111, .7);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='dark'] body::-webkit-scrollbar-thumb:hover {
+  background: rgb(118, 83, 151, .7);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+body::-webkit-scrollbar-thumb:active {
+  background-color: rgb(118, 83, 151, .7);
+}
+
+[data-theme='dark'] body::-webkit-scrollbar-thumb:active {
+  background-color: rgba(232, 184, 111, .7);
+}
+
+
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+body::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+[data-theme='dark'] body::-webkit-scrollbar-track {
+  background: #20202dfb;
+}

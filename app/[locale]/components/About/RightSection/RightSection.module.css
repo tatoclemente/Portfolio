@@ -22,12 +22,12 @@
   }
   
   [data-theme="dark"] .boobleBackLeft {
-    background-color: rgb(156, 97, 212);
+    background-color: rgb(118, 83, 151);
   }
   
   .boobleBackRight {
     position: absolute;
-    background-color: rgb(156, 97, 212);
+    background-color: rgb(118, 83, 151);
     width: 220px;
     height: 220px;
     border-radius: 50%;

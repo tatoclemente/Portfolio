@@ -1,11 +1,12 @@
 .mainContainer {
     min-height: 150vh;
     width: 100vw;
-    background-color: rgb(82, 30, 74);
+    background-color: rgb(118, 83, 151);
     position: relative;
     padding-top: 200px;
     padding-bottom: 300px;
     position: relative;
+    margin: 0 auto;
 }
 
 [data-theme='dark'] .mainContainer {
@@ -21,12 +22,17 @@
     font-size: 3.8rem;
     z-index: 990;
 }
+
+
+/* HEADER */
+
 .header {
   display: flex;
-  margin-left: .5rem;
+  width: 95%;
+  margin-left: 3rem;
 }
 .titleProyectContainerSelect {
-  background-color: rgb(232, 184, 111);
+  background-color: rgb(227, 205, 172);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,65 +40,159 @@
   width: 16rem;
   border-radius: 15px 15px 0 0;
   margin-top: 5rem;
+  cursor: pointer;
+  border-top: 4px solid rgb(118, 83, 151);
+  margin-left: 1px;
 }
-.titleProyectContainer {
-  background-color: rgb(234, 219, 197);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 3rem;
-  width: 16rem;
-  border-radius: 15px 15px 0 0;
-  margin-top: 5rem;
-}
-[data-theme="dark"] .titleProyectContainer {
-  background-color: rgb(80, 140, 243);
+[data-theme="dark"] .titleProyectContainerSelect {
+    background-color: rgb(156, 127, 183);
+    border-top: 4px solid #05424e;
+    
 }
 
+.selectedTab {
+  background-color: #eefbfe;
+  border: 4px solid rgb(232, 184, 111);
+  border-bottom: 0;
+}
+[data-theme="dark"] .selectedTab {
+  background-color: #041d22;
+  border: 4px solid rgba(118, 83, 151);
+  border-bottom: 0;
+}
+.selectedTab .titleProyect {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.7rem;
+}
 .titleProyect {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  transition: .3s ease-in-out;
 }
-.line {
-  width: 100%;
-  height: 3px;
+
+/* PROYECT CONTAINER */
+
+.proyectsContainer {
+  margin: 0 auto;
+  width: 95%;
   background-color: rgb(232, 184, 111);
+  border-radius: 10px;
+  padding-bottom: 50px;
 }
 
-[data-theme="dark"] .line {
-  background-color: rgb(80, 140, 243);
+[data-theme="dark"] .proyectsContainer {
+  background-color: rgb(118, 83, 151);
 }
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 3rem;
+}
+
+.swiperImage {
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
 .wave {
-    position: absolute;
-    bottom: 0;
-    z-index: 2;
-  }
-  
-  [data-theme='dark'] .wavePath {
-    fill: #041d22;
-  }
-
-  .swiper {
-    width: 95%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}
+[data-theme='dark'] .wavePath {
+  fill: #041d22;
   }
 
-  .swiperImage {
+  .descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+    
+  .buttonLink {
+    width: 50%;
+    height: 2rem;
+    background-color: #eefbfe;
+    padding: .3rem 1rem;
     border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in-out;
   }
-  
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
+  [data-theme='dark'] .buttonLink  {
+    background-color: #175867;
   }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
+  .buttonLink:hover {
+    background-color: #6682e7;
+    color: #eefbfe;
+    font-size: 1.2rem;
   }
+  [data-theme='dark'] .buttonLink:hover {
+    background-color: #07363f;
+  }
+
+
+  @media (max-width: 420px) {
+    .header {
+      margin-left: 1rem;
+    }
+    .titleProyectContainerSelect {
+      height: 1.5rem;
+      width: 7rem;
+      border-radius: 10px 10px 0 0;
+      margin-top: 5rem;
+      cursor: pointer;
+      border-top: 4px solid rgb(118, 83, 151);
+      margin-left: .9px;
+    }
+    [data-theme="dark"] .titleProyectContainerSelect {
+        background-color: rgb(156, 127, 183);
+        border-top: 4px solid #05424e;
+        
+    }
+    
+    .selectedTab {
   
+      border: 2px solid rgb(232, 184, 111);
+
+    }
+    [data-theme="dark"] .selectedTab {
+      background-color: #041d22;
+      border: 2px solid rgba(118, 83, 151);
+      border-bottom: 0;
+    }
+    .selectedTab .titleProyect {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: .9rem;
+    }
+    .titleProyect {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: .6rem;
+      transition: .3s ease-in-out;
+    }
+    .proyectsContainer {
+      width: 98%;
+    }
+    .swiperImage{
+      max-width: 95%;
+      max-height: 190px;
+      margin-left: 10px;
+    }
+
+    .buttonLink {
+      width: 80%;
+      height: 2rem;
+      background-color: #eefbfe;
+      padding: .3rem 1rem;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all .5s ease-in-out;
+    }
+  }

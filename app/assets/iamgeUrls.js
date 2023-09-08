@@ -14,5 +14,13 @@ export const elFestin = [
 
 
 export const piFood = [
-    "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694121875/Portfolio/Henry%20Food/Captura-de-pantalla-2023-07-07-105858_t0vyfe.webp", "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694121875/Portfolio/Henry%20Food/Captura-de-pantalla-2023-07-07-105858_t0vyfe.webp", "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694121875/Portfolio/Henry%20Food/Captura-de-pantalla-2023-07-07-105858_t0vyfe.webp"
+    "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694121875/Portfolio/Henry%20Food/Captura-de-pantalla-2023-07-07-105858_t0vyfe.webp",
+    "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694121875/Portfolio/Henry%20Food/Captura-de-pantalla-2023-07-07-105858_t0vyfe.webp",
+    "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694121875/Portfolio/Henry%20Food/Captura-de-pantalla-2023-07-07-105858_t0vyfe.webp"
+]
+
+export const rickAndMorty = [
+    "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694198203/Portfolio/Rick%20and%20Morty/ph1_s4uzvl.webp",
+    "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694198203/Portfolio/Rick%20and%20Morty/ph2_wptfvf.webp",
+    "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694198203/Portfolio/Rick%20and%20Morty/ph3_xkahqr.webp"
 ]
