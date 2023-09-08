@@ -4,6 +4,7 @@
     justify-content: flex-end;
     align-items: center;
     position: relative;
+
 }
 .menuContent {
     display: flex;
@@ -35,7 +36,6 @@
 @media (max-width: 970px) {
     .menuIcon {
         display: block;
-        transform: rotate(90deg);
     }
 
     .menuContent {

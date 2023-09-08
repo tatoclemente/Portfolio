@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Vollkorn:wght@600&display=swap');
 :root {
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -32,6 +34,7 @@
 body {
   color: #323232;
   background-color: #eefbfe;
+  overflow-x: hidden;
 }
 
 [data-theme='dark'] body {

@@ -8,6 +8,17 @@
     transform: translateY(-20%);
     left: 20%;
     z-index: -1;
+    animation: input-left 1s linear;
+  }
+
+  @keyframes input-left {
+    from {
+      opacity: 0;
+      left: -20%;
+    } to {
+      left: 20%;
+      opacity: 1;
+    }
   }
   
   [data-theme="dark"] .boobleBackLeft {
@@ -24,6 +35,16 @@
     transform: translateY(-60%);
     right: 20%;
     z-index: -1;
+    animation: input-right .7s linear alternate;
+  }
+  @keyframes input-right {
+    from {
+      opacity: 0;
+      right: -20%;
+    } to {
+      right: 20%;
+      opacity: 1;
+    }
   }
   
   [data-theme="dark"] .boobleBackRight {
@@ -31,9 +52,24 @@
   }
   
   .image {
-    filter: sepia(.5);
+    filter: sepia(.7);
     z-index: 5;
+    animation: input-image 1s linear;
   }
+
+  @keyframes input-image {
+    0% {
+      opacity: 0;
+      transform: scale(1.5);
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
   
   [data-theme="dark"] .image {
     filter: grayscale();
@@ -90,7 +126,18 @@
         top: 50%;
         transform: translateY(-60%) translateY(-5rem);
         left: 15%;
+        animation: input-left 1.3s linear alternate;
       }
+      @keyframes input-left {
+        from {
+          opacity: 0;
+          left: -20%;
+        } to {
+          left: 20%;
+          opacity: 1;
+        }
+      }
+      
     
       .boobleBackRight {
         position: absolute;
@@ -101,8 +148,31 @@
         top: 50%;
         transform: translateY(-100%);
         right: 20%;
+        animation: input-right 1.4s linear alternate;
       }
+        @keyframes input-right {
+    from {
+      opacity: 0;
+      right: -20%;
+    } to {
+      right: 20%;
+      opacity: 1;
+    }
+  }
       .image {
         transform: scale(0.6) translateY(-5rem);
+        animation: input-image 1.3s linear alternate;
+      }
+      @keyframes input-image {
+        0% {
+          opacity: 0;
+          transform: scale(1.1) translateY(-8rem);
+        }
+        40% {
+          opacity: 1;
+        }
+        100% {
+          transform: scale(.6) translateY(-5rem);
+        }
       }
   }

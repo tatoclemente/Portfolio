@@ -56,6 +56,7 @@
     background-clip: text;
     color: transparent;
     z-index: 5;
+    font-family: 'Vollkorn', serif;
   }
   
   .nameTitle {
@@ -69,6 +70,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    font-family: 'Vollkorn', serif;
   }
   
   .heyTitle.largeFont {
@@ -153,23 +155,27 @@
   
   .button {
     padding: .6rem 1rem;
-    background-color: #b1e2ec;
+    background-color: #3755c4;
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1.3rem auto;
+    margin:2rem auto;
     border-radius: 25px;
     transition: .5s ease-in-out;
     cursor: pointer;
+    color: #d1dcf3;
   }
   
   [data-theme="dark"] .button {
     background-color: #07363f;
   }
+  [data-theme="dark"] .button:hover {
+    background-color: rgb(78, 12, 122);
+  }
   
   .button:hover {
-    background-color: #12a0bc;
+    background-color: #0f1457;
   }
   .button span {
     transition: .5s ease-in-out;

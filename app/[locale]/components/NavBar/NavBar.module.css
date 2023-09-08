@@ -1,15 +1,27 @@
 .navBarContainer {
-    width: 100vw;
-    height: 50px;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1.5rem;
-    z-index: 999;
-    align-items: center;
+  width: 100vw;
+  height: 50px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem 0 1.5rem;
+  z-index: 999;
+  align-items: center;
+  background-color: #edeff8;
+}
+
+[data-theme='dark'] .navBarContainer {
+  background-color: #161b21;
 }
 
 .navBarLogo h1 {
-    padding: 0 !important;
-    margin: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 970px) {
+  .navBarContainer {
+    padding: 0 1.5rem;
+    width: 100.5vw;
+  }
 }
