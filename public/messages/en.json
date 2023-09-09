@@ -15,5 +15,18 @@
       "contact": "Contact me here!"
     },
     "loading": "Loading"
+  },
+  "Proyects": {
+    "title": "Proyects",
+    "elFestin": {
+      "description": "Final project of the Henry bootcamp"
+    },
+    "henryFood": {
+      "description": "Individual project of the Henry bootcamp"
+    },
+    "rickAndMorty": {
+      "description": "Integrated project of the Henry bootcamp"
+    },
+    "button": "Enter to see the site here"
   }
 }

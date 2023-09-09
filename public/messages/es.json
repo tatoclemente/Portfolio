@@ -15,5 +15,18 @@
       "contact": "¡Contáctame aquí!"
     },
     "loading": "Loading"
+  },
+  "Proyects": {
+    "title": "Proyectos",
+    "elFestin": {
+      "description": "Proyecto Final del bootcamp soy Henry"
+    },
+    "henryFood": {
+      "description": "Proyecto Individual del bootcamp soy Henry"
+    },
+    "rickAndMorty": {
+      "description": "Proyecto Integrador del bootcamp soy Henry"
+    },
+    "button": "Ingresa a ver el sitio aquí"
   }
 }

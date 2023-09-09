@@ -1,5 +1,5 @@
 .mainContainer {
-    min-height: 150vh;
+    min-height: 100vh;
     width: 100vw;
     background-color: rgb(118, 83, 151);
     position: relative;
@@ -43,11 +43,24 @@
   cursor: pointer;
   border-top: 4px solid rgb(118, 83, 151);
   margin-left: 1px;
+  transition: .3s ease-in-out;
 }
 [data-theme="dark"] .titleProyectContainerSelect {
     background-color: rgb(156, 127, 183);
     border-top: 4px solid #05424e;
     
+}
+
+.titleProyectContainerSelect:hover {
+  background-color:#eefbfe;;
+  border-bottom: 0;
+}
+[data-theme="dark"] .titleProyectContainerSelect:hover {
+  background-color: #041d22;
+  border-bottom: 0;
+}
+.titleProyectContainerSelect:hover .titleProyect {
+  font-size: 1.7rem;
 }
 
 .selectedTab {
@@ -57,7 +70,7 @@
 }
 [data-theme="dark"] .selectedTab {
   background-color: #041d22;
-  border: 4px solid rgba(118, 83, 151);
+  border: 4px solid rgb(118, 83, 151);
   border-bottom: 0;
 }
 .selectedTab .titleProyect {
@@ -75,13 +88,15 @@
 .proyectsContainer {
   margin: 0 auto;
   width: 95%;
-  background-color: rgb(232, 184, 111);
+  background-color: #eefbfe;
   border-radius: 10px;
   padding-bottom: 50px;
+  box-shadow: 10px 10px 35px rgba(145, 171, 177, 0.463);
 }
 
 [data-theme="dark"] .proyectsContainer {
-  background-color: rgb(118, 83, 151);
+  background-color: #041d22;
+  box-shadow: 10px 10px 35px rgba(13, 32, 37, 0.42);
 }
 
 .swiper {
@@ -92,8 +107,12 @@
 }
 
 .swiperImage {
-  border-radius: 15px;
+  border-radius: 5px;
   margin: 0 auto;
+  box-shadow: 10px 10px 35px rgba(118, 83, 151, 0.338);
+}
+[data-theme='dark'] .swiperImage {
+  box-shadow: 10px 10px 35px rgba(23, 88, 103, 0.409);
 }
 
 .wave {
@@ -115,35 +134,45 @@
     
   .buttonLink {
     width: 50%;
-    height: 2rem;
-    background-color: #eefbfe;
+    height: 3rem;
+    background-color: #3755c4;
+    color: #eefbfe;
     padding: .3rem 1rem;
-    border-radius: 15px;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all .5s ease-in-out;
+    font-size: 1.2rem;
   }
   [data-theme='dark'] .buttonLink  {
     background-color: #175867;
   }
   .buttonLink:hover {
-    background-color: #6682e7;
-    color: #eefbfe;
-    font-size: 1.2rem;
+    background-color: #0f1457;
+    font-size: 1.6rem;
   }
+
   [data-theme='dark'] .buttonLink:hover {
-    background-color: #07363f;
+    background-color: rgb(78, 12, 122);
   }
 
 
   @media (max-width: 420px) {
+    .mainContainer {
+      min-height: 80vh;
+  }
+  .title{
+    position: absolute;
+    right: 3.7rem;
+    top: 8rem;
+  }
     .header {
       margin-left: 1rem;
     }
     .titleProyectContainerSelect {
       height: 1.5rem;
-      width: 7rem;
+      width: 7.4rem;
       border-radius: 10px 10px 0 0;
       margin-top: 5rem;
       cursor: pointer;
@@ -157,10 +186,10 @@
     }
     
     .selectedTab {
-  
       border: 2px solid rgb(232, 184, 111);
-
+      border-bottom: 0;
     }
+
     [data-theme="dark"] .selectedTab {
       background-color: #041d22;
       border: 2px solid rgba(118, 83, 151);
@@ -168,11 +197,11 @@
     }
     .selectedTab .titleProyect {
       font-family: 'Ubuntu', sans-serif;
-      font-size: .9rem;
+      font-size: .9rem !important;
     }
     .titleProyect {
       font-family: 'Ubuntu', sans-serif;
-      font-size: .6rem;
+      font-size: .6rem !important;
       transition: .3s ease-in-out;
     }
     .proyectsContainer {
@@ -186,13 +215,13 @@
 
     .buttonLink {
       width: 80%;
-      height: 2rem;
-      background-color: #eefbfe;
+      height: 2.3rem;
       padding: .3rem 1rem;
-      border-radius: 15px;
+      border-radius: 18px;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: all .5s ease-in-out;
+      font-size: 1rem;
     }
   }

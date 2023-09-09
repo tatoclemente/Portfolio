@@ -384,9 +384,10 @@
       .titleContainer {
         position: relative;
         width: 100%;
+        margin-top: -1.5rem;
       }
       .heyTitle {
-        font-size: 2.9rem;
+        font-size: 4.6rem;
         font-weight: 900;
         background-image: linear-gradient(
           60deg,
@@ -399,7 +400,7 @@
       }
     
       .heyTitle.largeFont {
-        font-size: 3.4rem; /* Cambiar el valor de la variable */
+        font-size: 5.25rem;
       }
     
       .centerRight {
@@ -408,7 +409,7 @@
         transform: translateZ(0);
       }
       .nameTitle {
-        font-size: 1.4rem;
+        font-size: 2.3rem;
         font-weight: 900;
         background-image: linear-gradient(
           60deg,

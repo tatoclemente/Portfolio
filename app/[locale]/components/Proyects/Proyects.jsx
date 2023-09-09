@@ -17,29 +17,8 @@ import { CldImage } from 'next-cloudinary';
 import Link from 'next/link';
 
 
-const Proyects = () => {
+const Proyects = ({title, buttonLink, proyectsList}) => {
   const [selectedTab, setSelectedTab] = useState('El Festin'); // Inicialmente selecciona 'El Festin'
-
-  const proyectsList = [
-    {
-      title: 'El Festin',
-      images: elFestin,
-      description: 'Proyecto Final del bootcamp soy Henry',
-      link: 'https://pf-front-end-grupo3.vercel.app/',
-    },
-    {
-      title: 'Henry Food',
-      images: piFood,
-      description: 'Proyecto Individual del bootcamp soy Henry',
-      link: 'https://henrysfood.netlify.app/',
-    },
-    {
-      title: 'Rick And Morty',
-      images: rickAndMorty,
-      description: 'Proyecto Integrador del bootcamp soy Henry',
-      link: 'https://github.com/tatoclemente/Proyecto-Integrador',
-    },
-  ]
 
   const handleTabClick = (tab) => {
     setSelectedTab(tab);
@@ -47,7 +26,7 @@ const Proyects = () => {
 
   return (
     <div className={style.mainContainer}>
-      <h1 className={style.title}>Proyects</h1>
+      <h1 className={style.title}>{title}</h1>
       <header className={style.header}>
         <div
           className={`${style.titleProyectContainerSelect} ${
@@ -55,7 +34,7 @@ const Proyects = () => {
           }`}
           onClick={() => handleTabClick('El Festin')}
         >
-          <h3 className={style.titleProyect}>El Festin</h3>
+          <h3 className={style.titleProyect}>El Festín</h3>
         </div>
         <div
           className={`${style.titleProyectContainerSelect} ${
@@ -95,7 +74,7 @@ const Proyects = () => {
               spaceBetween={10}
               autoplay={{
                 delay: 3000,
-                disableOnInteraction: true,
+                disableOnInteraction: false,
               }}
               breakpoints={{
                 640: {
@@ -111,7 +90,6 @@ const Proyects = () => {
                   spaceBetween: 50,
                 }
               }}
-              //  slidesPerView={3}
               navigation
               pagination={{ clickable: true }}
               className={style.swiper}
@@ -124,7 +102,7 @@ const Proyects = () => {
             </Swiper>
             <div className={style.descriptionContainer}>
               <p>{proyect.description}</p>
-              <Link className={style.buttonLink} target='_blank' href={proyect.link} rel="noreferrer">Ingresa a ver el sitio aquí</Link>
+              <Link className={style.buttonLink} target='_blank' href={proyect.link} rel="noreferrer">{buttonLink}</Link>
             </div>
           </article>
         ))}
