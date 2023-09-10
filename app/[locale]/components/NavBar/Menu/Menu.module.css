@@ -63,7 +63,7 @@
     height: 100vh;
     top: -9px;
     right: -22px;
-    background-color: #ddf1f6;
+    background-color: #dfd1f3;
     transform: translateX(100%);
     transition: .5s ease-in-out;
 }
@@ -100,6 +100,11 @@
 .navBarLinksToggle a {
     /* transform: rotate(-10deg); */
     font-weight: 500;
+    background-color: rgba(67, 90, 220, 0.495);
+    width: 50vw;
+    padding: .5rem 1rem;
+    text-align: center;
+    border-radius: 20px;
 }
 .navBarSwetchersToggle {
     display: flex;

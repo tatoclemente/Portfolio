@@ -18,7 +18,7 @@ import Link from 'next/link';
 import Technologies from './Technologies/Technologies';
 
 
-const Proyects = ({title, buttonLink, proyectsList}) => {
+const Proyects = ({ title, buttonLink, proyectsList }) => {
   const [selectedTab, setSelectedTab] = useState('El Festin'); // Inicialmente selecciona 'El Festin'
 
   const handleTabClick = (tab) => {
@@ -30,25 +30,22 @@ const Proyects = ({title, buttonLink, proyectsList}) => {
       <h1 className={style.title}>{title}</h1>
       <header className={style.header}>
         <div
-          className={`${style.titleProyectContainerSelect} ${
-            selectedTab === 'El Festin' ? style.selectedTab : ''
-          }`}
+          className={`${style.titleProyectContainerSelect} ${selectedTab === 'El Festin' ? style.selectedTab : ''
+            }`}
           onClick={() => handleTabClick('El Festin')}
         >
           <h3 className={style.titleProyect}>El Festín</h3>
         </div>
         <div
-          className={`${style.titleProyectContainerSelect} ${
-            selectedTab === 'Henry Food' ? style.selectedTab : ''
-          }`}
+          className={`${style.titleProyectContainerSelect} ${selectedTab === 'Henry Food' ? style.selectedTab : ''
+            }`}
           onClick={() => handleTabClick('Henry Food')}
         >
           <h3 className={style.titleProyect}>Henry Food</h3>
         </div>
         <div
-          className={`${style.titleProyectContainerSelect} ${
-            selectedTab === 'Rick And Morty' ? style.selectedTab : ''
-          }`}
+          className={`${style.titleProyectContainerSelect} ${selectedTab === 'Rick And Morty' ? style.selectedTab : ''
+            }`}
           onClick={() => handleTabClick('Rick And Morty')}
         >
           <h3 className={style.titleProyect}>Rick And Morty</h3>
@@ -56,59 +53,64 @@ const Proyects = ({title, buttonLink, proyectsList}) => {
       </header>
       <div className={style.proyectsContainer}>
         {proyectsList.filter((proyect) => proyect.title === selectedTab)
-        .map((proyect, index) => (
-          <article key={index}>
-            <Swiper
-              // install Swiper modules
-              modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, Autoplay]}
-              effect={'coverflow'}
-              grabCursor={true}
-              centeredSlides={true}
-              slidesPerView={"auto"}
-              coverflowEffect={{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-              }}
-              spaceBetween={10}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-              }}
-              breakpoints={{
-                640: {
-                  slidesPerView: 1,
-                  spaceBetween: 10,
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 40,
-                },
-                1024: {
-                  slidesPerView: 2,
-                  spaceBetween: 50,
-                }
-              }}
-              navigation
-              pagination={{ clickable: true }}
-              className={style.swiper}
-            >
-              {proyect.images.map((image, index) => {
-                return <SwiperSlide key={index} className={style.seepwerSlide}>
-                  <CldImage className={style.swiperImage}  src={image} alt='phProyect' width={600} height={330} />
+          .map((proyect, index) => (
+            <article key={index}>
+              <Swiper
+                // install Swiper modules
+                modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, Autoplay]}
+                effect={'coverflow'}
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={"auto"}
+                coverflowEffect={{
+                  rotate: 50,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  slideShadows: true,
+                }}
+                spaceBetween={10}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                }}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                  },
+                  1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 50,
+                  }
+                }}
+                pagination={{ clickable: true }}
+                className={style.swiper}
+              >
+                {proyect.images.map((image, index) => {
+                  return <SwiperSlide key={index} className={style.seepwerSlide}>
+                    <CldImage className={style.swiperImage} src={image} alt='phProyect' width={600} height={330} />
                   </SwiperSlide>
-              })}
-            </Swiper>
-            <div className={style.descriptionContainer}>
-              <p>{proyect.description}</p>
-              <Link className={style.buttonLink} target='_blank' href={proyect.link} rel="noreferrer">{buttonLink}</Link>
-            </div>
-          </article>
-        ))}
-      </div>
+                })}
+                {/* Flecha de navegación "Siguiente" */}
+                <div className={`${style.nextButton} swiper-button-next`}></div>
 
+                {/* Flecha de navegación "Anterior" */}
+                <div className={`${style.prevButton} swiper-button-prev`}></div>
+              </Swiper>
+
+              <div className={style.descriptionContainer}>
+                <p>{proyect.description}</p>
+                <Link className={style.buttonLink} target='_blank' href={proyect.link} rel="noreferrer">{buttonLink}</Link>
+              </div>
+
+            </article>
+          ))}
+      </div>
       <Technologies />
 
       <svg className={style.wave} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

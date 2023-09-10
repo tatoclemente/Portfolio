@@ -4,7 +4,7 @@
     background-color: rgb(118, 83, 151);
     position: relative;
     padding-top: 200px;
-    padding-bottom: 300px;
+    padding-bottom: 400px;
     position: relative;
     margin: 0 auto;
 }
@@ -105,6 +105,85 @@
   padding-bottom: 50px;
   margin-bottom: 3rem;
 }
+.swiper:hover .nextButton {
+  opacity: 1;
+}
+.swiper:hover .prevButton {
+  opacity: 1;
+}
+
+/* SwiperNavigation.module.css */
+
+/* Estilo para la flecha de navegación "Siguiente" */
+.nextButton {
+  background-color: #304560; /* Color de fondo */
+  color: #eefbfe; /* Color del texto */
+  --swiper-navigation-size: 20px; /* Tamaño del texto */
+  font-weight: 700;
+  border-radius: 50%; /* Borde redondeado para hacer un botón circular */
+  width: 50px; /* Ancho del botón */
+  height: 50px; /* Altura del botón */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 10px; /* Posición a la derecha */
+  top: 50%; /* Posición en la mitad vertical */
+  transform: translateY(-50%); /* Centra verticalmente */
+  cursor: pointer; /* Cambia el cursor al estilo de un enlace */
+ opacity: 0;
+ transition: .3s ease-in-out;
+}
+
+/* Estilo para la flecha de navegación "Anterior" */
+.prevButton {
+  background-color: #304560; /* Color de fondo */
+  color: #eefbfe; /* Color del texto */
+  --swiper-navigation-size: 20px; /* Tamaño del texto */
+  font-weight: 700;
+  border-radius: 50%; /* Borde redondeado para hacer un botón circular */
+  width: 50px; /* Ancho del botón */
+  height: 50px; /* Altura del botón */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 10px; /* Posición a la izquierda */
+  top: 50%; /* Posición en la mitad vertical */
+  transform: translateY(-50%); /* Centra verticalmente */
+  cursor: pointer; /* Cambia el cursor al estilo de un enlace */
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+[data-theme='dark'] .prevButton {
+  background-color: #e4eefa; /* Color de fondo */
+  color: #041d22;
+}
+[data-theme='dark'] .nextButton {
+  background-color: #e4eefa; /* Color de fondo */
+  color: #041d22;
+}
+
+
+/* Estilo para las flechas al pasar el mouse */
+.nextButton:hover {
+  background-color: #3755c4; /* Cambia el color de fondo al pasar el mouse */
+  color: #eefbfe;
+}
+.prevButton:hover {
+  background-color: #3755c4; /* Cambia el color de fondo al pasar el mouse */
+  color: #eefbfe;
+}
+[data-theme='dark'] .prevButton:hover {
+  background-color: #175867; /* Cambia el color de fondo al pasar el mouse */
+  color: #eefbfe;
+}
+[data-theme='dark'] .nextButton:hover {
+  background-color: #175867; /* Cambia el color de fondo al pasar el mouse */
+  color: #eefbfe;
+}
+
 
 .swiperImage {
   border-radius: 5px;
@@ -158,9 +237,9 @@
   }
 
 
-  @media (max-width: 420px) {
+  @media (max-width: 800px) {
     .mainContainer {
-      min-height: 80vh;
+      padding-bottom: 150px;
   }
   .title{
     position: absolute;

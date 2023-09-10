@@ -11,26 +11,35 @@ import 'swiper/css/navigation';
 import style from './Technologies.module.css'
 
 // import required modules
-import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import { CldImage } from 'next-cloudinary';
 
 
 const Technologies = () => {
   return (
     <div className={style.techContainer}>
+    <h3>Stack</h3>
     <Swiper
-      slidesPerView={6}
-      spaceBetween={100}
-      pagination={{
-        clickable: true,
-      }}
+      slidesPerView={3}
+      spaceBetween={10}
       dynamicBullets={true}
+      loop={true} // Esto hace que el carrusel sea infinito
+      speed={25000} // Velocidad en milisegundos para cambiar de diapositiva
       autoplay={{
-        delay: 3000,
+        delay: 0,
         disableOnInteraction: false,
       }}
-      navigation={false}
-      modules={[Pagination, Navigation, Autoplay]}
+      breakpoints={{
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 6,
+          spaceBetween: 50,
+        }
+      }}
+      modules={[Autoplay]}
       className={style.swiper}
     >
     {technology.map((tech, index) => (
