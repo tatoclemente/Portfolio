@@ -9,7 +9,7 @@ import {useTranslations} from 'next-intl'
 export default function Home() {
   const t = useTranslations('Index')
   const tP = useTranslations('Proyects')
-  console.log(tP('elFestin.description'));
+  
   const proyectsList = [
     {
       title: 'El Festin',
