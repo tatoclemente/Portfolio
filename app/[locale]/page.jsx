@@ -1,5 +1,7 @@
 // 
 import About from './components/About/About'
+import CalendlyForm from './components/Calendly/Calendly'
+import CarruselCards from './components/CarruselCard/CarruselCards'
 import Proyects from './components/Proyects/Proyects'
 import style from './page.module.css'
 import { elFestin, piFood, rickAndMorty } from '@/app/assets/iamgeUrls'
@@ -34,6 +36,8 @@ export default function Home() {
     <div className={style.homeContainer}>
       <About t={t}/>
       <Proyects title={tP('title')} buttonLink={tP('button')} proyectsList={proyectsList}/>
+      {/* <CarruselCards /> */}
+      <CalendlyForm />
     </div>
   )
 }

@@ -26,7 +26,7 @@ const Proyects = ({ title, buttonLink, proyectsList }) => {
   };
 
   return (
-    <div className={style.mainContainer}>
+    <div className={style.mainContainer} id='proyects'>
       <h1 className={style.title}>{title}</h1>
       <header className={style.header}>
         <div
@@ -92,7 +92,7 @@ const Proyects = ({ title, buttonLink, proyectsList }) => {
                 className={style.swiper}
               >
                 {proyect.images.map((image, index) => {
-                  return <SwiperSlide key={index} className={style.seepwerSlide}>
+                  return <SwiperSlide key={index}>
                     <CldImage className={style.swiperImage} src={image} alt='phProyect' width={600} height={330} />
                   </SwiperSlide>
                 })}

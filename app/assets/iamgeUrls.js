@@ -25,40 +25,51 @@ export const rickAndMorty = [
   "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694198203/Portfolio/Rick%20and%20Morty/ph3_xkahqr.webp"
 ]
 
-export const technology = [
-  {
-    title: "Javascript",
-    image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300409/Portfolio/Technologies/js_svztpb.webp"
-  },
-  {
-    title: "TaypeScript",
-    image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300407/Portfolio/Technologies/ts_mrvayn.webp"
-  },
-  {
-    title: "Node",
-    image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300406/Portfolio/Technologies/node_zhlohj.webp"
-  },
-  {
-    title: "Express",
-    image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694304306/Portfolio/Technologies/express_rhtzvn.webp"
-  },
-  {
-    title: "React",
-    image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300406/Portfolio/Technologies/react_qb2ejo.webp"
-  },
-  {
-    title: "Next",
-    image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300406/Portfolio/Technologies/next_rxayel.webp"
-  },
-  {
-    title: "Redux",
-    image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300406/Portfolio/Technologies/redux_ncedzr.webp"
-  },
-  {
-    title: "Axios",
-    image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300407/Portfolio/Technologies/axios_vzoz1z.webp"
-  },
-  {
+export const technology = {
+  front:[
+    {
+      title: "Javascript",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300409/Portfolio/Technologies/js_svztpb.webp"
+    },
+    {
+      title: "TaypeScript",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300407/Portfolio/Technologies/ts_mrvayn.webp"
+    },
+    {
+      title: "React",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300406/Portfolio/Technologies/react_qb2ejo.webp"
+    },
+    {
+      title: "Next",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300406/Portfolio/Technologies/next_rxayel.webp"
+    },
+    {
+      title: "Redux",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300406/Portfolio/Technologies/redux_ncedzr.webp"
+    },
+    {
+      title: "Axios",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300407/Portfolio/Technologies/axios_vzoz1z.webp"
+    },
+    {
+      title: "HTML",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300408/Portfolio/Technologies/html_bycsjf.webp"
+    },
+    {
+      title: "CSS",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300408/Portfolio/Technologies/css_v64uyz.webp"
+    },
+  ],
+  back:[
+    {
+      title: "Node",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300406/Portfolio/Technologies/node_zhlohj.webp"
+    },
+    {
+      title: "Express",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694304306/Portfolio/Technologies/express_rhtzvn.webp"
+    },
+    {
     title: "JWT",
     image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300409/Portfolio/Technologies/jwt_mea84c.webp"
   },
@@ -79,15 +90,8 @@ export const technology = [
     image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300407/Portfolio/Technologies/cloudinary_ol6kiu.webp"
   },
   {
-    title: "HTML",
-    image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300408/Portfolio/Technologies/html_bycsjf.webp"
-  },
-  {
-    title: "CSS",
-    image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300408/Portfolio/Technologies/css_v64uyz.webp"
-  },
-  {
     title: "Docker",
     image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300408/Portfolio/Technologies/docker_vxm274.webp"
   },
-]
+  ]
+}

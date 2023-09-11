@@ -1,0 +1,24 @@
+.mainContainer {
+    min-height: 80vh;
+}
+.title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Ubuntu', sans-serif;
+    padding-bottom: 2rem;
+}
+.calendlyContainer {
+    border-radius: 25px;
+    overflow: hidden;
+
+}
+.calendly {
+    height: 400px;
+    width: 40vw;
+}
+
+@media (max-width: 768px) {
+    .calendly {
+      width: 90vw; /* Ancho del 90vw en dispositivos móviles */
+    }
+  }

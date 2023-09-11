@@ -21,7 +21,7 @@ const Menu = (props) => {
       <div className={style.menuContent}>
         <div className={style.navBarLinks}>
           <Link href="#">{about}</Link>
-          <Link href="#">{proyects}</Link>
+          <Link href="#proyects">{proyects}</Link>
           <Link href="#">{contact}</Link>
         </div>
         <div className={style.navBarSwetchers}>
@@ -41,7 +41,7 @@ const Menu = (props) => {
           </div>
           <div className={style.navBarLinksToggle}>
             <Link href="#">{about}</Link>
-            <Link href="#">{proyects}</Link>
+            <Link href="#proyects">{proyects}</Link>
             <Link href="#">{contact}</Link>
           </div>
           <div className={style.socialMedia}>

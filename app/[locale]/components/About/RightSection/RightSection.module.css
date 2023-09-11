@@ -1,3 +1,35 @@
+.atropos:hover .boobleBackLeft {
+  filter: brightness(1.5);
+  box-shadow: 0 0 30px rgb(232, 184, 111);
+  opacity: .7;
+}
+.atropos:hover .boobleBackRight {
+  filter: brightness(1.7);
+  background-color: rgb(126, 125, 227);
+  opacity: .7;
+  box-shadow: 0 0 30px rgb(110, 108, 226);
+}
+
+[data-theme="dark"] .atropos:hover .boobleBackLeft {
+  filter: brightness(1.5);
+  opacity: .8;
+  box-shadow: 0 0 30px rgb(118, 83, 151);
+}
+[data-theme="dark"] .atropos:hover .boobleBackRight {
+  filter: brightness(1.5);
+  opacity: .9;
+  background-color: rgb(232, 184, 111);
+  box-shadow: 0 0 30px rgb(232, 184, 111);
+}
+
+.atropos:hover .image {
+  filter: grayscale(.3) contrast(1.2);
+}
+[data-theme="dark"] .atropos:hover .image {
+  filter: grayscale(.3) brightness(1.2);
+}
+
+
 .boobleBackLeft {
     position: absolute;
     background-color: rgb(232, 184, 111);
@@ -9,6 +41,7 @@
     left: 20%;
     z-index: -1;
     animation: input-left 1s linear;
+    transition: .5s ease-in-out;
   }
 
   @keyframes input-left {
@@ -36,6 +69,7 @@
     right: 20%;
     z-index: -1;
     animation: input-right .7s linear alternate;
+    transition: .5s ease-in-out;
   }
   @keyframes input-right {
     from {

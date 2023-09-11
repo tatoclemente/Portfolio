@@ -10,7 +10,7 @@
   font-size: 2rem;
 }
 
-.swiper {
+/*.swiper {
     width: 100%;
     height: 100%;
     padding: 4rem 0;
@@ -25,14 +25,14 @@
     text-align: center;
     font-size: 18px;
     /* CenterSlide text vertically */
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(250, 250, 250, .5);
     border-radius: 25px;
-  }
+  } */
 
-  [data-theme='dark'] .swiperSlide {
+  /* [data-theme='dark'] .swiperSlide {
     background-color: rgba(3, 25, 29, 0.5);
   }
   
@@ -56,4 +56,93 @@
       height: 80px;
       object-fit: cover;
     }
+  } */
+
+
+  /* styles.css */
+
+/* Contenedor principal del carrusel */
+.carouselContainer {
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 2rem;
+  white-space: nowrap; 
+}
+
+/* Contenedor de los logotipos frontend */
+.carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  min-width: 150px;
+  height: 180px;
+  background-color: rgba(250, 250, 250, .5);
+  border-radius: 25px;
+  padding: 1rem;
+  animation: scroll 180s linear infinite; /* Controla la velocidad y la dirección de desplazamiento */
+}
+/* Contenedor de los logotipos backend */
+.carouselBack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  min-width: 150px;
+  height: 180px;
+  background-color: rgba(250, 250, 250, .5);
+  border-radius: 25px;
+  padding: 1rem;
+  transform: translateX(-2450px);
+  animation: scrollBack 180s linear infinite; /* Controla la velocidad y la dirección de desplazamiento */
+}
+
+/* Animación de desplazamiento left */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
+  100% {
+    transform: translateX(-2450px);
+  }
+}
+
+/* Animación de desplazamiento right */
+@keyframes scrollBack {
+  0% {
+    transform: translateX(-2450px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+[data-theme='dark'] .carouselBack {
+  background-color: rgba(3, 25, 29, 0.5);
+}
+
+[data-theme='dark'] .carousel {
+    background-color: rgba(3, 25, 29, 0.5);
+  }
+
+/* Estilos para los logotipos */
+.carouselLogo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width:970px) {
+  .carouselLogo {
+    width: 80px;
+    height: 80px;
+  }
+} 
