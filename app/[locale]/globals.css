@@ -38,6 +38,7 @@ body {
   color: #323232;
   background-color: #eefbfe;
   overflow-x: hidden;
+  font-family: 'Ubuntu', sans-serif !important;
 }
 
 [data-theme='dark'] body {

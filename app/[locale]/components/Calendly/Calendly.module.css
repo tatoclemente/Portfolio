@@ -10,15 +10,22 @@
 .calendlyContainer {
     border-radius: 25px;
     overflow: hidden;
-
+    box-shadow: 5px 5px 35px rgba(13, 32, 37, 0.22);
 }
+[data-theme="dark"] .calendlyContainer {
+    box-shadow: 5px 5px 35px rgba(145, 171, 177, 0.33)
+  }
 .calendly {
     height: 400px;
     width: 40vw;
 }
 
 @media (max-width: 768px) {
+    .title {
+        padding-top: 2rem;
+    }
     .calendly {
       width: 90vw; /* Ancho del 90vw en dispositivos móviles */
+      height: 360px;
     }
   }

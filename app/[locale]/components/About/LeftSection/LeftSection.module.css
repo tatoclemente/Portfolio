@@ -93,7 +93,7 @@
   }
   
   .descriptionContainer {
-    width: 100%;
+    width: 90%;
     height: 100%;
   }
   
@@ -149,7 +149,6 @@
   }
   .description {
     font-size: 1rem;
-    text-align: justify;
     margin-top: .5rem;
   }
   
@@ -224,7 +223,6 @@
       }
       .description {
         font-size: 1rem;
-        text-align: justify;
       }
   }
 
@@ -281,6 +279,7 @@
         position: relative;
         width: 100%;
         transform: translateY(-1rem);
+        padding: 0 1rem;
       }
       .heyTitle {
         font-size: var(--heyTitleFontSize1100);
@@ -316,7 +315,20 @@
         background-clip: text;
         color: transparent;
       }
-    
+      
+      .descriptionHeader {
+        padding: 0 1rem;
+      }
+      .lineContainer {
+        padding: 0 1rem;
+      }
+      
+      .line {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(252, 165, 3);
+        animation: intro-line 1s linear;
+      }
       .descriptionContainer {
         width: 100%;
       }
@@ -423,5 +435,8 @@
     
       .descriptionContainer {
         width: 100%;
+      }
+      .description {
+        margin-left: 1rem;
       }
   }

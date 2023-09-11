@@ -11,6 +11,7 @@ import {useTranslations} from 'next-intl'
 export default function Home() {
   const t = useTranslations('Index')
   const tP = useTranslations('Proyects')
+  const tC = useTranslations('Contact')
   
   const proyectsList = [
     {
@@ -37,7 +38,7 @@ export default function Home() {
       <About t={t}/>
       <Proyects title={tP('title')} buttonLink={tP('button')} proyectsList={proyectsList}/>
       {/* <CarruselCards /> */}
-      <CalendlyForm />
+      <CalendlyForm titleMeeting={tC("meeting")} />
     </div>
   )
 }

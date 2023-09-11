@@ -28,5 +28,8 @@
       "description": "Integrated project of the Henry bootcamp"
     },
     "button": "Enter to see the site here"
+  },
+  "Contact": {
+    "meeting": "Schedule a meeting with me"
   }
 }
