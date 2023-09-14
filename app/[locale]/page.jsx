@@ -30,7 +30,7 @@ export default function Home() {
       title: 'Rick And Morty',
       images: rickAndMorty,
       description: tP('rickAndMorty.description'),
-      link: 'https://github.com/tatoclemente/Proyecto-Integrador',
+      link: 'https://rickandmorty-five-ruby.vercel.app/',
     },
   ]
   return (

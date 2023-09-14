@@ -93,7 +93,7 @@ const Proyects = ({ title, buttonLink, proyectsList }) => {
               >
                 {proyect.images.map((image, index) => {
                   return <SwiperSlide key={index}>
-                    <CldImage className={style.swiperImage} src={image} alt='phProyect' width={600} height={330} />
+                    <CldImage className={style.swiperImage} src={image} alt='phProyect' width={580} height={300} />
                   </SwiperSlide>
                 })}
                 {/* Flecha de navegación "Siguiente" */}

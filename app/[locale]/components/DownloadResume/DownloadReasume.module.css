@@ -1,0 +1,24 @@
+.downloadResumeButton {
+    margin: 0;
+    /* transform: rotate(-10deg); */
+    font-weight: 500;
+    background-color: #064d37a8;
+    width: 40vw;
+    padding: .5rem .5rem;
+    text-align: center;
+    border-radius: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+[data-theme='dark'] .downloadResumeButton {
+        background-color: rgba(1, 4, 21, 0.495);
+}
+
+.icon {
+    color: #EC1C24;
+    font-size: 1.3rem;
+}

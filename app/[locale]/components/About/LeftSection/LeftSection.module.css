@@ -1,7 +1,21 @@
+.sectionLeftContainer {
+  animation: to-center 1s ease-in-out;
+}
 
+@keyframes to-center {
+ from {
+  transform: translateY(100%);
+  opacity: 0;
+ } 
+ to {
+  transform: translateY(0);
+  opacity: 1;
+ }
+}
   
   .titleContainer {
     position: relative;
+    width: 90%
   }
   
   .center {
@@ -57,6 +71,7 @@
     color: transparent;
     z-index: 5;
     font-family: 'Vollkorn', serif;
+
   }
   
   .nameTitle {
@@ -108,7 +123,7 @@
     width: 100%;
     height: 100%;
     background-color: rgb(252, 165, 3);
-    animation: intro-line 1s linear;
+    animation: intro-line 1.5s linear;
   }
   
   [data-theme="dark"] .line {
@@ -128,7 +143,7 @@
     width: 100%;
     height: 100%;
     background-color: rgb(252, 165, 3);
-    animation: intro-line-right 1s linear;
+    animation: intro-line-right 1.5s linear;
   }
   [data-theme="dark"] .lineRight {
     background-color: rgb(80, 140, 243);
@@ -274,6 +289,20 @@
   }
 
   @media (max-width: 970px) {
+    .sectionLeftContainer {
+      animation: to-center 1.8s ease-in-out;
+    }
+    
+    @keyframes to-center {
+     from {
+      transform: translateY(100%);
+      opacity: 0;
+     } 
+     to {
+      transform: translateY(0);
+      opacity: 1;
+     }
+    }
   
       .titleContainer {
         position: relative;
@@ -321,6 +350,39 @@
         padding-right: .6rem;
       }
 
+      .line {
+        animation: intro-line 2s linear;
+      }
+      
+      @keyframes intro-line {
+        0% {
+          transform: translate(-100%);
+        }
+        50% {
+          transform: translate(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      
+      .lineRight {
+        animation: intro-line-right 2s linear;
+      }
+
+      @keyframes intro-line-right {
+        0% {
+          transform: translate(100%);
+        }
+        50% {
+          transform: translate(100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      
+
       .descriptionContainer {
         width: 90%;
       }
@@ -335,6 +397,17 @@
     
       .button {
         margin-top: 4rem;
+      }
+      
+      [data-theme="dark"] .button:hover {
+        background-color: #07363f;
+      }
+      
+      .button:hover {
+        background-color: #3755c4;;
+      }
+      .button:hover span {
+        transform: scale(1);
       }
   }
 

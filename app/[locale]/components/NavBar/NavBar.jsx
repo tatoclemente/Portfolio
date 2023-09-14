@@ -11,13 +11,14 @@ const NavBar = ({locale}) => {
       contact: t('Contact'),
       allRight: t('AllRight')
     }
+    const downloadResume = t('DownloadResume')
   return (
     <div className={style.navBarContainer}>
         <div className={style.navBarLogo}>
             {/* <img src="/logo.png" alt="logo" /> */}
             <h1>GC</h1>
         </div>
-        <Menu menuItems={menuItems} locale={locale} />
+        <Menu menuItems={menuItems} locale={locale} downloadResume={downloadResume} />
     </div>
   )
 }

@@ -63,9 +63,10 @@
     height: 100vh;
     top: -9px;
     right: -22px;
-    background-color: #dfd1f3;
+    background-color: #ffffff;
     transform: translateX(100%);
     transition: .5s ease-in-out;
+    padding-bottom: 2rem;
 }
 
 [data-theme='dark'] .menuContentToggle {
@@ -90,9 +91,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding-top: 4rem;
-    height: 15rem;
-    text-transform: uppercase;
+    padding-top: 6rem;
     gap: 4rem;
     /* font-style: italic; */
 }
@@ -100,11 +99,22 @@
 .navBarLinksToggle a {
     /* transform: rotate(-10deg); */
     font-weight: 500;
-    background-color: rgba(67, 90, 220, 0.495);
-    width: 50vw;
+    background-color: #00ae7aa8;
+    width: 40vw;
     padding: .5rem 1rem;
     text-align: center;
     border-radius: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    color:#fff
+}
+[data-theme='dark'] .navBarLinksToggle a {
+        /* transform: rotate(-10deg); */
+        font-weight: 500;
+        background-color: rgba(67, 90, 220, 0.495);
+        width: 40vw;
+        padding: .5rem 1rem;
+        text-align: center;
+        border-radius: 20px;
 }
 .navBarSwetchersToggle {
     display: flex;

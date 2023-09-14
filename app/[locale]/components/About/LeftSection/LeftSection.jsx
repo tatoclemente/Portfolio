@@ -3,7 +3,7 @@ import style from './LeftSection.module.css'
 import Link from 'next/link'
 const LeftSection = ({t, locale}) => {
   return (
-    <>
+    <section className={style.sectionLeftContainer}>
       <div className={style.titleContainer}>
         <div className={style.center}></div>
         <div className={style.centerRight}></div>
@@ -24,7 +24,7 @@ const LeftSection = ({t, locale}) => {
           <span>{t('description.contact')}</span>
         </Link>
       </div>
-    </>
+    </section>
   )
 }
 

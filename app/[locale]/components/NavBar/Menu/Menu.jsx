@@ -7,6 +7,7 @@ import IntlSwitcher from '../IntlSwitcher/IntlSwitcher'
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 import { IoClose } from 'react-icons/io5'
+import DownloadResume from '../../DownloadResume/DonloadResume'
 
 const Menu = (props) => {
   const [menu, setMenu] = useState(false)
@@ -44,6 +45,7 @@ const Menu = (props) => {
             <Link href="#proyects">{proyects}</Link>
             <Link href="#">{contact}</Link>
           </div>
+          <DownloadResume downloadResume={props.downloadResume} />
           <div className={style.socialMedia}>
             <Link href="https://www.github.com/tatoclemente/" rel="noreferrer" className={style.github}>
               <BsGithub className={style.github} />
