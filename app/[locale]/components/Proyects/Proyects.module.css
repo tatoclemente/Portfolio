@@ -1,28 +1,27 @@
 .mainContainer {
-    min-height: 100vh;
-    width: 100vw;
-    background-color: rgb(118, 83, 151);
-    position: relative;
-    padding-top: 200px;
-    padding-bottom: 500px;
-    position: relative;
-    margin: 0 auto;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: rgb(118, 83, 151);
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 500px;
+  position: relative;
+  margin: 0 auto;
 }
 
-[data-theme='dark'] .mainContainer {
-    background-color: #05424e;
+[data-theme="dark"] .mainContainer {
+  background-color: #05424e;
 }
-.title{
-    position: absolute;
-    right: 6rem;
-    top: 9rem;
-    color: #fff;
-    font-family: 'Ubuntu', sans-serif;
-    letter-spacing: 1.3px;
-    font-size: 3.8rem;
-    z-index: 990;
+.title {
+  position: absolute;
+  right: 6rem;
+  top: 9rem;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 1.3px;
+  font-size: 3.8rem;
+  z-index: 990;
 }
-
 
 /* HEADER */
 
@@ -43,16 +42,15 @@
   cursor: pointer;
   border-top: 4px solid rgb(118, 83, 151);
   margin-left: 1px;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 [data-theme="dark"] .titleProyectContainerSelect {
-    background-color: rgb(156, 127, 183);
-    border-top: 4px solid #05424e;
-    
+  background-color: rgb(156, 127, 183);
+  border-top: 4px solid #05424e;
 }
 
 .titleProyectContainerSelect:hover {
-  background-color:#eefbfe;;
+  background-color: #eefbfe;
   border-bottom: 0;
 }
 [data-theme="dark"] .titleProyectContainerSelect:hover {
@@ -74,13 +72,13 @@
   border-bottom: 0;
 }
 .selectedTab .titleProyect {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.7rem;
 }
 .titleProyect {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.2rem;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 /* PROYECT CONTAINER */
@@ -100,98 +98,13 @@
   box-shadow: 10px 10px 35px rgba(13, 32, 37, 0.42);
 }
 
-.swiper {
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-bottom: 3rem;
-}
-.swiper:hover .nextButton {
-  opacity: 1;
-}
-.swiper:hover .prevButton {
-  opacity: 1;
-}
-
-/* SwiperNavigation.module.css */
-
-/* Estilo para la flecha de navegación "Siguiente" */
-.nextButton {
-  background-color: #304560; /* Color de fondo */
-  color: #eefbfe; /* Color del texto */
-  --swiper-navigation-size: 20px; /* Tamaño del texto */
-  font-weight: 700;
-  border-radius: 50%; /* Borde redondeado para hacer un botón circular */
-  width: 50px; /* Ancho del botón */
-  height: 50px; /* Altura del botón */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  right: 10px; /* Posición a la derecha */
-  top: 50%; /* Posición en la mitad vertical */
-  transform: translateY(-50%); /* Centra verticalmente */
-  cursor: pointer; /* Cambia el cursor al estilo de un enlace */
- opacity: 0;
- transition: .3s ease-in-out;
-}
-
-/* Estilo para la flecha de navegación "Anterior" */
-.prevButton {
-  background-color: #304560; /* Color de fondo */
-  color: #eefbfe; /* Color del texto */
-  --swiper-navigation-size: 20px; /* Tamaño del texto */
-  font-weight: 700;
-  border-radius: 50%; /* Borde redondeado para hacer un botón circular */
-  width: 50px; /* Ancho del botón */
-  height: 50px; /* Altura del botón */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  left: 10px; /* Posición a la izquierda */
-  top: 50%; /* Posición en la mitad vertical */
-  transform: translateY(-50%); /* Centra verticalmente */
-  cursor: pointer; /* Cambia el cursor al estilo de un enlace */
-  opacity: 0;
-  transition: .3s ease-in-out;
-}
-
-[data-theme='dark'] .prevButton {
-  background-color: #e4eefa; /* Color de fondo */
-  color: #041d22;
-}
-[data-theme='dark'] .nextButton {
-  background-color: #e4eefa; /* Color de fondo */
-  color: #041d22;
-}
-
-
-/* Estilo para las flechas al pasar el mouse */
-.nextButton:hover {
-  background-color: #3755c4; /* Cambia el color de fondo al pasar el mouse */
-  color: #eefbfe;
-}
-.prevButton:hover {
-  background-color: #3755c4; /* Cambia el color de fondo al pasar el mouse */
-  color: #eefbfe;
-}
-[data-theme='dark'] .prevButton:hover {
-  background-color: #175867; /* Cambia el color de fondo al pasar el mouse */
-  color: #eefbfe;
-}
-[data-theme='dark'] .nextButton:hover {
-  background-color: #175867; /* Cambia el color de fondo al pasar el mouse */
-  color: #eefbfe;
-}
-
-
 .swiperImage {
   border-radius: 5px;
   margin: 0 auto;
   box-shadow: 10px 10px 35px rgba(118, 83, 151, 0.338);
 }
-[data-theme='dark'] .swiperImage {
+
+[data-theme="dark"] .swiperImage {
   box-shadow: 10px 10px 35px rgba(23, 88, 103, 0.409);
 }
 
@@ -200,121 +113,120 @@
   bottom: -1px;
   z-index: 2;
 }
-[data-theme='dark'] .wavePath {
+[data-theme="dark"] .wavePath {
   fill: #041d22;
-  }
+}
 
-  .descriptionContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-  }
-    
-  .buttonLink {
-    width: 50%;
-    height: 3rem;
-    background-color: #3755c4;
-    color: #eefbfe;
-    padding: .3rem 1rem;
-    border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all .5s ease-in-out;
-    font-size: 1.2rem;
-  }
-  [data-theme='dark'] .buttonLink  {
-    background-color: #175867;
-  }
-  .buttonLink:hover {
-    background-color: #0f1457;
-    font-size: 1.6rem;
-  }
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
 
-  [data-theme='dark'] .buttonLink:hover {
-    background-color: rgb(78, 12, 122);
-  }
+.buttonLink {
+  width: 50%;
+  height: 3rem;
+  background-color: #3755c4;
+  color: #eefbfe;
+  padding: 0.3rem 1rem;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  font-size: 1.2rem;
+}
+[data-theme="dark"] .buttonLink {
+  background-color: #175867;
+}
+.buttonLink:hover {
+  background-color: #0f1457;
+  font-size: 1.6rem;
+}
 
+[data-theme="dark"] .buttonLink:hover {
+  background-color: rgb(78, 12, 122);
+}
 
-  @media (max-width: 800px) {
-    .mainContainer {
-      padding-bottom: 260px;
+@media (max-width: 800px) {
+  .mainContainer {
+    padding-bottom: 260px;
   }
-  .title{
+  .title {
     right: 50%;
     transform: translateX(50%);
     font-size: 3rem;
     top: 8rem;
   }
-    .header {
-      margin-left: 1rem;
-    }
-
-    .titleProyectContainerSelect {
-      height: 1.5rem;
-      width: 7.4rem;
-      border-radius: 10px 10px 0 0;
-      margin-top: 3rem;
-      cursor: pointer;
-      border-top: 4px solid rgb(118, 83, 151);
-      margin-left: .9px;
-    }
-    [data-theme="dark"] .titleProyectContainerSelect {
-        background-color: rgb(156, 127, 183);
-        border-top: 4px solid #05424e;
-        
-    }
-    
-    .selectedTab {
-      border: 2px solid rgb(232, 184, 111);
-      border-bottom: 0;
-    }
-
-    [data-theme="dark"] .selectedTab {
-      background-color: #041d22;
-      border: 2px solid rgba(118, 83, 151);
-      border-bottom: 0;
-    }
-    .selectedTab .titleProyect {
-      font-family: 'Ubuntu', sans-serif;
-      font-size: .9rem !important;
-    }
-    .titleProyect {
-      font-family: 'Ubuntu', sans-serif;
-      font-size: .6rem !important;
-      transition: .3s ease-in-out;
-    }
-    .proyectsContainer {
-      width: 98%;
-      height: 53vh;
-    }
-    .swiperImage{
-      max-width: 95%;
-      max-height: 190px;
-      margin-left: 10px;
-    }
-    .prevButton,.nextButton {
-      display: none;
-    }
-    .buttonLink {
-      width: 80%;
-      height: 2.3rem;
-      padding: .3rem 1rem;
-      border-radius: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: all .5s ease-in-out;
-      font-size: 1rem;
-    }
-    .buttonLink:hover {
-      background-color: #3755c4;
-      font-size: 1rem;
-    }
-
-    [data-theme='dark'] .buttonLink:hover  {
-      background-color: #175867;
-    }
+  .header {
+    margin-left: 1rem;
   }
+
+  .titleProyectContainerSelect {
+    height: 1.5rem;
+    width: 7.4rem;
+    border-radius: 10px 10px 0 0;
+    margin-top: 3rem;
+    cursor: pointer;
+    border-top: 4px solid rgb(118, 83, 151);
+    margin-left: 0.9px;
+  }
+  [data-theme="dark"] .titleProyectContainerSelect {
+    background-color: rgb(156, 127, 183);
+    border-top: 4px solid #05424e;
+  }
+
+  .selectedTab {
+    border: 2px solid rgb(232, 184, 111);
+    border-bottom: 0;
+  }
+
+  [data-theme="dark"] .selectedTab {
+    background-color: #041d22;
+    border: 2px solid rgba(118, 83, 151);
+    border-bottom: 0;
+  }
+  .selectedTab .titleProyect {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 0.9rem !important;
+  }
+  .titleProyect {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 0.6rem !important;
+    transition: 0.3s ease-in-out;
+  }
+  .proyectsContainer {
+    width: 98%;
+    height: 53vh;
+  }
+  .swiperImage {
+    max-width: 95%;
+    max-height: 190px;
+    margin-left: 10px;
+  }
+  .prevButton,
+  .nextButton {
+    display: none;
+  }
+  .buttonLink {
+    width: 80%;
+    height: 2.3rem;
+    padding: 0.3rem 1rem;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    font-size: 1rem;
+  }
+  .buttonLink:hover {
+    background-color: #3755c4;
+    font-size: 1rem;
+  }
+
+  [data-theme="dark"] .buttonLink:hover {
+    background-color: #175867;
+  }
+}

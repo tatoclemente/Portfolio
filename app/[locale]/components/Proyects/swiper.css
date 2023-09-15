@@ -4,6 +4,10 @@
   padding-bottom: 30px;
   margin-bottom: 3rem;
 }
+
+.swiper-slide {
+  margin-top: 2rem;
+}
 .swiper:hover .swiper-button-next {
   opacity: 1;
 }

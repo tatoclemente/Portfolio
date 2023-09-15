@@ -4,8 +4,6 @@ import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import Providers from './providers';
 import NavBar from './components/NavBar/NavBar';
-import AOSInit from './AOSInit';
-
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,7 +23,6 @@ export default function RootLayout({ children, params }) {
 
   return (
     <html lang={locale}>
-      <AOSInit />
         <body className={inter.className}>
           <Providers locale={locale}>
             <NavBar locale={locale} />
