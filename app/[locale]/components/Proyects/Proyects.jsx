@@ -4,7 +4,7 @@ import style from './Proyects.module.css'
 import { elFestin, piFood, rickAndMorty } from '@/app/assets/iamgeUrls'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import './swiper.css'
 import { Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, Autoplay } from 'swiper/modules';
 
 // Import Swiper styles
@@ -69,6 +69,7 @@ const Proyects = ({ title, buttonLink, proyectsList }) => {
                   modifier: 1,
                   slideShadows: true,
                 }}
+                navigation
                 spaceBetween={10}
                 autoplay={{
                   delay: 3000,
@@ -89,7 +90,7 @@ const Proyects = ({ title, buttonLink, proyectsList }) => {
                   }
                 }}
                 pagination={{ clickable: true }}
-                className={style.swiper}
+                className='swiper'
               >
                 {proyect.images.map((image, index) => {
                   return <SwiperSlide key={index}>
@@ -97,10 +98,10 @@ const Proyects = ({ title, buttonLink, proyectsList }) => {
                   </SwiperSlide>
                 })}
                 {/* Flecha de navegación "Siguiente" */}
-                <div className={`${style.nextButton} swiper-button-next`}></div>
+                {/* <div className={`${style.nextButton} swiper-button-next`}></div> */}
 
                 {/* Flecha de navegación "Anterior" */}
-                <div className={`${style.prevButton} swiper-button-prev`}></div>
+                {/* <div className={`${style.prevButton} swiper-button-prev`}></div> */}
               </Swiper>
 
               <div className={style.descriptionContainer}>

@@ -9,13 +9,31 @@ import { BsGithub, BsLinkedin } from 'react-icons/bs'
 import { IoClose } from 'react-icons/io5'
 import DownloadResume from '../../DownloadResume/DonloadResume'
 
+
 const Menu = (props) => {
   const [menu, setMenu] = useState(false)
+  const [isMobile, setIsMobile] = useState(false);
   const toggleMenu = () => {
     setMenu(!menu)
   }
 
-  const { about, proyects, contact, allRight } = props.menuItems;
+  const { about, proyects, meeting, contact, allRight } = props.menuItems;
+
+  
+  const checkMobile = () => {
+    setIsMobile(window.innerWidth <= 768); // Ajusta el valor según tus necesidades
+  };
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    isMobile && toggleMenu()
+    const meetingSection = document.querySelector('#meeting');
+    window.scrollTo({
+      top: meetingSection.offsetTop - 100, // Ajusta este valor para el desplazamiento deseado
+      behavior: 'smooth', // Para habilitar la animación de desplazamiento
+    });
+  };
+
 
   return (
     <div className={style.mainContainer}>
@@ -23,7 +41,8 @@ const Menu = (props) => {
         <div className={style.navBarLinks}>
           <Link href="#">{about}</Link>
           <Link href="#proyects">{proyects}</Link>
-          <Link href="#">{contact}</Link>
+          <Link href="#meeting" onClick={handleClick} >{meeting}</Link>
+          <Link href="#contact">{contact}</Link>
         </div>
         <div className={style.navBarSwetchers}>
           <IntlSwitcher locale={props.locale} />
@@ -41,9 +60,10 @@ const Menu = (props) => {
             <ThemeSwitcher />
           </div>
           <div className={style.navBarLinksToggle}>
-            <Link href="#">{about}</Link>
-            <Link href="#proyects">{proyects}</Link>
-            <Link href="#">{contact}</Link>
+            <Link href="#" onClick={toggleMenu}>{about}</Link>
+            <Link href="#proyects" onClick={toggleMenu}>{proyects}</Link>
+            <Link href="#meeting" onClick={handleClick} >{meeting}</Link>
+          <Link href="#contact" onClick={toggleMenu}>{contact}</Link>
           </div>
           <DownloadResume downloadResume={props.downloadResume} />
           <div className={style.socialMedia}>

@@ -197,7 +197,7 @@
 
 .wave {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   z-index: 2;
 }
 [data-theme='dark'] .wavePath {
@@ -243,8 +243,9 @@
       padding-bottom: 260px;
   }
   .title{
-    position: absolute;
-    right: 3.7rem;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 3rem;
     top: 8rem;
   }
     .header {
@@ -255,7 +256,7 @@
       height: 1.5rem;
       width: 7.4rem;
       border-radius: 10px 10px 0 0;
-      margin-top: 5rem;
+      margin-top: 3rem;
       cursor: pointer;
       border-top: 4px solid rgb(118, 83, 151);
       margin-left: .9px;
@@ -294,7 +295,9 @@
       max-height: 190px;
       margin-left: 10px;
     }
-
+    .prevButton,.nextButton {
+      display: none;
+    }
     .buttonLink {
       width: 80%;
       height: 2.3rem;

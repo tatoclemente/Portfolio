@@ -9,6 +9,7 @@ const NavBar = ({locale}) => {
       about: t('About'),
       proyects: t('Proyects'),
       contact: t('Contact'),
+      meeting: t('Meeting'),
       allRight: t('AllRight')
     }
     const downloadResume = t('DownloadResume')

@@ -3,6 +3,7 @@
     "About": "Sobre mí",
     "Proyects": "Proyectos",
     "Contact": "Contacto",
+    "Meeting": "Agendar reunión",
     "AllRight": "Todos los derechos resrvados",
     "DownloadResume": "Descargar CV"
   },
@@ -31,6 +32,18 @@
     "button": "Ingresa a ver el sitio aquí"
   },
   "Contact": {
-    "meeting": "Agenda un cita conmigo"
+    "meeting": "Agenda un cita conmigo",
+    "contact": "Contáctame",
+    "subtitle": "Si tiene alguna pregunta o duda, no dude en ponerse en contacto con migo.",
+    "helpMessage": "Estoy aquí para ayudarle!",
+    "name": "Nombre",
+    "namePlaceholder": "Ingrese su nombre aquí...",
+    "email": "Email",
+    "emailPlaceHolder": "Ingrese su mejor email...",
+    "message":"Message",
+    "messagePlaceHolder": "Escriba su consulta aquí...",
+    "buttonText": "Enviar"
   }
 }
+
+

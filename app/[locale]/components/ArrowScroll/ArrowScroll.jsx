@@ -17,8 +17,6 @@ const ArrowScroll = () => {
     return window.removeEventListener('scroll', handleScroll)
   }, []) 
 
- console.log(scrollTop);
-
   return (
     <div className={style.arrowScroll}>
       {scrollTop === 0 &&

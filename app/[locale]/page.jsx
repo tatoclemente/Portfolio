@@ -1,7 +1,7 @@
 // 
 import About from './components/About/About'
 import CalendlyForm from './components/Calendly/Calendly'
-import CarruselCards from './components/CarruselCard/CarruselCards'
+import { ContactUs } from './components/Form/ContactUs'
 import Proyects from './components/Proyects/Proyects'
 import style from './page.module.css'
 import { elFestin, piFood, rickAndMorty } from '@/app/assets/iamgeUrls'
@@ -12,6 +12,20 @@ export default function Home() {
   const t = useTranslations('Index')
   const tP = useTranslations('Proyects')
   const tC = useTranslations('Contact')
+
+  const contactIntl = {
+    meeting: tC("meeting"),
+    contact: tC("contact"),
+    subtitle: tC("subtitle"),
+    helpMessage: tC("helpMessage"),
+    name: tC("name"),
+    namePlaceholder: tC("namePlaceholder"),
+    email: tC("email"),
+    emailPlaceHolder: tC("emailPlaceHolder"),
+    message: tC("message"),
+    messagePlaceHolder: tC("messagePlaceHolder"),
+    buttonText: tC("buttonText"),
+  }
   
   const proyectsList = [
     {
@@ -37,8 +51,8 @@ export default function Home() {
     <div className={style.homeContainer}>
       <About t={t}/>
       <Proyects title={tP('title')} buttonLink={tP('button')} proyectsList={proyectsList}/>
-      {/* <CarruselCards /> */}
-      <CalendlyForm titleMeeting={tC("meeting")} />
+      <CalendlyForm titleMeeting={contactIntl.meeting} />
+      <ContactUs contactIntl={contactIntl}/>
     </div>
   )
 }

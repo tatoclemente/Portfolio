@@ -1,9 +1,9 @@
 .mainContainer {
-    min-height: 80vh;
+    min-height: 100vh;
 }
 .title {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: 'Ubuntu', sans-serif;
     padding-bottom: 2rem;
 }
@@ -22,8 +22,12 @@
 }
 
 @media (max-width: 768px) {
+    .mainContainer {
+        min-height: 70vh;
+    }
     .title {
         padding-top: 2rem;
+        font-size: 1.5rem;
     }
     .calendly {
       width: 90vw; /* Ancho del 90vw en dispositivos móviles */

@@ -6,8 +6,8 @@ const CalendlyForm = ({type, titleMeeting }) => {
     const showCookies = process.env.NEXT_PUBLIC_CALENDLY_SHOW_COOKIES == "false" ? 1 : 0;
 
     return (
-        <div className={style.mainContainer}>
-            <h3 className={style.title}>{titleMeeting}</h3>
+        <div className={style.mainContainer} id='meeting'>
+            <h1 className={style.title}>{titleMeeting}</h1>
             <div className={style.calendlyContainer}>
                 <div 
                 className={`calendly-inline-widget w-screen h-screen ${style.calendly}`} data-url={`https://calendly.com/${username}${type ? `/${type}` : ''}?hide_landing_page_details=${showDetails}&hide_gdpr_banner=${showCookies}`}></div>

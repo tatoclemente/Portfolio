@@ -3,6 +3,7 @@
     "About": "About",
     "Proyects": "Proyects",
     "Contact": "Contact",
+    "Meeting": "Schedule meeting",
     "AllRight": "All rights reserved",
     "DownloadResume": "Download CV"
   },
@@ -31,6 +32,16 @@
     "button": "Enter to see the site here"
   },
   "Contact": {
-    "meeting": "Schedule a meeting with me"
+    "meeting": "Schedule a meeting with me",
+    "contact": "Contact me",
+    "subtitle": "If you have any questions or concerns, please feel free to contact me.",
+    "helpMessage": "I'm here to help!",
+    "name": "Nombre",
+    "namePlaceholder": "Enter your name here...",
+    "email": "Email",
+    "emailPlaceHolder": "Enter your best email...",
+    "message":"Message",
+    "messagePlaceHolder": "Write your query here...",
+    "buttonText": "Send"
   }
 }

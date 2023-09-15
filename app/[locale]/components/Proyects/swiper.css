@@ -1,0 +1,69 @@
+.swiper {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 3rem;
+}
+.swiper:hover .swiper-button-next {
+  opacity: 1;
+}
+.swiper:hover .swiper-button-prev{
+  opacity: 1;
+}
+
+.swiper-button-prev {
+    background-color: #304560; /* Color de fondo */
+    color: #eefbfe !important; /* Color del texto */
+    --swiper-navigation-size: 20px; /* Tamaño del texto */
+    font-weight: 700;
+    border-radius: 50%; /* Borde redondeado para hacer un botón circular */
+    width: 50px !important; /* Ancho del botón */
+    height: 50px !important; /* Altura del botón */
+    transform: translateY(-50%); /* Centra verticalmente */
+    cursor: pointer !important; 
+    opacity: 0;
+    transition: .3s ease-in-out;
+    z-index: 990;
+}
+
+.swiper-button-next {
+    background-color: #304560; /* Color de fondo */
+    color: #eefbfe !important; /* Color del texto */
+    --swiper-navigation-size: 20px; /* Tamaño del texto */
+    font-weight: 700;
+    border-radius: 50%; /* Borde redondeado para hacer un botón circular */
+    width: 50px !important; /* Ancho del botón */
+    height: 50px !important; /* Altura del botón */
+    transform: translateY(-50%); /* Centra verticalmente */
+    cursor: pointer; /* Cambia el cursor al estilo de un enlace */
+   opacity: 0;
+   transition: .3s ease-in-out;
+}
+
+[data-theme='dark'] .swiper-button-prev {
+    background-color: #e4eefa; /* Color de fondo */
+    color: #041d22 !important;
+  }
+  [data-theme='dark'] .swiper-button-next {
+    background-color: #e4eefa; /* Color de fondo */
+    color: #041d22 !important;
+  }
+  
+  /* Estilo para las flechas al pasar el mouse */
+.swiper-button-next:hover {
+    background-color: #3755c4; /* Cambia el color de fondo al pasar el mouse */
+    color: #eefbfe;
+  }
+  .swiper-button-prev:hover {
+    background-color: #3755c4; /* Cambia el color de fondo al pasar el mouse */
+    color: #eefbfe;
+  }
+  [data-theme='dark'] .swiper-button-prev:hover {
+    background-color: #175867; /* Cambia el color de fondo al pasar el mouse */
+    color: #eefbfe;
+  }
+  [data-theme='dark'] .swiper-button-next:hover {
+    background-color: #175867; /* Cambia el color de fondo al pasar el mouse */
+    color: #eefbfe;
+  }
+  
