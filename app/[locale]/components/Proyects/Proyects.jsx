@@ -1,11 +1,13 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './Proyects.module.css'
+import styleModal from './Modal.module.css'
 import { elFestin, piFood, rickAndMorty } from '@/app/assets/iamgeUrls'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './swiper.css'
 import { Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, Autoplay } from 'swiper/modules';
+import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -18,12 +20,30 @@ import Link from 'next/link';
 import Technologies from './Technologies/Technologies';
 
 
+
 const Proyects = ({ title, buttonLink, proyectsList }) => {
+  const [isMobile, setIsMobile] = useState(false);
   const [selectedTab, setSelectedTab] = useState('El Festin'); // Inicialmente selecciona 'El Festin'
 
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 768);
+  }, []);
   const handleTabClick = (tab) => {
     setSelectedTab(tab);
   };
+
+  const openModal = (imageUrl) => {
+    const modal = document.getElementById("myModal");
+    const modalImage = document.getElementById("modalImage");
+    modalImage.src = imageUrl;
+    modal.style.display = "block";
+  };
+  
+  const closeModal = () => {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  };
+  
 
   return (
     <div className={style.mainContainer} id='proyects'>
@@ -93,15 +113,11 @@ const Proyects = ({ title, buttonLink, proyectsList }) => {
                 className='swiper'
               >
                 {proyect.images.map((image, index) => {
-                  return <SwiperSlide key={index}>
-                    <CldImage className={style.swiperImage} src={image} alt='phProyect' width={580} height={300} />
-                  </SwiperSlide>
+                  return (<SwiperSlide key={index}>
+                            <CldImage onClick={() => openModal(image)} className={style.swiperImage} src={image} alt='phProyect' width={580} height={300} />
+                          </SwiperSlide>
+                          )
                 })}
-                {/* Flecha de navegación "Siguiente" */}
-                {/* <div className={`${style.nextButton} swiper-button-next`}></div> */}
-
-                {/* Flecha de navegación "Anterior" */}
-                {/* <div className={`${style.prevButton} swiper-button-prev`}></div> */}
               </Swiper>
 
               <div className={style.descriptionContainer}>
@@ -111,6 +127,18 @@ const Proyects = ({ title, buttonLink, proyectsList }) => {
 
             </article>
           ))}
+        <div id="myModal" className={styleModal.modal}>
+          <div className={styleModal.modalContent}>
+            <span className={styleModal.close} onClick={closeModal}>x</span>
+            <TransformWrapper defaultScale={1} defaultPositionX={200} defaultPositionY={200}>
+              <TransformComponent>
+                <CldImage id="modalImage" className={styleModal.modalImage} alt='phProyect' width={isMobile ? 400 : 1060} height={isMobile ? 200 : 500} />
+              </TransformComponent>
+
+            </TransformWrapper>
+          </div>
+        </div>
+
       </div>
       <Technologies />
 

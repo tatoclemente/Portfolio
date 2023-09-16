@@ -2,6 +2,7 @@ import React from 'react'
 import style from './NavBar.module.css'
 import { useTranslations } from 'next-intl'
 import Menu from './Menu/Menu'
+import Link from 'next/link'
 
 const NavBar = ({locale}) => {
     const t = useTranslations('NavBar')
@@ -16,8 +17,7 @@ const NavBar = ({locale}) => {
   return (
     <div className={style.navBarContainer}>
         <div className={style.navBarLogo}>
-            {/* <img src="/logo.png" alt="logo" /> */}
-            <h1>GC</h1>
+            <Link href='#'><h1>GC</h1></Link>
         </div>
         <Menu menuItems={menuItems} locale={locale} downloadResume={downloadResume} />
     </div>

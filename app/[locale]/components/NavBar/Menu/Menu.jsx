@@ -26,7 +26,7 @@ const Menu = (props) => {
   };
 
   useEffect(() => {
-    handleLinkClick('About')
+    props.locale === 'en' ? handleLinkClick('About') : handleLinkClick('Sobre mí')
     setIsMobile(window.innerWidth <= 768);
   }, []);
 

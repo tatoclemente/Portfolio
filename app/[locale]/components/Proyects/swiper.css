@@ -17,7 +17,7 @@
 
 .swiper-button-prev {
     background-color: #304560; /* Color de fondo */
-    color: #eefbfe !important; /* Color del texto */
+    --swiper-navigation-color:#eefbfe;
     --swiper-navigation-size: 20px; /* Tamaño del texto */
     font-weight: 700;
     border-radius: 50%; /* Borde redondeado para hacer un botón circular */
@@ -32,7 +32,7 @@
 
 .swiper-button-next {
     background-color: #304560; /* Color de fondo */
-    color: #eefbfe !important; /* Color del texto */
+    --swiper-navigation-color:#eefbfe;
     --swiper-navigation-size: 20px; /* Tamaño del texto */
     font-weight: 700;
     border-radius: 50%; /* Borde redondeado para hacer un botón circular */
@@ -46,11 +46,11 @@
 
 [data-theme='dark'] .swiper-button-prev {
     background-color: #e4eefa; /* Color de fondo */
-    color: #041d22 !important;
+    --swiper-navigation-color:#041d22;
   }
   [data-theme='dark'] .swiper-button-next {
     background-color: #e4eefa; /* Color de fondo */
-    color: #041d22 !important;
+    --swiper-navigation-color:#041d22;
   }
   
   /* Estilo para las flechas al pasar el mouse */
@@ -70,10 +70,20 @@
     background-color: #175867; /* Cambia el color de fondo al pasar el mouse */
     color: #eefbfe;
   }
+
+.swiper-button-disabled {
+    display: none !important;
+  }
   
   @media (max-width: 800px) {
     .swiper-button-next, .swiper-button-prev {
       display: none;
+    }
+    .swiper:hover .swiper-button-next {
+      opacity: 0;
+    }
+    .swiper:hover .swiper-button-prev{
+      opacity: 0;
     }
     .swiper-slide {
       margin-top: .8rem;
