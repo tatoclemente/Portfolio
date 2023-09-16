@@ -53,7 +53,7 @@ Una plataforma de comercio electrónico innovadora diseñada específicamente pa
   [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white&labelColor=101010)]()
   [![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?logo=sequelize&logoColor=white&labelColor=101010)]()
 
-  ### Proyecto 3: [Rick And Morty](https://rickandmorty-five-ruby.vercel.app/)
+### Proyecto 3: [Rick And Morty](https://rickandmorty-five-ruby.vercel.app/)
 - Échale un ojo a esta Aplicación de Página Única (SPA) donde comencé mi aventura como desarrollador Fullstack. Incluye páginas de registro e inicio de sesión, y se conecta perfectamente con la API de Rick and Morty para mostrar tarjetas de personajes, permitiendo a los usuarios añadir a sus personajes favoritos a su colección.
 - Tecnologías Utilizadas:
   
@@ -75,7 +75,7 @@ Una plataforma de comercio electrónico innovadora diseñada específicamente pa
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=LinkedIn&logoColor=white&labelColor=101010)](https://linkedin.com/in/tatoclemente/)
 [![Gmail](https://img.shields.io/badge/Gmail-EA4335?logo=Gmail&logoColor=white&labelColor=101010)](mailto:soytatoclemente@gmail.com?Subject=Contacto%20por%20colaboración)
 
-- ## Programa una Reunión
+## Programa una Reunión
 
 Si deseas programar una reunión conmigo, puedes utilizar mi servicio de programación a través de Calendly. Es fácil y conveniente. Simplemente haz clic en el enlace a continuación para seleccionar una fecha y hora que te funcione <br/>(También lo puedes hacer desde mi [portfolio](https://www.tatoclemente.dev/) 😉)
 
