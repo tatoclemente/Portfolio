@@ -24,7 +24,7 @@
       "description": "Una plataforma de comercio electrónico innovadora diseñada específicamente para un restaurante, meticulosamente elaborada utilizando tecnologías de vanguardia como React, Express y PostgreSQL. El proyecto sigue el disciplinado marco de la metodología SCRUM para garantizar un desarrollo y entrega eficientes."
     },
     "henryFood": {
-      "description": "Te presento esta genial aplicación de recetas que incorpora información de una API y permite la creación de recetas personalizadas. Este p´royecto ha sido desarrollada utilizando tecnologías como React, Express, Cloudinary y PostgreSQL. Forma parte de mi proyecto individual en el bootcamp de SoyHenry, donde pongo en práctica mis habilidades de desarrollo."
+      "description": "Te presento esta genial aplicación de recetas que incorpora información de una API y permite la creación de recetas personalizadas. Este proyecto ha sido desarrollada utilizando tecnologías como React, Express, Cloudinary y PostgreSQL. Forma parte de mi proyecto individual en el bootcamp de SoyHenry, donde pongo en práctica mis habilidades de desarrollo."
     },
     "rickAndMorty": {
       "description": "Échale un ojo a esta Aplicación de Página Única (SPA) donde comencé mi aventura como desarrollador Fullstack. Incluye páginas de registro e inicio de sesión, y se conecta perfectamente con la API de Rick and Morty para mostrar tarjetas de personajes, permitiendo a los usuarios añadir a sus personajes favoritos a su colección."
