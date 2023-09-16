@@ -1,68 +1,68 @@
 .mainContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  user-select: none;
 }
 .global {
-    color: rgb(2, 60, 104);
-    font-size: 1.8rem;
-    cursor: pointer;
+  color: rgb(2, 60, 104);
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
-[data-theme='dark'] .global {
-    color: rgb(0, 145, 255);
+[data-theme="dark"] .global {
+  color: rgb(0, 145, 255);
 }
 
 .linksContainer {
-    position: absolute;
-    width: 3.5rem;
-    height: 4rem;
-    background-color: rgb(81, 139, 183);
-    top:105%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
+  position: absolute;
+  width: 3.5rem;
+  height: 4rem;
+  background-color: rgb(81, 139, 183);
+  top: 105%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
 }
 
 @media (max-width: 970px) {
-    .linksContainer {
-        width: 4rem;
-        height: 5rem;
-        gap: 1rem;
-    }
-    .linksContainer a {
-        padding-left: 0;
-        width: 100%;
-        text-align: center;
-        margin-left: 0;
-    }
+  .linksContainer {
+    width: 4rem;
+    height: 5rem;
+    gap: 1rem;
+  }
+  .linksContainer a {
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
 }
 
-[data-theme='dark'] .linksContainer {
-    background-color: rgb(2, 60, 104);
+[data-theme="dark"] .linksContainer {
+  background-color: rgb(2, 60, 104);
 }
 
 .linksContainer a {
-    z-index: 50;
-    color: #fff;
-    width: 90%;
-    text-align: center;
-    padding: 0 .5rem;
-    user-select: none !important;
+  z-index: 50;
+  color: #fff;
+  width: 90%;
+  text-align: center;
+  padding: 0 0.5rem;
+  user-select: none !important;
 }
 
 .active {
-    border-left: 3px solid rgb(236, 189, 102);
+  border-left: 3px solid rgb(236, 189, 102);
 }
 
 .inactive {
-    border-left: 2px solid transparent;
+  border-left: 2px solid transparent;
 }
 
 .linksContainer a:hover {
-    color: rgb(236, 189, 102);
+  color: rgb(236, 189, 102);
 }

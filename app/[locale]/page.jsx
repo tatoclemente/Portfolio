@@ -7,7 +7,7 @@ import Proyects from './components/Proyects/Proyects'
 import style from './page.module.css'
 import { elFestin, piFood, rickAndMorty } from '@/app/assets/iamgeUrls'
 
-import {useTranslations} from 'next-intl'
+import { useTranslations } from 'next-intl'
 
 export default function Home() {
   const t = useTranslations('Index')
@@ -34,7 +34,7 @@ export default function Home() {
     buttonText: tC("buttonText"),
     alert: tC("alert"),
   }
-  
+
   const proyectsList = [
     {
       title: 'El Festin',
@@ -57,10 +57,10 @@ export default function Home() {
   ]
   return (
     <div className={style.homeContainer}>
-      <About t={t}/>
-      <Proyects title={tP('title')} buttonLink={tP('button')} proyectsList={proyectsList}/>
+      <About t={t} />
+      <Proyects title={tP('title')} buttonLink={tP('button')} proyectsList={proyectsList} />
       <CalendlyForm titleMeeting={contactIntl.meeting} />
-      <ContactUs contactIntl={contactIntl}/>
+      <ContactUs contactIntl={contactIntl} />
       <Footer />
     </div>
   )

@@ -12,7 +12,6 @@ const ArrowScroll = () => {
       const { scrollTop } = event.target;
       setScrollTop(scrollTop)
     };
-    //window.onscroll=()=>this does work/
     window.addEventListener('scroll', handleScroll)
     return window.removeEventListener('scroll', handleScroll)
   }, []) 

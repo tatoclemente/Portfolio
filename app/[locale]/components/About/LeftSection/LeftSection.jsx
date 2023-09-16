@@ -2,14 +2,14 @@
 import React from 'react'
 import style from './LeftSection.module.css'
 import Link from 'next/link'
-const LeftSection = ({leftText, locale}) => {
+const LeftSection = ({ leftText, locale }) => {
   const { hello, name, descriptionHeader, descriptionP1, descriptionP2, descriptionContact } = leftText;
   const handleClickContact = (e) => {
     e.preventDefault();
     const contactSection = document.querySelector('#contact');
     window.scrollTo({
-      top: contactSection.offsetTop - 100, // Ajusta este valor para el desplazamiento deseado
-      behavior: 'smooth', // Para habilitar la animación de desplazamiento
+      top: contactSection.offsetTop - 100,
+      behavior: 'smooth', 
     });
   };
   return (

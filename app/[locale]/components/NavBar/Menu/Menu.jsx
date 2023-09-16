@@ -48,8 +48,8 @@ const Menu = (props) => {
     isMobile && toggleMenu()
     const meetingSection = document.querySelector('#meeting');
     window.scrollTo({
-      top: meetingSection.offsetTop - 100, // Ajusta este valor para el desplazamiento deseado
-      behavior: 'smooth', // Para habilitar la animación de desplazamiento
+      top: meetingSection.offsetTop - 100,
+      behavior: 'smooth',
     });
   };
 
@@ -58,8 +58,8 @@ const Menu = (props) => {
     isMobile && toggleMenu()
     const contactSection = document.querySelector('#contact');
     window.scrollTo({
-      top: contactSection.offsetTop - 100, // Ajusta este valor para el desplazamiento deseado
-      behavior: 'smooth', // Para habilitar la animación de desplazamiento
+      top: contactSection.offsetTop - 100,
+      behavior: 'smooth',
     });
   };
 

@@ -11,81 +11,82 @@
 .swiper:hover .swiper-button-next {
   opacity: 1;
 }
-.swiper:hover .swiper-button-prev{
+.swiper:hover .swiper-button-prev {
   opacity: 1;
 }
 
 .swiper-button-prev {
-    background-color: #304560; /* Color de fondo */
-    --swiper-navigation-color:#eefbfe;
-    --swiper-navigation-size: 20px; /* Tamaño del texto */
-    font-weight: 700;
-    border-radius: 50%; /* Borde redondeado para hacer un botón circular */
-    width: 50px !important; /* Ancho del botón */
-    height: 50px !important; /* Altura del botón */
-    transform: translateY(-50%); /* Centra verticalmente */
-    cursor: pointer !important; 
-    opacity: 0;
-    transition: .3s ease-in-out;
-    z-index: 990;
+  background-color: #304560;
+  --swiper-navigation-color: #eefbfe;
+  --swiper-navigation-size: 20px;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 50px !important;
+  height: 50px !important;
+  transform: translateY(-50%); /* Centra verticalmente */
+  cursor: pointer !important;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  z-index: 990;
 }
 
 .swiper-button-next {
-    background-color: #304560; /* Color de fondo */
-    --swiper-navigation-color:#eefbfe;
-    --swiper-navigation-size: 20px; /* Tamaño del texto */
-    font-weight: 700;
-    border-radius: 50%; /* Borde redondeado para hacer un botón circular */
-    width: 50px !important; /* Ancho del botón */
-    height: 50px !important; /* Altura del botón */
-    transform: translateY(-50%); /* Centra verticalmente */
-    cursor: pointer; /* Cambia el cursor al estilo de un enlace */
-   opacity: 0;
-   transition: .3s ease-in-out;
+  background-color: #304560;
+  --swiper-navigation-color: #eefbfe;
+  --swiper-navigation-size: 20px;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 50px !important;
+  height: 50px !important;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
 }
 
-[data-theme='dark'] .swiper-button-prev {
-    background-color: #e4eefa; /* Color de fondo */
-    --swiper-navigation-color:#041d22;
-  }
-  [data-theme='dark'] .swiper-button-next {
-    background-color: #e4eefa; /* Color de fondo */
-    --swiper-navigation-color:#041d22;
-  }
-  
-  /* Estilo para las flechas al pasar el mouse */
+[data-theme="dark"] .swiper-button-prev {
+  background-color: #e4eefa; /* Color de fondo */
+  --swiper-navigation-color: #041d22;
+}
+[data-theme="dark"] .swiper-button-next {
+  background-color: #e4eefa; /* Color de fondo */
+  --swiper-navigation-color: #041d22;
+}
+
+/* Estilo para las flechas al pasar el mouse */
 .swiper-button-next:hover {
-    background-color: #3755c4; /* Cambia el color de fondo al pasar el mouse */
-    color: #eefbfe;
-  }
-  .swiper-button-prev:hover {
-    background-color: #3755c4; /* Cambia el color de fondo al pasar el mouse */
-    color: #eefbfe;
-  }
-  [data-theme='dark'] .swiper-button-prev:hover {
-    background-color: #175867; /* Cambia el color de fondo al pasar el mouse */
-    color: #eefbfe;
-  }
-  [data-theme='dark'] .swiper-button-next:hover {
-    background-color: #175867; /* Cambia el color de fondo al pasar el mouse */
-    color: #eefbfe;
-  }
+  background-color: #3755c4;
+  color: #eefbfe;
+}
+.swiper-button-prev:hover {
+  background-color: #3755c4;
+  color: #eefbfe;
+}
+[data-theme="dark"] .swiper-button-prev:hover {
+  background-color: #175867; /* Cambia el color de fondo al pasar el mouse */
+  color: #eefbfe;
+}
+[data-theme="dark"] .swiper-button-next:hover {
+  background-color: #175867;
+  color: #eefbfe;
+}
 
 .swiper-button-disabled {
-    display: none !important;
+  display: none !important;
+}
+
+@media (max-width: 800px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
   }
-  
-  @media (max-width: 800px) {
-    .swiper-button-next, .swiper-button-prev {
-      display: none;
-    }
-    .swiper:hover .swiper-button-next {
-      opacity: 0;
-    }
-    .swiper:hover .swiper-button-prev{
-      opacity: 0;
-    }
-    .swiper-slide {
-      margin-top: .8rem;
-    }
+  .swiper:hover .swiper-button-next {
+    opacity: 0;
   }
+  .swiper:hover .swiper-button-prev {
+    opacity: 0;
+  }
+  .swiper-slide {
+    margin-top: 0.8rem;
+  }
+}

@@ -35,7 +35,7 @@
   z-index: 1;
 }
 
-[data-theme='dark'] .wave path {
+[data-theme="dark"] .wave path {
   fill: #041d22;
 }
 @media (min-width: 1400px) {
@@ -224,5 +224,4 @@
       bottom: -8%;
     }
   }
-
 }

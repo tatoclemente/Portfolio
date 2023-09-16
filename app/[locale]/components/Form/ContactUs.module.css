@@ -81,10 +81,7 @@
 }
 
 @media (max-width: 768px) {
-  /* .formContainer {
-        margin-top: -4rem;
-    }
-     */
+
   .formContainer h1 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
@@ -94,7 +91,7 @@
     background-color: #3755c4;
     font-size: 1.1rem;
   }
-  
+
   [data-theme="dark"] .buttonSubmit:hover {
     background-color: #07363f;
   }
@@ -127,45 +124,3 @@
   color: red;
   margin-left: 0.3rem;
 }
-/* .errorMessageSteps {
-    position: absolute;
-    background-color: #ffdddd;
-    color: #ff0000;
-    padding: 10px;
-    border: 1px solid #ff0000;
-    border-radius: 4px;
-    bottom: -38px;
-} */
-
-/* .errorMessageImage {
-    position: absolute;
-    background-color: #ffdddd;
-    color: #ff0000;
-    padding: 10px;
-    border: 1px solid #ff0000;
-    border-radius: 4px;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -38px;
-    z-index: 2;
-} */
-
-/* .errorMessageSteps .arrowUp {
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #ffdddd;
-}
-
-.errorMessageImage .arrowUp {
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #ffdddd;
-} */

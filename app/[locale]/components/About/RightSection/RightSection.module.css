@@ -155,15 +155,15 @@
 
   .boobleLeftClick {
     filter: brightness(1.5);
-  box-shadow: 0 0 30px rgb(232, 184, 111);
-  opacity: 0.7;
+    box-shadow: 0 0 30px rgb(232, 184, 111);
+    opacity: 0.7;
   }
   [data-theme="dark"] .boobleLeftClick {
     filter: brightness(1.5);
     opacity: 0.8;
     box-shadow: 0 0 30px rgb(118, 83, 151);
   }
-  
+
   .boobleRightMobile {
     position: absolute;
     background-color: rgb(118, 83, 151);
@@ -180,13 +180,12 @@
   [data-theme="dark"] .boobleRightMobile {
     background-color: rgb(232, 184, 111);
   }
-  
+
   .boobleRightClick {
     filter: brightness(2);
-  background-color: rgba(41, 18, 215) !important
-  ;
-  opacity: 0.5;
-  box-shadow: 0 0 30px rgb(81, 79, 199);
+    background-color: rgba(41, 18, 215) !important;
+    opacity: 0.5;
+    box-shadow: 0 0 30px rgb(81, 79, 199);
   }
   [data-theme="dark"] .boobleRightClick {
     filter: brightness(1.5);
@@ -198,7 +197,7 @@
     filter: sepia(0.7);
     z-index: 5;
     animation: input-image 1s linear;
-    transform: scale(.6);
+    transform: scale(0.6);
     transition: filter 0.3s ease-in-out;
   }
   [data-theme="dark"] .imageMobile {
@@ -242,10 +241,9 @@
       opacity: 1;
     }
     100% {
-      transform: scale(.6) translateY(-5rem);
+      transform: scale(0.6) translateY(-5rem);
     }
   }
-  
 }
 
 @media (max-width: 400px) {
@@ -258,7 +256,6 @@
     top: 12rem;
     animation: input-left 1.3s linear alternate;
   }
-
 
   .boobleRightMobile {
     position: absolute;

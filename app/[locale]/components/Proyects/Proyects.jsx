@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from 'react'
 import style from './Proyects.module.css'
 import styleModal from './Modal.module.css'
+import './swiper.css'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import './swiper.css'
 import { Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, Autoplay } from 'swiper/modules';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch'
 
@@ -13,8 +13,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-// import Image from 'next/image';
+
+// import CldImage from 'next/cloudinary';
 import { CldImage } from 'next-cloudinary';
+
 import Link from 'next/link';
 import Technologies from './Technologies/Technologies';
 
@@ -25,7 +27,18 @@ const Proyects = ({ title, buttonLink, proyectsList }) => {
   const [selectedTab, setSelectedTab] = useState('El Festin'); // Inicialmente selecciona 'El Festin'
 
   useEffect(() => {
-    setIsMobile(window.innerWidth <= 768);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768); 
+    };
+
+    // Ejecutar la función al cargar la página y en cambios de tamaño de ventana
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    // Limpieza del evento al desmontar el componente
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
   }, []);
   const handleTabClick = (tab) => {
     setSelectedTab(tab);
@@ -37,12 +50,12 @@ const Proyects = ({ title, buttonLink, proyectsList }) => {
     modalImage.src = imageUrl;
     modal.style.display = "block";
   };
-  
+
   const closeModal = () => {
     const modal = document.getElementById("myModal");
     modal.style.display = "none";
   };
-  
+
 
   return (
     <div className={style.mainContainer} id='proyects'>
@@ -113,9 +126,9 @@ const Proyects = ({ title, buttonLink, proyectsList }) => {
               >
                 {proyect.images.map((image, index) => {
                   return (<SwiperSlide key={index}>
-                            <CldImage onClick={() => openModal(image)} className={style.swiperImage} src={image} alt='phProyect' width={580} height={300} />
-                          </SwiperSlide>
-                          )
+                    <CldImage onClick={() => openModal(image)} className={style.swiperImage} src={image} alt='phProyect' width={580} height={300} />
+                  </SwiperSlide>
+                  )
                 })}
               </Swiper>
 
@@ -131,7 +144,7 @@ const Proyects = ({ title, buttonLink, proyectsList }) => {
             <span className={styleModal.close} onClick={closeModal}>x</span>
             <TransformWrapper defaultScale={1} defaultPositionX={200} defaultPositionY={200}>
               <TransformComponent>
-                <CldImage id="modalImage" className={styleModal.modalImage} alt='phProyect' width={isMobile ? 600 : 1150} height={isMobile ? 200 : 550} />
+                <CldImage id="modalImage" className={styleModal.modalImage} alt='phProyect' width={isMobile ? 600 : 1150} height={isMobile ? 190 : 550} />
               </TransformComponent>
 
             </TransformWrapper>

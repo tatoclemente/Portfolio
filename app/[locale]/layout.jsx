@@ -23,12 +23,12 @@ export default function RootLayout({ children, params }) {
 
   return (
     <html lang={locale}>
-        <body className={inter.className}>
-          <Providers locale={locale}>
-            <NavBar locale={locale} />
-            {children}
-          </Providers>
-        </body>
+      <body className={inter.className}>
+        <Providers locale={locale}>
+          <NavBar locale={locale} />
+          {children}
+        </Providers>
+      </body>
     </html>
   )
 }

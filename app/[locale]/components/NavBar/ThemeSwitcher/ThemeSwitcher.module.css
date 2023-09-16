@@ -1,48 +1,48 @@
 .mainContainer {
-    position: relative;
-    width: 3.8rem;
-    height: 1.9rem;
-    border-radius: 20px;
-    background-color: rgb(82, 177, 244);
-    border: 1.5px solid #252525;
-    overflow: hidden;
-    cursor: pointer;
-    transition: .5s ease-in-out;
+  position: relative;
+  width: 3.8rem;
+  height: 1.9rem;
+  border-radius: 20px;
+  background-color: rgb(82, 177, 244);
+  border: 1.5px solid #252525;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
 
-[data-theme='dark'] .mainContainer {
-    background-color: rgb(10, 3, 32);
-    border: 1.5px solid#ddddde;
+[data-theme="dark"] .mainContainer {
+  background-color: rgb(10, 3, 32);
+  border: 1.5px solid#ddddde;
 }
 .ball {
- width: 1.8rem;
- height: 1.8rem;
- border-radius: 50%;
- position: absolute;
- background-color:#eefbfe;
- top: -.5px;
- left: -1px;
- z-index: 5;
- transform: translateX(103%);
- transition: .5s ease-in-out;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #eefbfe;
+  top: -0.5px;
+  left: -1px;
+  z-index: 5;
+  transform: translateX(103%);
+  transition: 0.5s ease-in-out;
 }
 
-[data-theme='dark'] .ball {
-    transform: translateX(0);
+[data-theme="dark"] .ball {
+  transform: translateX(0);
 }
 
 .iconSun {
-    position: absolute;
-    top: 2.5px;
-    left: 3.5px;
-    font-size: 1.4rem;
-    color: rgb(255, 225, 0);
+  position: absolute;
+  top: 2.5px;
+  left: 3.5px;
+  font-size: 1.4rem;
+  color: rgb(255, 225, 0);
 }
 
 .iconMoon {
-    position: absolute;
-    top: 1.8px;
-    right: 3.5px;
-    font-size: 1.4rem;
-    color: rgb(245, 232, 139);
+  position: absolute;
+  top: 1.8px;
+  right: 3.5px;
+  font-size: 1.4rem;
+  color: rgb(245, 232, 139);
 }

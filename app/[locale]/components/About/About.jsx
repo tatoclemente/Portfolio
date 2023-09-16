@@ -9,7 +9,7 @@ const About = ({ t }) => {
   const locale = useLocale()
 
   const leftText = {
-    hola: t("hello"),
+    hello: t("hello"),
     name: t("name"),
     descriptionHeader: t("description.header"),
     descriptionP1: t('description.p1'),

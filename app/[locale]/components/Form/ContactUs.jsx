@@ -6,8 +6,8 @@ import validations from '../../Functions/validations'
 
 export const ContactUs = ({ contactIntl }) => {
   const form = useRef();
-  const { nameError,nameErrorFormat, emailError, emailErrorFormat, messageError, messageErrorFormat } = contactIntl
-  const errorMsjs = { nameError, nameErrorFormat, emailError, emailErrorFormat, messageError, messageErrorFormat}
+  const { nameError, nameErrorFormat, emailError, emailErrorFormat, messageError, messageErrorFormat } = contactIntl
+  const errorMsjs = { nameError, nameErrorFormat, emailError, emailErrorFormat, messageError, messageErrorFormat }
 
   const [formValues, setFormValues] = useState({
     user_name: '',
@@ -101,29 +101,29 @@ export const ContactUs = ({ contactIntl }) => {
         <li>
           <label>{contactIntl.name}<span className={style.required}>*</span></label>
           <input onChange={handleChange} value={formValues.user_name} type="text" name="user_name" placeholder={contactIntl.namePlaceholder} />
-          {touchedFields.user_name && errors.user_name 
-          ? (
+          {touchedFields.user_name && errors.user_name
+            ? (
               <div className={style.errorMessage}>
                 <div className={style.arrowUp}></div>
                 <p className={style.warning}>{errors.user_name}</p>
               </div>
             )
-          : null
+            : null
           }
         </li>
         <li>
           <label>{contactIntl.email}<span className={style.required}>*</span></label>
           <input onChange={handleChange} value={formValues.user_email} type="email" name="user_email" placeholder={contactIntl.emailPlaceHolder} />
           {
-            touchedFields.user_email&& errors.user_email 
-            ?
+            touchedFields.user_email && errors.user_email
+              ?
               (
                 <div className={style.errorMessage}>
                   <div className={style.arrowUp}></div>
                   <p className={style.warning}>{errors.user_email}</p>
                 </div>
               )
-            : null
+              : null
           }
         </li>
         <li>
@@ -137,13 +137,13 @@ export const ContactUs = ({ contactIntl }) => {
           <span className={style.docCharacters}>{`${varCharacters}/${maxCaracteres}`}</span>
           {
             touchedFields.message && errors.message
-            ? (
+              ? (
                 <div className={style.errorMessage}>
                   <div className={style.arrowUp}></div>
                   <p className={style.warning}>{errors.message}</p>
                 </div>
               )
-            : null
+              : null
           }
         </li>
       </ul>

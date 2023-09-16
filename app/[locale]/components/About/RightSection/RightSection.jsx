@@ -15,9 +15,9 @@ const RightSection = () => {
 
 
   useEffect(() => {
-    // Verificar si la ventana tiene un ancho menor o igual a 768px (o el valor que desees para dispositivos móviles)
+    // Verifica si la ventana tiene un ancho menor o igual a 768px 
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768); // Ajusta el valor según tus necesidades
+      setIsMobile(window.innerWidth <= 768); 
     };
 
     // Ejecutar la función al cargar la página y en cambios de tamaño de ventana
