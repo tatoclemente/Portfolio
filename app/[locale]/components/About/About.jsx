@@ -7,10 +7,19 @@ import RightSection from './RightSection/RightSection'
 
 const About = ({ t }) => {
   const locale = useLocale()
+
+  const leftText = {
+    hola: t("hello"),
+    name: t("name"),
+    descriptionHeader: t("description.header"),
+    descriptionP1: t('description.p1'),
+    descriptionP2: t('description.p2'),
+    descriptionContact:t('description.contact')
+  }
   return (
     <div className={style.AboutContainer}>
       <section className={style.sectionLeft}>
-        <LeftSection t={t} locale={locale} />
+        <LeftSection leftText={leftText} locale={locale} />
       </section>
       <section className={style.sectionRight}>
         <RightSection />

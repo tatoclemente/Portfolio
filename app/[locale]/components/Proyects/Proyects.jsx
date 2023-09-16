@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react'
 import style from './Proyects.module.css'
 import styleModal from './Modal.module.css'
-import { elFestin, piFood, rickAndMorty } from '@/app/assets/iamgeUrls'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './swiper.css'
@@ -132,7 +131,7 @@ const Proyects = ({ title, buttonLink, proyectsList }) => {
             <span className={styleModal.close} onClick={closeModal}>x</span>
             <TransformWrapper defaultScale={1} defaultPositionX={200} defaultPositionY={200}>
               <TransformComponent>
-                <CldImage id="modalImage" className={styleModal.modalImage} alt='phProyect' width={isMobile ? 400 : 1060} height={isMobile ? 200 : 500} />
+                <CldImage id="modalImage" className={styleModal.modalImage} alt='phProyect' width={isMobile ? 600 : 1150} height={isMobile ? 173 : 550} />
               </TransformComponent>
 
             </TransformWrapper>
