@@ -75,4 +75,7 @@
     .swiper-button-next, .swiper-button-prev {
       display: none;
     }
+    .swiper-slide {
+      margin-top: .8rem;
+    }
   }

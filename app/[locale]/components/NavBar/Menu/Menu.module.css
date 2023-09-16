@@ -18,7 +18,8 @@
 }
 .navBarLinks {
     display: flex;
-    margin-right: 3rem;
+    align-items: center;
+    margin-right: 2rem;
     gap: 3rem;
     /* font-style: italic; */
 }
@@ -26,7 +27,31 @@
 .navBarLinks a {
     /* transform: rotate(-10deg); */
     font-weight: 500;
+    padding-bottom: .4rem;
+    overflow: hidden;
+    position: relative;
 }
+
+.active {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: green;
+    animation: intro .3s linear;
+}
+[data-theme='dark'] .active{
+    background-color: rgb(87, 151, 200);
+}
+
+@keyframes intro {
+    from {
+        transform: translateX(-100%);
+    }
+
+}
+
 .navBarSwetchers {
     display: flex;
     align-items: center;

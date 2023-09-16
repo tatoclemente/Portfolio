@@ -21,13 +21,14 @@
   "Proyects": {
     "title": "Proyects",
     "elFestin": {
-      "description": "Final project of the Henry bootcamp"
+      "description": "An innovative e-commerce platform designed specifically for a restaurant, meticulously crafted using cutting-edge technologies such as React, Express, and PostgreSQL. The project follows the disciplined framework of the SCRUM methodology to ensure efficient development and delivery."
     },
     "henryFood": {
-      "description": "Individual project of the Henry bootcamp"
+      "description": 
+      "Allow me to introduce you to this recipe application that integrates data from an API and enables the creation of custom recipes. This proyect has been developed using cutting-edge technologies such as React, Express, Cloudinary, and PostgreSQL. It is a pivotal component of my individual project at the SoyHenry bootcamp, where I apply and hone my development skills."
     },
     "rickAndMorty": {
-      "description": "Integrated project of the Henry bootcamp"
+      "description": "Check out this Single Page Application (SPA) where I kicked off my journey as a Fullstack developer. It comes with registration and login pages and seamlessly connects to the Rick and Morty API to display character cards, letting users add their favorite characters to their collection."
     },
     "button": "Enter to see the site here"
   },
@@ -38,12 +39,15 @@
     "helpMessage": "I'm here to help!",
     "name": "Name",
     "nameError": "You must enter your name",
+    "nameErrorFormat": "Must be a valid name",
     "namePlaceholder": "Enter your name here...",
     "email": "Email",
     "emailError": "You must enter your email",
+    "emailErrorFormat": "Must be a valid email",
     "emailPlaceHolder": "Enter your best email...",
     "message":"Message",
     "messageError": "You must write a message",
+    "messageErrorFormat": "Must be a valid text",
     "messagePlaceHolder": "Write your query here...",
     "buttonText": "Send",
     "alert": "Ups, there seems to be some error"

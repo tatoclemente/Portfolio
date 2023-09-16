@@ -41,7 +41,6 @@
   margin-top: 5rem;
   cursor: pointer;
   border-top: 4px solid rgb(118, 83, 151);
-  margin-left: 1px;
   transition: 0.3s ease-in-out;
 }
 [data-theme="dark"] .titleProyectContainerSelect {
@@ -93,6 +92,11 @@
   box-shadow: 10px 10px 35px rgba(145, 171, 177, 0.463);
 }
 
+.descriptionContainer p {
+  width: 80%;
+  line-height: 1.4
+}
+
 [data-theme="dark"] .proyectsContainer {
   background-color: #041d22;
   box-shadow: 10px 10px 35px rgba(13, 32, 37, 0.42);
@@ -127,7 +131,7 @@
 
 .buttonLink {
   width: 50%;
-  height: 3rem;
+  height: 2.5rem;
   background-color: #3755c4;
   color: #eefbfe;
   padding: 0.3rem 1rem;
@@ -143,7 +147,7 @@
 }
 .buttonLink:hover {
   background-color: #0f1457;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 [data-theme="dark"] .buttonLink:hover {
@@ -199,7 +203,14 @@
   }
   .proyectsContainer {
     width: 98%;
-    height: 53vh;
+    height: 58vh;
+  }
+  .descriptionContainer {
+    margin-top: -2rem;
+  }
+  .descriptionContainer p {
+    width: 90%;
+    line-height: 1.2
   }
   .swiperImage {
     max-width: 95%;

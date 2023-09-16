@@ -1,6 +1,7 @@
 // 
 import About from './components/About/About'
 import CalendlyForm from './components/Calendly/Calendly'
+import Footer from './components/Footer/Footer'
 import { ContactUs } from './components/Form/ContactUs'
 import Proyects from './components/Proyects/Proyects'
 import style from './page.module.css'
@@ -20,14 +21,18 @@ export default function Home() {
     helpMessage: tC("helpMessage"),
     name: tC("name"),
     nameError: tC("nameError"),
+    nameErrorFormat: tC("nameErrorFormat"),
     namePlaceholder: tC("namePlaceholder"),
     email: tC("email"),
     emailError: tC("emailError"),
+    emailErrorFormat: tC("emailErrorFormat"),
     emailPlaceHolder: tC("emailPlaceHolder"),
     message: tC("message"),
     messageError: tC("messageError"),
+    messageErrorFormat: tC("messageErrorFormat"),
     messagePlaceHolder: tC("messagePlaceHolder"),
     buttonText: tC("buttonText"),
+    alert: tC("alert"),
   }
   
   const proyectsList = [
@@ -56,6 +61,7 @@ export default function Home() {
       <Proyects title={tP('title')} buttonLink={tP('button')} proyectsList={proyectsList}/>
       <CalendlyForm titleMeeting={contactIntl.meeting} />
       <ContactUs contactIntl={contactIntl}/>
+      <Footer />
     </div>
   )
 }

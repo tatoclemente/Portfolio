@@ -6,8 +6,8 @@ import validations from '../../Functions/validations'
 
 export const ContactUs = ({ contactIntl }) => {
   const form = useRef();
-  const { nameError, emailError, messageError } = contactIntl
-  const errorMsjs = { nameError, emailError, messageError }
+  const { nameError,nameErrorFormat, emailError, emailErrorFormat, messageError, messageErrorFormat } = contactIntl
+  const errorMsjs = { nameError, nameErrorFormat, emailError, emailErrorFormat, messageError, messageErrorFormat}
 
   const [formValues, setFormValues] = useState({
     user_name: '',
@@ -82,7 +82,7 @@ export const ContactUs = ({ contactIntl }) => {
         }, (error) => {
           console.log(error.text)
         });
-    } else window.alert("Hay errores")
+    } else window.alert(contactIntl.alert)
   };
 
   return (

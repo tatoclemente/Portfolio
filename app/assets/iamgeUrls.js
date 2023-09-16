@@ -14,9 +14,12 @@ export const elFestin = [
 
 
 export const piFood = [
-  "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694121875/Portfolio/Henry%20Food/Captura-de-pantalla-2023-07-07-105858_t0vyfe.webp",
-  "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694121875/Portfolio/Henry%20Food/Captura-de-pantalla-2023-07-07-105858_t0vyfe.webp",
-  "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694121875/Portfolio/Henry%20Food/Captura-de-pantalla-2023-07-07-105858_t0vyfe.webp"
+  "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694121875/Portfolio/Henry%20Food/ph1.webp",
+  "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694840134/Portfolio/Henry%20Food/ph2_b05gea.webp",
+  "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694840135/Portfolio/Henry%20Food/ph3_vvrdzt.webp",
+  "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694840134/Portfolio/Henry%20Food/ph4_mhac2u.webp",
+  "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694840134/Portfolio/Henry%20Food/ph5_amny1x.webp",
+  "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694840134/Portfolio/Henry%20Food/ph6_uyc32d.webp"
 ]
 
 export const rickAndMorty = [
@@ -26,7 +29,7 @@ export const rickAndMorty = [
 ]
 
 export const technology = {
-  front:[
+  front: [
     {
       title: "Javascript",
       image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300409/Portfolio/Technologies/js_svztpb.webp"
@@ -60,7 +63,7 @@ export const technology = {
       image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300408/Portfolio/Technologies/css_v64uyz.webp"
     },
   ],
-  back:[
+  back: [
     {
       title: "Node",
       image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300406/Portfolio/Technologies/node_zhlohj.webp"
@@ -70,28 +73,28 @@ export const technology = {
       image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694304306/Portfolio/Technologies/express_rhtzvn.webp"
     },
     {
-    title: "JWT",
-    image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300409/Portfolio/Technologies/jwt_mea84c.webp"
-  },
-  {
-    title: "PostgreSQL",
-    image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694304614/Portfolio/Technologies/postgre_a1lhgy.webp"
-  },
-  {
-    title: "Sequelize",
-    image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300406/Portfolio/Technologies/sequelize_qqqlx6.webp"
-  },
-  {
-    title: "MongoDB",
-    image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300406/Portfolio/Technologies/mongo_b9embu.webp"
-  },
-  {
-    title: "Cloudinary",
-    image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300407/Portfolio/Technologies/cloudinary_ol6kiu.webp"
-  },
-  {
-    title: "Docker",
-    image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300408/Portfolio/Technologies/docker_vxm274.webp"
-  },
+      title: "JWT",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300409/Portfolio/Technologies/jwt_mea84c.webp"
+    },
+    {
+      title: "PostgreSQL",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694304614/Portfolio/Technologies/postgre_a1lhgy.webp"
+    },
+    {
+      title: "Sequelize",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300406/Portfolio/Technologies/sequelize_qqqlx6.webp"
+    },
+    {
+      title: "MongoDB",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300406/Portfolio/Technologies/mongo_b9embu.webp"
+    },
+    {
+      title: "Cloudinary",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300407/Portfolio/Technologies/cloudinary_ol6kiu.webp"
+    },
+    {
+      title: "Docker",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300408/Portfolio/Technologies/docker_vxm274.webp"
+    },
   ]
 }

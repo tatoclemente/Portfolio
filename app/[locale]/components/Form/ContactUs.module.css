@@ -1,113 +1,131 @@
 .formContainer {
-    height: 80vh;
-    width: 500px;
-    max-width: 90vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  height: 90vh;
+  width: 500px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .formContainer h1 {
-    text-align: center;
-    font-size: 2rem;
+  text-align: center;
+  font-size: 2rem;
 }
 
 .subtitles {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .formList {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
 }
 .formList li {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: .3rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 .formContainer input {
-    position: relative;
-    height: 2rem;
-    width: 100%;
-    padding-left: .5rem;
-    border-radius: 5px;
-    border: 1px solid #b7b2cb;
+  position: relative;
+  height: 2rem;
+  width: 100%;
+  padding-left: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #b7b2cb;
 }
 
 .formContainer textarea {
-    min-height: 8rem;
-    max-height: 8rem;
-    max-width: 100%;
-    min-width: 100%;
-    padding: .5rem;
-    border-radius: 5px;
-    border: 1px solid #b7b2cb;
-    font-family: 'Ubuntu', sans-serif;
+  min-height: 8rem;
+  max-height: 8rem;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #b7b2cb;
+  font-family: "Ubuntu", sans-serif;
 }
 .buttonSubmit {
-    background-color: #3755c4;
-    border: none !important;
-    color: #e9e5ff;
-    font-size: 1.1rem;
-    border-radius: 18px;
+  background-color: #3755c4;
+  border: none !important;
+  color: #e9e5ff;
+  font-size: 1.1rem;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 
-  
+.buttonSubmit:hover {
+  background-color: #0f1457;
+  font-size: 1.3rem;
+}
+
+[data-theme="dark"] .buttonSubmit:hover {
+  background-color: rgb(78, 12, 122);
+}
+
 [data-theme="dark"] .buttonSubmit {
-background-color: #07363f;
+  background-color: #07363f;
 }
 .docCharacters {
-    position: absolute;
-    bottom: 5px;
-    right: 15px;
-    font-size: .9rem;
-    opacity: .6;
-    pointer-events: none;
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
-    /* .formContainer {
+  /* .formContainer {
         margin-top: -4rem;
     }
      */
-    .formContainer h1 {
-        font-size: 1.5rem;
-        margin-bottom: .5rem;
-    }
+  .formContainer h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .buttonSubmit:hover {
+    background-color: #3755c4;
+    font-size: 1.1rem;
+  }
+  
+  [data-theme="dark"] .buttonSubmit:hover {
+    background-color: #07363f;
+  }
 }
 
-
 .errorMessage {
-    position: absolute;
-    background-color: #ffdddd;
-    color: #ff0000;
-    padding: 5px;
-    border-radius: 4px;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -35px;
-    z-index: 50;
-    font-size: .9rem;
+  position: absolute;
+  background-color: #ffdddd;
+  color: #ff0000;
+  padding: 5px;
+  border-radius: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -35px;
+  z-index: 50;
+  font-size: 0.9rem;
 }
 
 .errorMessage .arrowUp {
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #ffdddd;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ffdddd;
 }
 
 .required {
-    color: red;
-    margin-left: .3rem;
+  color: red;
+  margin-left: 0.3rem;
 }
 /* .errorMessageSteps {
     position: absolute;

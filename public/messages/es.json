@@ -21,13 +21,13 @@
   "Proyects": {
     "title": "Proyectos",
     "elFestin": {
-      "description": "Proyecto Final del bootcamp soy Henry"
+      "description": "Una plataforma de comercio electrónico innovadora diseñada específicamente para un restaurante, meticulosamente elaborada utilizando tecnologías de vanguardia como React, Express y PostgreSQL. El proyecto sigue el disciplinado marco de la metodología SCRUM para garantizar un desarrollo y entrega eficientes."
     },
     "henryFood": {
-      "description": "Proyecto Individual del bootcamp soy Henry"
+      "description": "Te presento esta genial aplicación de recetas que incorpora información de una API y permite la creación de recetas personalizadas. Este p´royecto ha sido desarrollada utilizando tecnologías como React, Express, Cloudinary y PostgreSQL. Forma parte de mi proyecto individual en el bootcamp de SoyHenry, donde pongo en práctica mis habilidades de desarrollo."
     },
     "rickAndMorty": {
-      "description": "Proyecto Integrador del bootcamp soy Henry"
+      "description": "Échale un ojo a esta Aplicación de Página Única (SPA) donde comencé mi aventura como desarrollador Fullstack. Incluye páginas de registro e inicio de sesión, y se conecta perfectamente con la API de Rick and Morty para mostrar tarjetas de personajes, permitiendo a los usuarios añadir a sus personajes favoritos a su colección."
     },
     "button": "Ingresa a ver el sitio aquí"
   },
@@ -38,14 +38,18 @@
     "helpMessage": "Estoy aquí para ayudarle!",
     "name": "Nombre",
     "nameError": "Debe ingresar su nombre",
+    "nameErrorFormat": "Debe ser un nombre válido",
     "namePlaceholder": "Ingrese su nombre aquí...",
     "email": "Email",
     "emailError": "Debe ingresar su email",
+    "emailErrorFormat": "Debe ser un email válido",
     "emailPlaceHolder": "Ingrese su mejor email...",
     "message":"Mensaje",
     "messageError": "Debe escribir un mensaje",
+    "messageErrorFormat": "Debe ser un texto válido",
     "messagePlaceHolder": "Escriba su consulta aquí...",
-    "buttonText": "Enviar"
+    "buttonText": "Enviar",
+    "alert": "Ups, there seems to be some error"
   }
 }
 

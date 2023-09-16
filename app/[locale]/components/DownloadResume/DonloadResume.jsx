@@ -5,7 +5,7 @@ import { FaFilePdf } from 'react-icons/fa';
 const DownloadResume = ({downloadResume}) => {
 
   return (
-    <Link className={style.downloadResumeButton} href='./cv/Resume_GustavoClemente_DevFullStack.pdf' target='_blank' download>
+    <Link className={style.downloadResumeButton} href='./cv/Resume_GustavoClemente_Dev_Fullstack.pdf' target='_blank' download>
       {downloadResume} <FaFilePdf className={style.icon} />
     </Link>
   );
