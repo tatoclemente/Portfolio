@@ -19,10 +19,13 @@ export default function Home() {
     subtitle: tC("subtitle"),
     helpMessage: tC("helpMessage"),
     name: tC("name"),
+    nameError: tC("nameError"),
     namePlaceholder: tC("namePlaceholder"),
     email: tC("email"),
+    emailError: tC("emailError"),
     emailPlaceHolder: tC("emailPlaceHolder"),
     message: tC("message"),
+    messageError: tC("messageError"),
     messagePlaceHolder: tC("messagePlaceHolder"),
     buttonText: tC("buttonText"),
   }

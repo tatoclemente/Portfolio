@@ -25,11 +25,13 @@
     gap: 1rem;
 }
 .formList li {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: .3rem;
 }
 .formContainer input {
+    position: relative;
     height: 2rem;
     width: 100%;
     padding-left: .5rem;
@@ -38,8 +40,10 @@
 }
 
 .formContainer textarea {
-    height: 8rem;
-    width: 100%;
+    min-height: 8rem;
+    max-height: 8rem;
+    max-width: 100%;
+    min-width: 100%;
     padding: .5rem;
     border-radius: 5px;
     border: 1px solid #b7b2cb;
@@ -57,6 +61,14 @@
 [data-theme="dark"] .buttonSubmit {
 background-color: #07363f;
 }
+.docCharacters {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    font-size: .9rem;
+    opacity: .6;
+    pointer-events: none;
+}
 
 @media (max-width: 768px) {
     /* .formContainer {
@@ -68,3 +80,74 @@ background-color: #07363f;
         margin-bottom: .5rem;
     }
 }
+
+
+.errorMessage {
+    position: absolute;
+    background-color: #ffdddd;
+    color: #ff0000;
+    padding: 5px;
+    border-radius: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -35px;
+    z-index: 50;
+    font-size: .9rem;
+}
+
+.errorMessage .arrowUp {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ffdddd;
+}
+
+.required {
+    color: red;
+    margin-left: .3rem;
+}
+/* .errorMessageSteps {
+    position: absolute;
+    background-color: #ffdddd;
+    color: #ff0000;
+    padding: 10px;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+    bottom: -38px;
+} */
+
+/* .errorMessageImage {
+    position: absolute;
+    background-color: #ffdddd;
+    color: #ff0000;
+    padding: 10px;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -38px;
+    z-index: 2;
+} */
+
+/* .errorMessageSteps .arrowUp {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ffdddd;
+}
+
+.errorMessageImage .arrowUp {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ffdddd;
+} */

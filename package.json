@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
-    "aos": "^2.3.4",
     "atropos": "^2.0.2",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
@@ -21,7 +20,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
-    "react-scroll": "^1.8.9",
     "swiper": "^10.2.0"
   }
 }

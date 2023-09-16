@@ -36,12 +36,16 @@
     "contact": "Contact me",
     "subtitle": "If you have any questions or concerns, please feel free to contact me.",
     "helpMessage": "I'm here to help!",
-    "name": "Nombre",
+    "name": "Name",
+    "nameError": "You must enter your name",
     "namePlaceholder": "Enter your name here...",
     "email": "Email",
+    "emailError": "You must enter your email",
     "emailPlaceHolder": "Enter your best email...",
     "message":"Message",
+    "messageError": "You must write a message",
     "messagePlaceHolder": "Write your query here...",
-    "buttonText": "Send"
+    "buttonText": "Send",
+    "alert": "Ups, there seems to be some error"
   }
 }

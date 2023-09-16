@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { GoKebabHorizontal } from 'react-icons/go'
 import style from './Menu.module.css'
 import Link from 'next/link'
@@ -17,12 +17,11 @@ const Menu = (props) => {
     setMenu(!menu)
   }
 
-  const { about, proyects, meeting, contact, allRight } = props.menuItems;
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 768);
+  }, [])
 
-  
-  const checkMobile = () => {
-    setIsMobile(window.innerWidth <= 768); // Ajusta el valor según tus necesidades
-  };
+  const { about, proyects, meeting, contact, allRight } = props.menuItems;
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -50,35 +49,35 @@ const Menu = (props) => {
         </div>
       </div>
       <GoKebabHorizontal onClick={toggleMenu} className={style.menuIcon} />
-        <div onClick={toggleMenu} style={menu === true ? {transform: 'translateX(0%)'}:null} className={style.filterBlur}></div>
-        <div style={menu === true ? {transform: 'translateX(0%'}:null} className={style.menuContentToggle}>
-          <div className={style.close} >
-            <IoClose onClick={toggleMenu} />
-          </div>
-          <div className={style.navBarSwetchersToggle}>
-            <IntlSwitcher locale={props.locale} />
-            <ThemeSwitcher />
-          </div>
-          <div className={style.navBarLinksToggle}>
-            <Link href="#" onClick={toggleMenu}>{about}</Link>
-            <Link href="#proyects" onClick={toggleMenu}>{proyects}</Link>
-            <Link href="#meeting" onClick={handleClick} >{meeting}</Link>
-          <Link href="#contact" onClick={toggleMenu}>{contact}</Link>
-          </div>
-          <DownloadResume downloadResume={props.downloadResume} />
-          <div className={style.socialMedia}>
-            <Link href="https://www.github.com/tatoclemente/" rel="noreferrer" className={style.github}>
-              <BsGithub className={style.github} />
-            </Link>
-            <Link href="https://www.linkedin.com/in/tatoclemente/" rel="noreferrer">
-              <BsLinkedin className={style.linkedin} />
-            </Link>
-          </div>
-          <div className={style.footer}>
-            <p>© 2023 Gustavo Clemente</p>
-            <p>{allRight}</p>
-          </div>
+      <div onClick={toggleMenu} style={menu === true ? { transform: 'translateX(0%)' } : null} className={style.filterBlur}></div>
+      <div style={menu === true ? { transform: 'translateX(0%' } : null} className={style.menuContentToggle}>
+        <div className={style.close} >
+          <IoClose onClick={toggleMenu} />
         </div>
+        <div className={style.navBarSwetchersToggle}>
+          <IntlSwitcher locale={props.locale} />
+          <ThemeSwitcher />
+        </div>
+        <div className={style.navBarLinksToggle}>
+          <Link href="#" onClick={toggleMenu}>{about}</Link>
+          <Link href="#proyects" onClick={toggleMenu}>{proyects}</Link>
+          <Link href="#meeting" onClick={handleClick} >{meeting}</Link>
+          <Link href="#contact" onClick={toggleMenu}>{contact}</Link>
+        </div>
+        <DownloadResume downloadResume={props.downloadResume} />
+        <div className={style.socialMedia}>
+          <Link href="https://www.github.com/tatoclemente/" rel="noreferrer" className={style.github}>
+            <BsGithub className={style.github} />
+          </Link>
+          <Link href="https://www.linkedin.com/in/tatoclemente/" rel="noreferrer">
+            <BsLinkedin className={style.linkedin} />
+          </Link>
+        </div>
+        <div className={style.footer}>
+          <p>© 2023 Gustavo Clemente</p>
+          <p>{allRight}</p>
+        </div>
+      </div>
     </div>
   )
 }

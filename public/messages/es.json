@@ -37,10 +37,13 @@
     "subtitle": "Si tiene alguna pregunta o duda, no dude en ponerse en contacto con migo.",
     "helpMessage": "Estoy aquí para ayudarle!",
     "name": "Nombre",
+    "nameError": "Debe ingresar su nombre",
     "namePlaceholder": "Ingrese su nombre aquí...",
     "email": "Email",
+    "emailError": "Debe ingresar su email",
     "emailPlaceHolder": "Ingrese su mejor email...",
-    "message":"Message",
+    "message":"Mensaje",
+    "messageError": "Debe escribir un mensaje",
     "messagePlaceHolder": "Escriba su consulta aquí...",
     "buttonText": "Enviar"
   }
