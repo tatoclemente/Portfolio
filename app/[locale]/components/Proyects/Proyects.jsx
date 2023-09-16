@@ -131,7 +131,7 @@ const Proyects = ({ title, buttonLink, proyectsList }) => {
             <span className={styleModal.close} onClick={closeModal}>x</span>
             <TransformWrapper defaultScale={1} defaultPositionX={200} defaultPositionY={200}>
               <TransformComponent>
-                <CldImage id="modalImage" className={styleModal.modalImage} alt='phProyect' width={isMobile ? 600 : 1150} height={isMobile ? 173 : 550} />
+                <CldImage id="modalImage" className={styleModal.modalImage} alt='phProyect' width={isMobile ? 600 : 1150} height={isMobile ? 200 : 550} />
               </TransformComponent>
 
             </TransformWrapper>
