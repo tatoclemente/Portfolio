@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { ThemeProvider } from "next-themes"
 import Loader from "./components/loader/Loader"
 
-const providers = ({ children }) => {
+const Providers = ({ children }) => {
   const [mounted, setMounted] = useState(false)
 
   // When mounted on client, now we can show the UI
@@ -18,4 +18,4 @@ const providers = ({ children }) => {
   )
 }
 
-export default providers
+export default Providers
