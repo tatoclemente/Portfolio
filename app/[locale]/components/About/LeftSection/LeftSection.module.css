@@ -259,7 +259,7 @@
   }
 
   .heyTitle.largeFont {
-    font-size: 6.6rem; 
+    font-size: 6.3rem; 
   }
 
   .centerRight {
@@ -268,7 +268,7 @@
     transform: translateZ(0);
   }
   .nameTitle {
-    font-size: 2.7rem;
+    font-size: 2.75rem;
     font-weight: 900;
     background-image: linear-gradient(
       60deg,
@@ -499,5 +499,42 @@
 
   .descriptionContainer {
     width: 97%;
+  }
+}
+
+@media (max-width: 360px) {
+  .heyTitle {
+    font-size: 4.3rem;
+    font-weight: 900;
+    background-image: linear-gradient(
+      60deg,
+      rgba(73, 21, 2, 1) 0%,
+      rgba(38, 45, 233, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .heyTitle.largeFont {
+    font-size: 4.4rem;
+  }
+
+  .centerRight {
+    right: 30%;
+    top: -50%;
+    transform: translateZ(0);
+  }
+  .nameTitle {
+    font-size: 1.9rem;
+    font-weight: 900;
+    background-image: linear-gradient(
+      60deg,
+      rgba(73, 21, 2, 1) 0%,
+      rgba(38, 45, 233, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }

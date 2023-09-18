@@ -3,12 +3,14 @@ import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import style from './ContactUs.module.css'
 import validations from '../../Functions/validations'
+import Swal from 'sweetalert2'
+import Spinner from '../Spinner/Spinner'
 
 export const ContactUs = ({ contactIntl }) => {
   const form = useRef();
   const { nameError, nameErrorFormat, emailError, emailErrorFormat, messageError, messageErrorFormat } = contactIntl
   const errorMsjs = { nameError, nameErrorFormat, emailError, emailErrorFormat, messageError, messageErrorFormat }
-
+  const [loading, setLoading] = useState(false);
   const [formValues, setFormValues] = useState({
     user_name: '',
     user_email: '',
@@ -66,9 +68,14 @@ export const ContactUs = ({ contactIntl }) => {
     setErrors({ ...requiredErrors });
 
     if (!Object.values(requiredErrors).some((error) => !!error)) {
+      setLoading(true);
       emailjs.sendForm('service_34xhari', 'template_fw3yrml', form.current, 'PJzBzd6GFpccaZ3k3')
         .then((result) => {
-          window.alert("Mensaje enviado" + result.text)
+          Swal.fire({
+            icon: 'success',
+            title: contactIntl.alertTitleSuccess,
+            text: contactIntl.alertTextSuccess,
+          })
           setFormValues({
             user_name: '',
             user_email: '',
@@ -79,10 +86,20 @@ export const ContactUs = ({ contactIntl }) => {
             user_email: '',
             message: '',
           })
-        }, (error) => {
+        })
+        .catch((error) => {
           console.log(error.text)
-        });
-    } else window.alert(contactIntl.alert)
+        })
+        .finally(() => {
+          setLoading(false)
+        })
+   
+    } else {
+      Swal.fire({
+      icon: 'error',
+      title: contactIntl.alertTitle,
+      text: contactIntl.alertText,
+    })}
   };
 
   return (
@@ -130,7 +147,7 @@ export const ContactUs = ({ contactIntl }) => {
           <label>{contactIntl.message}<span className={style.required}>*</span></label>
           <textarea
             onChange={handleChange}
-            value={formValues.user_message}
+            value={formValues.message}
             name="message"
             placeholder={contactIntl.messagePlaceHolder}
             maxLength={300} />
@@ -147,7 +164,13 @@ export const ContactUs = ({ contactIntl }) => {
           }
         </li>
       </ul>
-      <input type="submit" value={contactIntl.buttonText} className={style.buttonSubmit} />
+      {loading ? (
+        <p className={style.loadingButton}>
+          <Spinner /> <span className={style.loadingText}>{contactIntl.loadingText}</span>
+        </p>
+      ) : (
+        <input type="submit" value={contactIntl.buttonText} className={style.buttonSubmit} />
+      )}
     </form>
   );
 };

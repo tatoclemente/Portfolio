@@ -19,10 +19,11 @@ import { CldImage } from 'next-cloudinary';
 
 import Link from 'next/link';
 import Technologies from './Technologies/Technologies';
+import Swal from 'sweetalert2'
 
 
 
-const Proyects = ({ title, buttonLink, proyectsList }) => {
+const Proyects = ({ proyectTexts, proyectsList }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [selectedTab, setSelectedTab] = useState('El Festin'); // Inicialmente selecciona 'El Festin'
 
@@ -56,10 +57,30 @@ const Proyects = ({ title, buttonLink, proyectsList }) => {
     modal.style.display = "none";
   };
 
+  const handleLinkClick = (link) => {
+    isMobile && !link.includes('https://henrysfood.netlify.app/') ?
+    Swal.fire({
+      icon: 'info',
+      title: proyectTexts.alertTitle,
+      text: proyectTexts.alertText,
+      showDenyButton: true,
+      confirmButtonText: proyectTexts.confirmButtonText,
+      denyButtonText: proyectTexts.denyButtonText,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        window.open(link, "_blank");;
+      } else if (result.isDenied) {
+        return
+      }
+    })
+    : window.open(link, "_blank");
+    ;
+  };
 
   return (
     <div className={style.mainContainer} id='proyects'>
-      <h1 className={style.title}>{title}</h1>
+      <h1 className={style.title}>{proyectTexts.title}</h1>
       <header className={style.header}>
         <div
           className={`${style.titleProyectContainerSelect} ${selectedTab === 'El Festin' ? style.selectedTab : ''
@@ -134,7 +155,7 @@ const Proyects = ({ title, buttonLink, proyectsList }) => {
 
               <div className={style.descriptionContainer}>
                 <p>{proyect.description}</p>
-                <Link className={style.buttonLink} target='_blank' href={proyect.link} rel="noreferrer">{buttonLink}</Link>
+                <p onClick={(() => handleLinkClick(proyect.link))} className={style.buttonLink} target='_blank'>{proyectTexts.button}</p>
               </div>
 
             </article>

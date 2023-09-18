@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import { GoKebabHorizontal } from 'react-icons/go';
+// import { GoKebabHorizontal } from 'react-icons/go';
+import { IoMenu } from 'react-icons/io5';
 import style from './Menu.module.css';
 import Link from 'next/link';
 import IntlSwitcher from '../IntlSwitcher/IntlSwitcher';
@@ -90,7 +91,7 @@ const Menu = (props) => {
           <ThemeSwitcher />
         </div>
       </div>
-      <GoKebabHorizontal onClick={toggleMenu} className={style.menuIcon} />
+      <IoMenu onClick={toggleMenu} className={style.menuIcon} />
       <div onClick={toggleMenu} style={menu === true ? { transform: 'translateX(0%)' } : null} className={style.filterBlur}></div>
       <div style={menu === true ? { transform: 'translateX(0%' } : null} className={style.menuContentToggle}>
         <div className={style.close}>

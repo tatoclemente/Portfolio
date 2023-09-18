@@ -32,7 +32,11 @@ export default function Home() {
     messageErrorFormat: tC("messageErrorFormat"),
     messagePlaceHolder: tC("messagePlaceHolder"),
     buttonText: tC("buttonText"),
-    alert: tC("alert"),
+    alertTitleSuccess: tC("alertTitleSuccess"),
+    alertTextSuccess: tC("alertTextSuccess"),
+    alertTitle: tC("alertTitle"),
+    alertText: tC("alertText"),
+    loadingText: tC("loadingText"),
   }
 
   const proyectsList = [
@@ -55,10 +59,18 @@ export default function Home() {
       link: 'https://rickandmorty-five-ruby.vercel.app/',
     },
   ]
+  const proyectTexts = {
+    title: tP('title'),
+    button: tP('button'),
+    alertTitle: tP('alertTitle'),
+    alertText: tP('alertText'),
+    confirmButtonText: tP('confirmButtonText'),
+    denyButtonText: tP('denyButtonText'),
+  }
   return (
     <div className={style.homeContainer}>
       <About t={t} />
-      <Proyects title={tP('title')} buttonLink={tP('button')} proyectsList={proyectsList} />
+      <Proyects proyectTexts={proyectTexts} proyectsList={proyectsList} />
       <CalendlyForm titleMeeting={contactIntl.meeting} />
       <ContactUs contactIntl={contactIntl} />
       <Footer />

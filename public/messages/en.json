@@ -20,6 +20,10 @@
   },
   "Proyects": {
     "title": "Proyects",
+    "alertTitle": "Wait a moment",
+    "alertText": "The following website is not optimized for mobile devices and may not display correctly.",
+    "confirmButtonText": "Proceed Anyway",
+    "denyButtonText": "View Later",
     "elFestin": {
       "description": "An innovative e-commerce platform designed specifically for a restaurant, meticulously crafted using cutting-edge technologies such as React, Express, and PostgreSQL. The project follows the disciplined framework of the SCRUM methodology to ensure efficient development and delivery."
     },
@@ -50,6 +54,10 @@
     "messageErrorFormat": "Must be a valid text",
     "messagePlaceHolder": "Write your query here...",
     "buttonText": "Send",
-    "alert": "Ups, there seems to be some error"
+    "alertTitleSuccess": "Cool!",
+    "alertTextSuccess": "Your message has been sent successfully.",
+    "alertTitle": "Oops...",
+    "alertText": "It seems like something isn't quite right.",
+    "loadingText": "Sending..."
   }
 }

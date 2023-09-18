@@ -20,6 +20,10 @@
   },
   "Proyects": {
     "title": "Proyectos",
+    "alertTitle": "Espera un momento",
+    "alertText": "EL siguiente sitio no esta optimizado para dispositivos móviles y puede que no se vea correctamente.",
+    "confirmButtonText": "Ver de todos modos",
+    "denyButtonText": "Ver mas tarde",
     "elFestin": {
       "description": "Una plataforma de comercio electrónico innovadora diseñada específicamente para un restaurante, meticulosamente elaborada utilizando tecnologías de vanguardia como React, Express y PostgreSQL. El proyecto sigue el disciplinado marco de la metodología SCRUM para garantizar un desarrollo y entrega eficientes."
     },
@@ -34,22 +38,26 @@
   "Contact": {
     "meeting": "Agenda un cita conmigo",
     "contact": "Contáctame",
-    "subtitle": "Si tiene alguna pregunta o duda, no dude en ponerse en contacto con migo.",
-    "helpMessage": "Estoy aquí para ayudarle!",
+    "subtitle": "Si tienes alguna consulta, no dudes en ponerte en contacto conmigo.",
+    "helpMessage": "Estoy aquí para ayudarte!",
     "name": "Nombre",
-    "nameError": "Debe ingresar su nombre",
+    "nameError": "Debes ingresar tu nombre",
     "nameErrorFormat": "Debe ser un nombre válido",
-    "namePlaceholder": "Ingrese su nombre aquí...",
+    "namePlaceholder": "Ingresa tu nombre aquí...",
     "email": "Email",
-    "emailError": "Debe ingresar su email",
+    "emailError": "Debes ingresar tu email",
     "emailErrorFormat": "Debe ser un email válido",
-    "emailPlaceHolder": "Ingrese su mejor email...",
+    "emailPlaceHolder": "Ingresa tu mejor email...",
     "message":"Mensaje",
     "messageError": "Debe escribir un mensaje",
     "messageErrorFormat": "Debe ser un texto válido",
-    "messagePlaceHolder": "Escriba su consulta aquí...",
+    "messagePlaceHolder": "Escribe tu consulta aquí...",
     "buttonText": "Enviar",
-    "alert": "Ups, there seems to be some error"
+    "alertTitleSuccess": "¡Genial!",
+    "alertTextSuccess": "Tu mensaje fué enviado correctamente.",
+    "alertTitle": "Uups...",
+    "alertText": "Parece que algo no anda bien",
+    "loadingText": "Enviando..."
   }
 }
 
