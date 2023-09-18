@@ -19,7 +19,7 @@
 
 - [Atropos](https://github.com/davidkpiano/atropos): Atropos para crear efectos en la imágen principal.
 
-- [next-intl](https://github.com/vinissimus/next-intl): next-intl es una biblioteca que utilicé para gestionar la internacionalización en mi sitio web.
+- [next-intl](https://github.com/vinissimus/next-intl): next-intl es una biblioteca que utilicé para gestionar la internacionalización en mi sitio web. Estoy usando la version en Beta que funciona con "Server Components", con el App Router y desbloquea muchos beneficios al manejar la internacionalización completamente del lado del servidor.
 
 - [next-themes](https://github.com/pacocoursey/next-themes): next-themes es una biblioteca que utilicé para agregar temas oscuros y claros a mi sitio web.
 
