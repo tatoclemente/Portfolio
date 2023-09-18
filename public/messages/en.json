@@ -1,7 +1,7 @@
 {
   "NavBar": {
     "About": "About",
-    "Proyects": "Proyects",
+    "Proyects": "Projects",
     "Contact": "Contact",
     "Meeting": "Schedule meeting",
     "AllRight": "All rights reserved",
@@ -19,7 +19,7 @@
     "loading": "Loading"
   },
   "Proyects": {
-    "title": "Proyects",
+    "title": "Projects",
     "alertTitle": "Wait a moment",
     "alertText": "The following website is not optimized for mobile devices and may not display correctly.",
     "confirmButtonText": "Proceed Anyway",
