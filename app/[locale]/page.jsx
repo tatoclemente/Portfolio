@@ -67,9 +67,19 @@ export default function Home() {
     confirmButtonText: tP('confirmButtonText'),
     denyButtonText: tP('denyButtonText'),
   }
+
+  const leftText = {
+    hello: t("hello"),
+    name: t("name"),
+    descriptionHeader: t("description.header"),
+    descriptionP1: t('description.p1'),
+    descriptionP2: t('description.p2'),
+    descriptionContact:t('description.contact')
+  }
+
   return (
     <div className={style.homeContainer}>
-      <About t={t} />
+      <About leftText={leftText} contactIntl={contactIntl} />
       <Proyects proyectTexts={proyectTexts} proyectsList={proyectsList} />
       <CalendlyForm titleMeeting={contactIntl.meeting} />
       <ContactUs contactIntl={contactIntl} />

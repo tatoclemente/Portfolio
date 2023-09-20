@@ -1,0 +1,34 @@
+.modalContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    height: 90vh;
+    width: 45vw;
+    background-color: #fff;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.modalOpen {
+    overflow: hidden;
+}
+
+@media (max-width: 978px) {
+    .modal {
+        width: 95vw;
+        height: 80vh;
+    }
+}

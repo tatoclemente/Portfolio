@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 2rem 0 1.5rem;
-  z-index: 999;
+  z-index: 888;
   align-items: center;
   background-color: #edeff8;
 }
