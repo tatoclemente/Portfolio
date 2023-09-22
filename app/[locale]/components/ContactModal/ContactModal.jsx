@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import style from './ContactModal.module.css'
 import { ContactUs } from '../Form/ContactUs'
 import MsgContact from './MsgContact/MsgContact'
+import { AiFillCloseCircle } from 'react-icons/ai'
 const ContactModal = ( { contactIntl, contactClick } ) => {
 
   const [showMsg, setShowMsg] = useState(true)
@@ -11,7 +12,7 @@ const ContactModal = ( { contactIntl, contactClick } ) => {
     useEffect(() => {
       setTimeout(() => {
         setShowMsg(false)
-      }, 3000)
+      }, 2500)
     },[])
 
     useEffect(() => {
@@ -26,7 +27,7 @@ const ContactModal = ( { contactIntl, contactClick } ) => {
           showMsg 
           ? <MsgContact />
           : <div className={style.modalContent}>
-              <span className={style.close} onClick={contactClick}>X</span>
+              <AiFillCloseCircle className={style.close} onClick={contactClick} />
               <ContactUs contactIntl={contactIntl} />
             </div>
         }

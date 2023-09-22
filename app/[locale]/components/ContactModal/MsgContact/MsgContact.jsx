@@ -4,11 +4,8 @@ const MsgContact = () => {
   return (
     <div className={style.msgContact}>
       <div className={style.titleContainer}>
-        <h1>¡Me agrada tu actitud...</h1>
-        <h1>...eres una persona decidida!</h1>
+        <h1>"Quien toma<br /> decisiones y <br />elije sabiamente <br />controla su <br />destino"</h1>
       </div>
-      <h3>Por eso vamos directo allí...</h3>
-  
     </div>
   )
 }
