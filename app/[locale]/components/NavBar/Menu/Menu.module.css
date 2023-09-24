@@ -61,6 +61,11 @@
     display: block;
   }
 
+  .modalOpen {
+    overflow: hidden;
+}
+
+
   .menuContent {
     display: none;
   }

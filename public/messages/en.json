@@ -14,7 +14,10 @@
       "header": "Full Stack Web Developer",
       "p1": "Front-End development is my true passion, where I feel completely at ease. This determination and enthusiasm drive the creation of visual and functional solutions that enhance the user experience.",
       "p2": "Always open to new connections and exciting opportunities.",
-      "contact": "Contact me here!"
+      "contact": "Contact me here!",
+      "modalContact1": "Someone who makes decisions",
+      "modalContact2": "and chooses wisely",
+      "modalContact3": "controls their destiny."
     },
     "loading": "Loading"
   },

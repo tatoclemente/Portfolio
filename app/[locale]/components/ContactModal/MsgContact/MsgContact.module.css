@@ -1,0 +1,31 @@
+.msgContact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+    width: 80%;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: 2.5rem;
+    font-style: italic;
+    font-size: .8rem;
+    border-left: 5px solid rgb(87, 76, 95);
+    padding-left: 2rem;
+}
+
+  
+@media (max-width: 978px) {
+  .msgContact {
+    width: 90%;
+  }
+    .titleContainer { 
+        font-size: .6rem;
+        font-weight: 500;
+        padding-left: 2rem;
+    }
+}
