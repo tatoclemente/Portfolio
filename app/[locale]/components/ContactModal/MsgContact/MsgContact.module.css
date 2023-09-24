@@ -12,14 +12,20 @@
     flex-direction: column;
     justify-content: flex-start;
     line-height: 2.5rem;
-    margin-top: -4rem;
     font-style: italic;
-    font-size: 1rem;
+    font-size: .8rem;
+    border-left: 5px solid rgb(87, 76, 95);
+    padding-left: 2rem;
 }
 
-
-
-.subtitle {
-    font-size: 1.3rem;
-    text-align: right;
+  
+@media (max-width: 978px) {
+  .msgContact {
+    width: 90%;
+  }
+    .titleContainer { 
+        font-size: .6rem;
+        font-weight: 500;
+        padding-left: 2rem;
+    }
 }

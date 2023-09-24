@@ -15,9 +15,12 @@ const Menu = (props) => {
   const [isMobile, setIsMobile] = useState(false);
   const [selectedLink, setSelectedLink] = useState('/');
 
+
   const toggleMenu = () => {
     setMenu(!menu);
   };
+
+  menu ? document.body.classList.add(style.modalOpen) : document.body.classList.remove(style.modalOpen);
 
   const handleLinkClick = (link) => {
     setSelectedLink(link);

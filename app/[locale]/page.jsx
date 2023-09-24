@@ -74,7 +74,10 @@ export default function Home() {
     descriptionHeader: t("description.header"),
     descriptionP1: t('description.p1'),
     descriptionP2: t('description.p2'),
-    descriptionContact:t('description.contact')
+    contactButton:t('description.contact'),
+    modalContact1: t('description.modalContact1'),
+    modalContact2: t('description.modalContact2'),
+    modalContact3: t('description.modalContact3'),
   }
 
   return (

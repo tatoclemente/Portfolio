@@ -6,7 +6,7 @@
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, .5);
-    z-index: 99999;
+    z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +16,7 @@
 .modal {
     height: 90vh;
     min-width: 45vw;
-    background-color: #fff;
+    background-color: #eef8ff;
     border-radius: 25px;
     display: flex;
     justify-content: center;
@@ -25,6 +25,8 @@
     animation: open-contact .3s ease-out forwards;
     overflow: hidden;
 }
+
+
 @keyframes open-contact {
     to {
         transform: scale(1)
@@ -56,13 +58,77 @@
     cursor: pointer;
     position: absolute;
     top: -3rem;
-    left: -1rem;
-    font-size: 1.5rem;
+    right: -1rem;
+    font-size: 1.8rem;
+    color: rgba(255, 0, 0, 0.469);
+    transition: .3s ease-in-out;
 }
+.close:hover {
+    transform: scale(1.1);
+    color: rgba(255, 0, 0, 0.702);
+}
+
+[data-theme='dark'] .close {
+    color: rgba(254, 254, 254, 0.469);
+}
+[data-theme='dark'] .close:hover {
+    color: rgb(254, 254, 254);
+}
+
+@media (max-width: 1224px) {
+    .modal {
+        width: 85vw;
+    }
+
+    .modalContent {
+        margin-top: 6rem;
+    }
+    .close {
+        top: -2.5rem;
+        right: -6rem;
+        font-size: 1.8rem;
+    }
+    .close:hover {
+        transform: scale(1);
+        color: rgba(255, 0, 0, 0.469);
+    }
+}
+
 
 @media (max-width: 978px) {
     .modal {
         width: 95vw;
         height: 80vh;
+    }
+
+    .modalContent {
+        margin-top: 12rem;
+    }
+}
+@media (max-width: 720px) {
+    .modal {
+        width: 95vw;
+        height: 80vh;
+    }
+
+    .modalContent {
+        margin-top: 12rem;
+    }
+    .close {
+        right: 0;
+    }
+}
+
+@media (max-width: 376px) {
+    .modal {
+        width: 95vw;
+        height: 90vh;
+    }
+
+    .modalContent {
+        margin-top: 10rem;
+    }
+    .close {
+        right: 0;
     }
 }
