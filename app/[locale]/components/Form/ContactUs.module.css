@@ -99,6 +99,9 @@
     margin-bottom: 0.5rem;
   }
 
+  .formList {
+    margin-top: 1rem;
+  }
   .buttonSubmit:hover {
     background-color: #3755c4;
     font-size: 1.1rem;
