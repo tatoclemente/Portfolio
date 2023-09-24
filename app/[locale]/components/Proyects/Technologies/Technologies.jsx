@@ -115,6 +115,7 @@ const Technologies = () => {
           >
             <CldImage
               className={style.carouselLogo}
+              as="image"
               src={tech.image}
               alt='phProyect'
               width={100}
@@ -143,6 +144,7 @@ const Technologies = () => {
             <CldImage
               className={style.carouselLogo}
               src={tech.image}
+              as="image"
               alt='phProyect'
               width={100}
               height={100}

@@ -26,6 +26,8 @@ import Swal from 'sweetalert2'
 const Proyects = ({ proyectTexts, proyectsList }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [selectedTab, setSelectedTab] = useState('El Festin'); // Inicialmente selecciona 'El Festin'
+  const [modalImageUrl, setModalImageUrl] = useState(''); // Estado para la URL de la imagen en el modal
+
 
   useEffect(() => {
     const checkMobile = () => {
@@ -46,15 +48,18 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
   };
 
   const openModal = (imageUrl) => {
-    const modal = document.getElementById("myModal");
-    const modalImage = document.getElementById("modalImage");
-    modalImage.src = imageUrl;
-    modal.style.display = "block";
+    console.log(imageUrl);
+    setModalImageUrl(imageUrl)
+    // const modal = document.getElementById("myModal");
+    // const modalImage = document.getElementById("modalImage");
+    // modalImage.src = imageUrl;
+    // modal.style.display = "block";
   };
 
   const closeModal = () => {
-    const modal = document.getElementById("myModal");
-    modal.style.display = "none";
+    setModalImageUrl('')
+    // const modal = document.getElementById("myModal");
+    // modal.style.display = "none";
   };
 
   const handleLinkClick = (link) => {
@@ -147,7 +152,7 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
               >
                 {proyect.images.map((image, index) => {
                   return (<SwiperSlide key={index}>
-                    <CldImage onClick={() => openModal(image)} className={style.swiperImage} src={image} alt='phProyect' width={580} height={300} />
+                    <CldImage onClick={() => openModal(image)} as="image" className={style.swiperImage} src={image} alt='phProyect' width={580} height={300} />
                   </SwiperSlide>
                   )
                 })}
@@ -160,23 +165,26 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
 
             </article>
           ))}
-        <div id="myModal" className={styleModal.modal}>
-          <div className={styleModal.modalContent}>
-            <span className={styleModal.close} onClick={closeModal}>x</span>
-            <TransformWrapper defaultScale={1} defaultPositionX={200} defaultPositionY={200}>
-              <TransformComponent>
-                <CldImage id="modalImage" className={styleModal.modalImage} alt='phProyect' width={isMobile ? 600 : 1150} height={isMobile ? 190 : 550} />
-              </TransformComponent>
-
-            </TransformWrapper>
-          </div>
-        </div>
+          {modalImageUrl !== '' && 
+           <div className={styleModal.modal}>
+           <div className={styleModal.modalContent}>
+             <span className={styleModal.close} onClick={closeModal}>x</span>
+             <TransformWrapper defaultScale={1} defaultPositionX={200} defaultPositionY={200}>
+               <TransformComponent>
+                 <CldImage id="modalImage" src={modalImageUrl} as="image" className={styleModal.modalImage} alt='phProyect' width={isMobile ? 600 : 1150} height={isMobile ? 190 : 550} />
+               </TransformComponent>
+ 
+             </TransformWrapper>
+           </div>
+         </div>
+          }
+       
 
       </div>
       <Technologies />
 
       <svg className={style.wave} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path className={style.wavePath} fill="#eefbfe" fill-opacity="1" d="M0,224L80,224C160,224,320,224,480,197.3C640,171,800,117,960,90.7C1120,64,1280,64,1360,64L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+        <path className={style.wavePath} fill="#eefbfe" d="M0,224L80,224C160,224,320,224,480,197.3C640,171,800,117,960,90.7C1120,64,1280,64,1360,64L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
     </div>
   )
 }
