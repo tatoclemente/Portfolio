@@ -139,3 +139,20 @@
   color: red;
   margin-left: 0.3rem;
 }
+
+.messageHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.icon {
+  color: #096274;
+  cursor: pointer;
+}
+.emojiPicker {
+  position: absolute;
+  left: 50%;
+  top: -150%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}

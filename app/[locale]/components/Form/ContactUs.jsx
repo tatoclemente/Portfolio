@@ -6,6 +6,8 @@ import validations from '../../Functions/validations'
 import Swal from 'sweetalert2'
 import Spinner from '../Spinner/Spinner'
 import EmojiPicker from 'emoji-picker-react'
+import { BsFillEmojiSmileFill } from 'react-icons/bs'
+import { BiSolidKeyboard } from 'react-icons/bi'
 
 export const ContactUs = ({ contactIntl }) => {
   const form = useRef();
@@ -28,6 +30,12 @@ export const ContactUs = ({ contactIntl }) => {
     user_email: false,
     message: false,
   });
+
+  const [showEmoji, setShowEmoji] = useState(false)
+
+  const handleShowEmoji = () => {
+    setShowEmoji(!showEmoji)
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -152,8 +160,11 @@ export const ContactUs = ({ contactIntl }) => {
           }
         </li>
         <li>
-          <label>{contactIntl.message}<span className={style.required}>*</span></label>
-          <EmojiPicker onEmojiClick={onEmojiClick} />
+          <div className={style.messageHeader}>
+            <label>{contactIntl.message}<span className={style.required}>*</span></label>
+            {showEmoji ? <BiSolidKeyboard onClick={handleShowEmoji} className={style.icon} /> : <BsFillEmojiSmileFill onClick={handleShowEmoji} className={style.icon} />}
+          </div>
+          {showEmoji && <div className={style.emojiPicker}><EmojiPicker onEmojiClick={onEmojiClick} /></div>}
           <textarea
             onChange={handleChange}
             value={formValues.message}
