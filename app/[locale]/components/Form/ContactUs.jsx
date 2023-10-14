@@ -5,6 +5,7 @@ import style from './ContactUs.module.css'
 import validations from '../../Functions/validations'
 import Swal from 'sweetalert2'
 import Spinner from '../Spinner/Spinner'
+import EmojiPicker from 'emoji-picker-react'
 
 export const ContactUs = ({ contactIntl }) => {
   const form = useRef();
@@ -53,7 +54,14 @@ export const ContactUs = ({ contactIntl }) => {
 
   const varCharacters = formValues.message.length
   const maxCaracteres = 300;
-
+  console.log(formValues.message);
+  const onEmojiClick = (e) => {
+    setFormValues((prevFormValues) => ({
+      ...prevFormValues,
+      message: prevFormValues.message + e.emoji
+    }));
+  };
+  
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -145,6 +153,7 @@ export const ContactUs = ({ contactIntl }) => {
         </li>
         <li>
           <label>{contactIntl.message}<span className={style.required}>*</span></label>
+          <EmojiPicker onEmojiClick={onEmojiClick} />
           <textarea
             onChange={handleChange}
             value={formValues.message}
