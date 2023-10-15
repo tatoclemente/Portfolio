@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useRef, useState, useEffect } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
+
 import { technology } from '@/app/assets/iamgeUrls';
 // Import Swiper styles
 import 'swiper/css';
@@ -21,7 +21,7 @@ const Technologies = () => {
   const [clonedTechnologyFront, setClonedTechnologyFront] = useState([...front]);
   const [clonedTechnologyBack, setClonedTechnologyBack] = useState([...back]);
   let isDragging = false
-
+ 
   let startX; // Posición X inicial del mouse
   let scrollLeft; // Posición de desplazamiento izquierda inicial del carrusel
 
@@ -120,6 +120,7 @@ const Technologies = () => {
               alt='phProyect'
               width={100}
               height={100}
+              onClick={(e) => e.stopPropagation()} 
             />
             <span>{tech.title}</span>
           </div>
@@ -148,6 +149,7 @@ const Technologies = () => {
               alt='phProyect'
               width={100}
               height={100}
+              onClick={(e) => e.stopPropagation()} 
             />
             <span>{tech.title}</span>
           </div>
