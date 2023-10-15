@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import style from './LeftSection.module.css'
-import Link from 'next/link'
 
 const LeftSection = ({ leftText, locale, contactClick }) => {
   const { hello, name, descriptionHeader, descriptionP1, descriptionP2, contactButton } = leftText;
