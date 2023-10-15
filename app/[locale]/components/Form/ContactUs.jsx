@@ -1,12 +1,20 @@
 'use client'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import style from './ContactUs.module.css'
 import validations from '../../Functions/validations'
 import Swal from 'sweetalert2'
 import Spinner from '../Spinner/Spinner'
+import EmojiPicker from 'emoji-picker-react'
+import { BsFillEmojiSmileFill } from 'react-icons/bs'
+import { BiSolidKeyboard } from 'react-icons/bi'
 
 export const ContactUs = ({ contactIntl }) => {
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 768);
+  }, [])
+  
   const form = useRef();
   const { nameError, nameErrorFormat, emailError, emailErrorFormat, messageError, messageErrorFormat } = contactIntl
   const errorMsjs = { nameError, nameErrorFormat, emailError, emailErrorFormat, messageError, messageErrorFormat }
@@ -27,6 +35,18 @@ export const ContactUs = ({ contactIntl }) => {
     user_email: false,
     message: false,
   });
+
+  const [showEmoji, setShowEmoji] = useState(false)
+
+  const handleShowEmoji = () => {
+    setShowEmoji(!showEmoji)
+  }
+
+  useEffect(() => {
+    document.addEventListener('keydown', (e) => {
+      if(e.code === 'Escape') setShowEmoji(false)
+    })
+  }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -53,7 +73,14 @@ export const ContactUs = ({ contactIntl }) => {
 
   const varCharacters = formValues.message.length
   const maxCaracteres = 300;
-
+  console.log(formValues.message);
+  const onEmojiClick = (e) => {
+    setFormValues((prevFormValues) => ({
+      ...prevFormValues,
+      message: prevFormValues.message + e.emoji
+    }));
+  };
+  
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -144,7 +171,16 @@ export const ContactUs = ({ contactIntl }) => {
           }
         </li>
         <li>
-          <label>{contactIntl.message}<span className={style.required}>*</span></label>
+          {isMobile ?
+          <div>
+              <label>{contactIntl.message}<span className={style.required}>*</span></label>
+          </div> :
+            <div className={style.messageHeader}>
+              <label>{contactIntl.message}<span className={style.required}>*</span></label>
+              {showEmoji ? <BiSolidKeyboard onClick={handleShowEmoji} className={style.icon} /> : <BsFillEmojiSmileFill onClick={handleShowEmoji} className={style.icon} />}
+            </div>
+          }
+          {showEmoji && <div className={style.emojiPicker}><EmojiPicker onEmojiClick={onEmojiClick} /></div>}
           <textarea
             onChange={handleChange}
             value={formValues.message}
