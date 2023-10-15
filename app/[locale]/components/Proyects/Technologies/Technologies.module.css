@@ -21,6 +21,7 @@
   font-family: 'Ubuntu', sans-serif;
   margin-top: 3rem;
   white-space: nowrap; 
+  cursor:grab;
 }
 
 /* Contenedor de los logotipos frontend */
@@ -36,6 +37,14 @@
   border-radius: 25px;
   padding: 1rem;
   animation: scroll 180s linear infinite; /* Controla la velocidad y la dirección de desplazamiento */
+}
+
+.carousel:active {
+  cursor: grabbing;
+}
+
+.carousel span {
+  user-select: none;
 }
 /* Contenedor de los logotipos backend */
 .carouselBack {
@@ -53,6 +62,12 @@
   animation: scrollBack 180s linear infinite; /* Controla la velocidad y la dirección de desplazamiento */
 }
 
+.carouselBack:active {
+  cursor: grabbing;
+}
+.carouselBack span {
+  user-select: none;
+}
 /* Animación de desplazamiento left */
 @keyframes scroll {
   0% {
@@ -88,6 +103,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
 }
 
 @media (max-width:970px) {
