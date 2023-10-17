@@ -157,6 +157,28 @@
 [data-theme="dark"] .buttonLink:hover {
   background-color: rgb(78, 12, 122);
 }
+@media (min-width: 1400px) {
+  .mainContainer {
+    padding-top: 300px;
+    padding-bottom: 600px;
+  }
+
+  .header {
+    display: flex;
+    width: 85%;
+    margin-left: 6rem;
+  }
+
+  .proyectsContainer {
+    width: 90%;
+    min-height: 70vh;
+  }
+  .wave {
+    position: absolute;
+    bottom: -2px;
+    z-index: 2;
+  }
+}
 
 @media (max-width: 800px) {
   .mainContainer {
