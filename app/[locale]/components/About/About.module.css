@@ -40,7 +40,6 @@
 }
 @media (min-width: 1400px) {
   .wave {
-    bottom: -35%;
     width: 150%;
   }
 }

@@ -20,6 +20,13 @@
   width: 40vw;
   background-color: #fff;
 }
+@media (min-width: 1400px) {
+  .calendly {
+    height: 590px;
+    width: 40vw;
+    background-color: #fff;
+  }
+}
 
 @media (max-width: 768px) {
   .mainContainer {
