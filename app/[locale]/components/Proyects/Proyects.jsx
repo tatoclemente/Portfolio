@@ -152,7 +152,13 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
               >
                 {proyect.images.map((image, index) => {
                   return (<SwiperSlide key={index}>
-                    <CldImage onClick={() => openModal(image)} as="image" className={style.swiperImage} src={image} alt='phProyect' width={580} height={300} />
+                    <CldImage onClick={() => openModal(image)} 
+                      as="image" 
+                      className={style.swiperImage} 
+                      src={image} 
+                      alt='phProyect' 
+                      width={580} 
+                      height={300} />
                   </SwiperSlide>
                   )
                 })}
