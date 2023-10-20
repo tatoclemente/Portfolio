@@ -27,8 +27,8 @@ export default function RootLayout({ children, params }) {
         <Providers locale={locale}>
           <NavBar locale={locale} />
           {children}
-          <Analytics />
         </Providers>
+        <Analytics />
       </body>
     </html>
   )
