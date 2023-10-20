@@ -4,8 +4,8 @@ import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import Providers from './providers';
 import NavBar from './components/NavBar/NavBar';
-
 const inter = Inter({ subsets: ['latin'] })
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: 'Gustavo Clemente',
@@ -27,6 +27,7 @@ export default function RootLayout({ children, params }) {
         <Providers locale={locale}>
           <NavBar locale={locale} />
           {children}
+          <Analytics />
         </Providers>
       </body>
     </html>
