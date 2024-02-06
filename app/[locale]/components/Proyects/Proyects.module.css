@@ -124,33 +124,53 @@
 
 .descriptionContainer {
   display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  gap: 4rem;
+  width: 100%;
+}
+
+.description {
+  margin: 0 auto;
+}
+
+.buttonContainer {
+  width: 50%;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .buttonLink {
-  width: 50%;
+  width: 350px;
+  border: none;
   height: 2.5rem;
   background-color: #3755c4;
   color: #eefbfe;
-  padding: 0.3rem 1rem;
+  padding: 0.3rem 1.5rem;
   border-radius: 25px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: .5rem;
   align-items: center;
   transition: all 0.5s ease-in-out;
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin: 0 auto;
   cursor: pointer;
 }
+
+
+
 [data-theme="dark"] .buttonLink {
   background-color: #175867;
 }
 .buttonLink:hover {
   background-color: #0f1457;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 [data-theme="dark"] .buttonLink:hover {
@@ -207,7 +227,7 @@
 
   .titleProyectContainerSelect {
     height: 1.5rem;
-    width: 7.4rem;
+    width: 6.8rem;
     border-radius: 7px 7px 0 0;
     margin-top: 3rem;
     cursor: pointer;
@@ -239,15 +259,22 @@
     transition: 0.3s ease-in-out;
   }
   .proyectsContainer {
-    width: 98%;
+    width: 97%;
     min-height: 62vh;
   }
   .descriptionContainer {
+    flex-direction: column;
     margin-top: -2rem;
+    padding: 0rem;
+  }
+  .buttonContainer {
+    width: 80%;
+
   }
   .descriptionContainer p {
-    width: 90%;
-    line-height: 1.2
+    line-height: 1.2;
+    width: 100%;
+
   }
   .swiperImage {
     max-width: 95%;
@@ -259,13 +286,7 @@
     display: none;
   }
   .buttonLink {
-    width: 80%;
-    height: 2.3rem;
-    padding: 0.3rem 1rem;
-    border-radius: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
     transition: all 0.5s ease-in-out;
     font-size: 1rem;
   }

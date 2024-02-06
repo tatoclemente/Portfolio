@@ -5,7 +5,7 @@ import Footer from './components/Footer/Footer'
 import { ContactUs } from './components/Form/ContactUs'
 import Proyects from './components/Proyects/Proyects'
 import style from './page.module.css'
-import { elFestin, piFood, rickAndMorty } from '@/app/assets/iamgeUrls'
+import { elFestin, piFood, rickAndMorty, tesloShop } from '@/app/assets/iamgeUrls'
 
 import { useTranslations } from 'next-intl'
 
@@ -41,27 +41,37 @@ export default function Home() {
 
   const proyectsList = [
     {
+      title: 'TesloShop',
+      images: tesloShop,
+      description: tP('tesloShop.description'),
+      link: 'https://tesloshop-gc.vercel.app/',
+      githubLink: 'https://github.com/tatoclemente/Teslo-Shop',
+    },
+    {
       title: 'El Festin',
       images: elFestin,
       description: tP('elFestin.description'),
       link: 'https://pf-front-end-grupo3.vercel.app/',
+      githubLink: 'https://github.com/tatoclemente/PF-Front-End-Grupo3',
     },
     {
       title: 'Henry Food',
       images: piFood,
       description: tP('henryFood.description'),
       link: 'https://henrysfood.netlify.app/',
+      githubLink: 'https://github.com/tatoclemente/PI-HENRY-FOOD',
     },
-    {
-      title: 'Rick And Morty',
-      images: rickAndMorty,
-      description: tP('rickAndMorty.description'),
-      link: 'https://rickandmorty-five-ruby.vercel.app/',
-    },
+    // {
+    //   title: 'Rick And Morty',
+    //   images: rickAndMorty,
+    //   description: tP('rickAndMorty.description'),
+    //   link: 'https://rickandmorty-five-ruby.vercel.app/',
+    // },
   ]
   const proyectTexts = {
     title: tP('title'),
     button: tP('button'),
+    gitHubButton: tP('gitHubButton'),
     alertTitle: tP('alertTitle'),
     alertText: tP('alertText'),
     confirmButtonText: tP('confirmButtonText'),

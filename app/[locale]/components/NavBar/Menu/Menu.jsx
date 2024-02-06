@@ -34,7 +34,7 @@ const Menu = (props) => {
     setIsMobile(window.innerWidth <= 768);
   }, []);
 
-  const { about, proyects, meeting, contact, allRight } = props.menuItems;
+  const { about, projects, meeting, contact, allRight } = props.menuItems;
 
   const handleSectionClick = (sectionId, link) => (e) => {
     e.preventDefault();
@@ -75,9 +75,9 @@ const Menu = (props) => {
             {about}
             <div className={selectedLink === about ? style.active : ''}></div>
           </Link>
-          <Link href="#proyects" onClick={() => handleLinkClick(proyects)}>
-            {proyects}
-            <div className={selectedLink === proyects ? style.active : ''}></div>
+          <Link href="#projects" onClick={() => handleLinkClick(projects)}>
+            {projects}
+            <div className={selectedLink === projects ? style.active : ''}></div>
           </Link>
           <Link href="#meeting" onClick={handleSectionClick('meeting', meeting)}>
             {meeting}
@@ -108,8 +108,8 @@ const Menu = (props) => {
           <Link href="#" onClick={toggleMenu}>
             {about}
           </Link>
-          <Link href="#proyects" onClick={toggleMenu}>
-            {proyects}
+          <Link href="#projects" onClick={toggleMenu}>
+            {projects}
           </Link>
           <Link href="#meeting" onClick={handleClick}>
             {meeting}

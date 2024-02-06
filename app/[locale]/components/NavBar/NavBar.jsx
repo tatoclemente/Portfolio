@@ -8,7 +8,7 @@ const NavBar = ({ locale }) => {
   const t = useTranslations('NavBar')
   const menuItems = {
     about: t('About'),
-    proyects: t('Proyects'),
+    projects: t('Projects'),
     contact: t('Contact'),
     meeting: t('Meeting'),
     allRight: t('AllRight')
