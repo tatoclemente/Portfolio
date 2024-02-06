@@ -1,7 +1,7 @@
 {
   "NavBar": {
     "About": "About",
-    "Proyects": "Projects",
+    "Projects": "Projects",
     "Contact": "Contact",
     "Meeting": "Schedule meeting",
     "AllRight": "All rights reserved",
@@ -30,6 +30,9 @@
     "elFestin": {
       "description": "An innovative e-commerce platform designed specifically for a restaurant, meticulously crafted using cutting-edge technologies such as React, Express, and PostgreSQL. The project follows the disciplined framework of the SCRUM methodology to ensure efficient development and delivery."
     },
+    "tesloShop": {
+      "description": "TesloShop is an e-commerce project that seamlessly integrates the backend within the Next.js application, using Server Actions. Developed 100% with Next.js, TypeScript, Zustand, PostgreSQL, and Prisma, this project offers a dynamic and efficient shopping experience. As a clone of the official Tesla store, not only provides a user-friendly interface but also features a consolidated backend, streamlining processes for secure transactions and robust data management. With PayPal integration, ensures a reliable and hassle-free payment experience for users."
+    },
     "henryFood": {
       "description": 
       "Allow me to introduce you to this recipe application that integrates data from an API and enables the creation of custom recipes. This proyect has been developed using cutting-edge technologies such as React, Express, Cloudinary, and PostgreSQL. It is a pivotal component of my individual project at the SoyHenry bootcamp, where I apply and hone my development skills."
@@ -37,7 +40,8 @@
     "rickAndMorty": {
       "description": "Check out this Single Page Application (SPA) where I kicked off my journey as a Fullstack developer. It comes with registration and login pages and seamlessly connects to the Rick and Morty API to display character cards, letting users add their favorite characters to their collection."
     },
-    "button": "Enter to see the site here"
+    "button": "Enter to see the site here",
+    "gitHubButton": "View code on GitHub"
   },
   "Contact": {
     "meeting": "Schedule a meeting with me",

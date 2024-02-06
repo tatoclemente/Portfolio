@@ -28,6 +28,17 @@ export const rickAndMorty = [
   "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694198203/Portfolio/Rick%20and%20Morty/ph3_xkahqr.webp"
 ]
 
+export const tesloShop = [
+  "https://res.cloudinary.com/dt2o36ezn/image/upload/v1707240923/Portfolio/Teslo-shop/project-ph-1_jlv5ih.webp",
+  "https://res.cloudinary.com/dt2o36ezn/image/upload/v1707240923/Portfolio/Teslo-shop/project-ph-2_yujtlk.webp",
+  "https://res.cloudinary.com/dt2o36ezn/image/upload/v1707240923/Portfolio/Teslo-shop/project-ph-5_ut48y5.webp",
+  "https://res.cloudinary.com/dt2o36ezn/image/upload/v1707240924/Portfolio/Teslo-shop/project-ph-7_ivttjf.webp",
+  "https://res.cloudinary.com/dt2o36ezn/image/upload/v1707240924/Portfolio/Teslo-shop/project-ph-8_va26vg.webp",
+  "https://res.cloudinary.com/dt2o36ezn/image/upload/v1707240925/Portfolio/Teslo-shop/project-ph-10_z6xryv.webp",
+  "https://res.cloudinary.com/dt2o36ezn/image/upload/v1707240925/Portfolio/Teslo-shop/project-ph-11_ih9tp8.webp",
+  "https://res.cloudinary.com/dt2o36ezn/image/upload/v1707240926/Portfolio/Teslo-shop/project-ph-12_bnbtr3.webp"
+]
+
 export const technology = {
   front: [
     {

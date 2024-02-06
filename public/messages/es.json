@@ -1,7 +1,7 @@
 {
   "NavBar": {
     "About": "Sobre mí",
-    "Proyects": "Proyectos",
+    "Projects": "Proyectos",
     "Contact": "Contacto",
     "Meeting": "Agendar reunión",
     "AllRight": "Todos los derechos resrvados",
@@ -27,6 +27,9 @@
     "alertText": "EL siguiente sitio no esta optimizado para dispositivos móviles y puede que no se vea correctamente.",
     "confirmButtonText": "Ver de todos modos",
     "denyButtonText": "Ver mas tarde",
+    "tesloShop": {
+      "description": "TesloShop es un proyecto de comercio electrónico que integra perfectamente el backend dentro de la aplicación Next.js, utilizando Server Actions. Desarrollado 100% con Next.js, TypeScript, Zustand, PostgreSQL y Prisma, este proyecto ofrece una experiencia de compra dinámica y eficiente. Es un clon de la tienda oficial de Tesla, no solo proporciona una interfaz fácil de usar, sino que también cuenta con un backend consolidado, simplificando procesos para transacciones seguras y una gestión robusta de datos. Con la integración de PayPal, garantiza una experiencia de pago confiable y sin complicaciones para los usuarios."
+    },
     "elFestin": {
       "description": "Una plataforma de comercio electrónico innovadora diseñada específicamente para un restaurante, meticulosamente elaborada utilizando tecnologías de vanguardia como React, Express y PostgreSQL. El proyecto sigue el disciplinado marco de la metodología SCRUM para garantizar un desarrollo y entrega eficientes."
     },
@@ -36,7 +39,8 @@
     "rickAndMorty": {
       "description": "Échale un ojo a esta Aplicación de Página Única (SPA) donde comencé mi aventura como desarrollador Fullstack. Incluye páginas de registro e inicio de sesión, y se conecta perfectamente con la API de Rick and Morty para mostrar tarjetas de personajes, permitiendo a los usuarios añadir a sus personajes favoritos a su colección."
     },
-    "button": "Ingresa a ver el sitio aquí"
+    "button": "Ingresa a ver el sitio aquí",
+    "gitHubButton": "Ver código en GitHub"
   },
   "Contact": {
     "meeting": "Agenda un cita conmigo",

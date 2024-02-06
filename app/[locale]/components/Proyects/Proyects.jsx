@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import style from './Proyects.module.css'
 import styleModal from './Modal.module.css'
 import './swiper.css'
@@ -17,21 +17,26 @@ import 'swiper/css/scrollbar';
 // import CldImage from 'next/cloudinary';
 import { CldImage } from 'next-cloudinary';
 
-import Link from 'next/link';
+
 import Technologies from './Technologies/Technologies';
 import Swal from 'sweetalert2'
+import Link from 'next/link'
+import { BsGithub } from 'react-icons/bs'
+import { TbWorldShare } from "react-icons/tb";
 
 
 
 const Proyects = ({ proyectTexts, proyectsList }) => {
   const [isMobile, setIsMobile] = useState(false);
-  const [selectedTab, setSelectedTab] = useState('El Festin'); // Inicialmente selecciona 'El Festin'
+  const [selectedTab, setSelectedTab] = useState('TesloShop'); // Inicialmente selecciona 'El Festin'
   const [modalImageUrl, setModalImageUrl] = useState(''); // Estado para la URL de la imagen en el modal
 
 
+  const swiperRef = useRef(null);
+
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768); 
+      setIsMobile(window.innerWidth <= 768);
     };
 
     // Ejecutar la función al cargar la página y en cambios de tamaño de ventana
@@ -43,6 +48,13 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
       window.removeEventListener('resize', checkMobile);
     };
   }, []);
+
+
+  useEffect(() => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideTo(0);
+    }
+  }, [selectedTab]);
   const handleTabClick = (tab) => {
     setSelectedTab(tab);
   };
@@ -63,30 +75,37 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
   };
 
   const handleLinkClick = (link) => {
-    isMobile && !link.includes('https://henrysfood.netlify.app/') ?
-    Swal.fire({
-      icon: 'info',
-      title: proyectTexts.alertTitle,
-      text: proyectTexts.alertText,
-      showDenyButton: true,
-      confirmButtonText: proyectTexts.confirmButtonText,
-      denyButtonText: proyectTexts.denyButtonText,
-    }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
-      if (result.isConfirmed) {
-        window.open(link, "_blank");;
-      } else if (result.isDenied) {
-        return
-      }
-    })
-    : window.open(link, "_blank");
+    isMobile && link.includes('https://pf-front-end-grupo3.vercel.app/') ?
+      Swal.fire({
+        icon: 'info',
+        title: proyectTexts.alertTitle,
+        text: proyectTexts.alertText,
+        showDenyButton: true,
+        confirmButtonText: proyectTexts.confirmButtonText,
+        denyButtonText: proyectTexts.denyButtonText,
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          window.open(link, "_blank");;
+        } else if (result.isDenied) {
+          return
+        }
+      })
+      : window.open(link, "_blank");
     ;
   };
 
   return (
-    <div className={style.mainContainer} id='proyects'>
+    <div className={style.mainContainer} id='projects'>
       <h1 className={style.title}>{proyectTexts.title}</h1>
       <header className={style.header}>
+        <div
+          className={`${style.titleProyectContainerSelect} ${selectedTab === 'TesloShop' ? style.selectedTab : ''
+            }`}
+          onClick={() => handleTabClick('TesloShop')}
+        >
+          <h3 className={style.titleProyect}>TesloShop</h3>
+        </div>
         <div
           className={`${style.titleProyectContainerSelect} ${selectedTab === 'El Festin' ? style.selectedTab : ''
             }`}
@@ -101,20 +120,13 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
         >
           <h3 className={style.titleProyect}>Henry Food</h3>
         </div>
-        <div
-          className={`${style.titleProyectContainerSelect} ${selectedTab === 'Rick And Morty' ? style.selectedTab : ''
-            }`}
-          onClick={() => handleTabClick('Rick And Morty')}
-        >
-          <h3 className={style.titleProyect}>Rick And Morty</h3>
-        </div>
       </header>
       <div className={style.proyectsContainer}>
         {proyectsList.filter((proyect) => proyect.title === selectedTab)
           .map((proyect, index) => (
             <article key={index}>
               <Swiper
-                // install Swiper modules
+                ref={swiperRef}
                 modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, Autoplay]}
                 effect={'coverflow'}
                 grabCursor={true}
@@ -152,12 +164,12 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
               >
                 {proyect.images.map((image, index) => {
                   return (<SwiperSlide key={index}>
-                    <CldImage onClick={() => openModal(image)} 
-                      as="image" 
-                      className={style.swiperImage} 
-                      src={image} 
-                      alt='phProyect' 
-                      width={580} 
+                    <CldImage onClick={() => openModal(image)}
+                      as="image"
+                      className={style.swiperImage}
+                      src={image}
+                      alt='phProyect'
+                      width={580}
                       height={300} />
                   </SwiperSlide>
                   )
@@ -165,26 +177,35 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
               </Swiper>
 
               <div className={style.descriptionContainer}>
-                <p>{proyect.description}</p>
-                <p onClick={(() => handleLinkClick(proyect.link))} className={style.buttonLink} target='_blank'>{proyectTexts.button}</p>
+                <div className={style.buttonContainer}>
+                  <p className={style.description}>{proyect.description}</p>
+                </div>
+                <div className={style.buttonContainer}>
+                  <button onClick={(() => handleLinkClick(proyect.link))} className={style.buttonLink} target='_blank'>
+                    <TbWorldShare size={24} /> {proyectTexts.button}
+                  </button>
+                  <Link href={proyect.githubLink} target='_blank' className={style.buttonLink} >
+                    <BsGithub size={21} /> {proyectTexts.gitHubButton}
+                  </Link> 
+                </div>
               </div>
 
             </article>
           ))}
-          {modalImageUrl !== '' && 
-           <div className={styleModal.modal}>
-           <div className={styleModal.modalContent}>
-             <span className={styleModal.close} onClick={closeModal}>x</span>
-             <TransformWrapper defaultScale={1} defaultPositionX={200} defaultPositionY={200}>
-               <TransformComponent>
-                 <CldImage id="modalImage" src={modalImageUrl} as="image" className={styleModal.modalImage} alt='phProyect' width={isMobile ? 600 : 1150} height={isMobile ? 190 : 550} />
-               </TransformComponent>
- 
-             </TransformWrapper>
-           </div>
-         </div>
-          }
-       
+        {modalImageUrl !== '' &&
+          <div className={styleModal.modal}>
+            <div className={styleModal.modalContent}>
+              <span className={styleModal.close} onClick={closeModal}>x</span>
+              <TransformWrapper defaultScale={1} defaultPositionX={200} defaultPositionY={200}>
+                <TransformComponent>
+                  <CldImage id="modalImage" src={modalImageUrl} as="image" className={styleModal.modalImage} alt='phProyect' width={isMobile ? 600 : 1150} height={isMobile ? 190 : 550} />
+                </TransformComponent>
+
+              </TransformWrapper>
+            </div>
+          </div>
+        }
+
 
       </div>
       <Technologies />
