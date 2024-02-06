@@ -73,19 +73,19 @@ const Menu = (props) => {
         <div className={style.navBarLinks}>
           <Link href="/" onClick={() => handleLinkClick(about)}>
             {about}
-            <div className={selectedLink === about ? style.active : ''}></div>
+            <div className={`${style.underlined} ${selectedLink === about ? style.active : ''}`}></div>
           </Link>
           <Link href="#projects" onClick={() => handleLinkClick(projects)}>
             {projects}
-            <div className={selectedLink === projects ? style.active : ''}></div>
+            <div className={`${style.underlined} ${selectedLink === projects ? style.active : ''}`}></div>
           </Link>
           <Link href="#meeting" onClick={handleSectionClick('meeting', meeting)}>
             {meeting}
-            <div className={selectedLink === meeting ? style.active : ''}></div>
+            <div className={`${style.underlined} ${selectedLink === meeting ? style.active : ''}`}></div>
           </Link>
           <Link href="#contact" onClick={handleSectionClick('contact', contact)}>
             {contact}
-            <div className={selectedLink === contact ? style.active : ''}></div>
+            <div className={`${style.underlined} ${selectedLink === contact ? style.active : ''}`}></div>
           </Link>
           <DownloadResume downloadResume={props.downloadResume} width="10rem" />
         </div>
