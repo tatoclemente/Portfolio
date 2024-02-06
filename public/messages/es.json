@@ -11,7 +11,7 @@
     "hello": "Hola, soy",
     "name": "Gustavo Clemente",
     "description": {
-      "header": "Desarrolador Web Full Stack",
+      "header": "Desarrollador Web Full Stack",
       "p1": "El desarrollo Front-End es mi verdadera pasión, donde me siento totalmente a gusto. Esta determinación y entusiasmo impulsan la creación de soluciones visuales y funcionales que elevan la experiencia del usuario.",
       "p2": "Siempre receptivo a nuevas conexiones y oportunidades emocionantes.",
       "contact": "¡Contáctame aquí!",
@@ -28,7 +28,7 @@
     "confirmButtonText": "Ver de todos modos",
     "denyButtonText": "Ver mas tarde",
     "tesloShop": {
-      "description": "TesloShop es un proyecto de comercio electrónico que integra perfectamente el backend dentro de la aplicación Next.js, utilizando Server Actions. Desarrollado 100% con Next.js, TypeScript, Zustand, PostgreSQL y Prisma, este proyecto ofrece una experiencia de compra dinámica y eficiente. Es un clon de la tienda oficial de Tesla, no solo proporciona una interfaz fácil de usar, sino que también cuenta con un backend consolidado, simplificando procesos para transacciones seguras y una gestión robusta de datos. Con la integración de PayPal, garantiza una experiencia de pago confiable y sin complicaciones para los usuarios."
+      "description": "TesloShop es un proyecto de comercio electrónico que integra perfectamente el backend dentro de la aplicación Next.js, utilizando Server Actions. Desarrollado 100% con Next.js, TypeScript, Tailwing, Zustand, PostgreSQL y Prisma, este proyecto ofrece una experiencia de compra dinámica y eficiente. Es un clon de la tienda oficial de Tesla, no solo proporciona una interfaz fácil de usar, sino que también cuenta con un backend consolidado, simplificando procesos para transacciones seguras y una gestión robusta de datos. Con la integración de PayPal, garantiza una experiencia de pago confiable y sin complicaciones para los usuarios."
     },
     "elFestin": {
       "description": "Una plataforma de comercio electrónico innovadora diseñada específicamente para un restaurante, meticulosamente elaborada utilizando tecnologías de vanguardia como React, Express y PostgreSQL. El proyecto sigue el disciplinado marco de la metodología SCRUM para garantizar un desarrollo y entrega eficientes."

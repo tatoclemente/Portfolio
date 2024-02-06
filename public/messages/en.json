@@ -31,7 +31,7 @@
       "description": "An innovative e-commerce platform designed specifically for a restaurant, meticulously crafted using cutting-edge technologies such as React, Express, and PostgreSQL. The project follows the disciplined framework of the SCRUM methodology to ensure efficient development and delivery."
     },
     "tesloShop": {
-      "description": "TesloShop is an e-commerce project that seamlessly integrates the backend within the Next.js application, using Server Actions. Developed 100% with Next.js, TypeScript, Zustand, PostgreSQL, and Prisma, this project offers a dynamic and efficient shopping experience. As a clone of the official Tesla store, not only provides a user-friendly interface but also features a consolidated backend, streamlining processes for secure transactions and robust data management. With PayPal integration, ensures a reliable and hassle-free payment experience for users."
+      "description": "TesloShop is an e-commerce project that seamlessly integrates the backend within the Next.js application, using Server Actions. Developed 100% with Next.js, TypeScript, Tailwing, Zustand, PostgreSQL, and Prisma, this project offers a dynamic and efficient shopping experience. As a clone of the official Tesla store, not only provides a user-friendly interface but also features a consolidated backend, streamlining processes for secure transactions and robust data management. With PayPal integration, ensures a reliable and hassle-free payment experience for users."
     },
     "henryFood": {
       "description": 
