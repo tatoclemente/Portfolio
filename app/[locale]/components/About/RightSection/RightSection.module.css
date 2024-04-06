@@ -90,6 +90,17 @@
   filter: sepia(0.7);
   z-index: 5;
   animation: input-image 1s linear;
+  mask-image: radial-gradient(
+    black 65%,
+    transparent
+  )
+}
+
+[data-theme="dark"] .image {
+  mask-image: radial-gradient(
+    black 55%,
+    transparent
+  )
 }
 
 @keyframes input-image {

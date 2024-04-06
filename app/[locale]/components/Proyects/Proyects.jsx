@@ -166,7 +166,6 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
                   return (<SwiperSlide key={index}>
                     <CldImage onClick={() => openModal(image)}
                       as="image"
-                      className={style.swiperImage}
                       src={image}
                       alt='phProyect'
                       width={580}

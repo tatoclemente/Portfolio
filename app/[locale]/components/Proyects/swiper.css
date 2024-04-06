@@ -8,6 +8,20 @@
 .swiper-slide {
   margin-top: 2rem;
   padding-bottom: 2rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  box-shadow: 10px 10px 35px rgba(118, 83, 151, 0.338);
+  height: 100%;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+[data-theme="dark"] .swiper-slide img {
+  box-shadow: 10px 10px 35px rgba(23, 88, 103, 0.409);
 }
 .swiper:hover .swiper-button-next {
   opacity: 1;

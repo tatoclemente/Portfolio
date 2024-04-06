@@ -1,5 +1,4 @@
 .formContainer {
-  height: 90vh;
   width: 500px;
   max-width: 90vw;
   display: flex;
@@ -154,10 +153,35 @@
   position: absolute;
   left: 50%;
   top: -150%;
-  z-index: 9999;
+  z-index: 999;
   animation: intro .3s ease-out forwards;
   box-shadow: 5px 5px 25px rgba(0, 0, 0, .4);
   border-radius: 8px;
+}
+
+.closeIcons {
+  position: absolute;
+  z-index: 9999;
+  font-size: 34px;
+  right: -28px;
+  top: -28px;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+  color: #3755c4;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+[data-theme="dark"] .closeIcons {
+  color: #606060;
+}
+
+.closeIcons:hover {
+  color: #0f1457;
+}
+
+[data-theme="dark"] .closeIcons:hover {
+  color: rgb(80, 82, 82);
 }
 
 @keyframes intro {

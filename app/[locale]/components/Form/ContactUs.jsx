@@ -8,6 +8,7 @@ import Spinner from '../Spinner/Spinner'
 import EmojiPicker from 'emoji-picker-react'
 import { BsFillEmojiSmileFill } from 'react-icons/bs'
 import { BiSolidKeyboard } from 'react-icons/bi'
+import { IoCloseCircle } from 'react-icons/io5'
 
 export const ContactUs = ({ contactIntl }) => {
   const [isMobile, setIsMobile] = useState(false)
@@ -180,7 +181,11 @@ export const ContactUs = ({ contactIntl }) => {
               {showEmoji ? <BiSolidKeyboard onClick={handleShowEmoji} className={style.icon} /> : <BsFillEmojiSmileFill onClick={handleShowEmoji} className={style.icon} />}
             </div>
           }
-          {showEmoji && <div className={style.emojiPicker}><EmojiPicker onEmojiClick={onEmojiClick} /></div>}
+          {showEmoji && 
+            <div className={style.emojiPicker}>
+              <button onClick={ handleShowEmoji } className={ style.closeIcons }><IoCloseCircle /></button>
+              <EmojiPicker onEmojiClick={onEmojiClick} />
+            </div>}
           <textarea
             onChange={handleChange}
             value={formValues.message}

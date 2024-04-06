@@ -1,10 +1,10 @@
 import React from 'react'
 import style from './Footer.module.css'
-import { useTranslations } from 'next-intl'
+
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 import Link from 'next/link'
 const Footer = () => {
-  const t = useTranslations('NavBar')
+
   return (
     <div className={style.footerContainer}>
       <div className={style.socialMedia}>
@@ -16,8 +16,7 @@ const Footer = () => {
         </Link>
       </div>
       <div className={style.footer}>
-        <p>© 2023 Gustavo Clemente</p>
-        <p>{t('AllRight')}</p>
+        <p>© 2024 Gustavo Clemente</p>
       </div>
     </div>
   )

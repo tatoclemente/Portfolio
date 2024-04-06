@@ -6,3 +6,8 @@
   align-items: center;
   overflow-x: hidden;
 }
+
+
+.contact {
+  min-height: 90vh
+}

@@ -102,12 +102,12 @@
   box-shadow: 10px 10px 35px rgba(13, 32, 37, 0.42);
 }
 
-.swiperImage {
+/* .swiperImage {
   border-radius: 5px;
   margin: 0 auto;
   box-shadow: 10px 10px 35px rgba(118, 83, 151, 0.338);
   object-fit: cover;
-}
+} */
 
 [data-theme="dark"] .swiperImage {
   box-shadow: 10px 10px 35px rgba(23, 88, 103, 0.409);
