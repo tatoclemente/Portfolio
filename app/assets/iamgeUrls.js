@@ -46,7 +46,7 @@ export const technology = {
       image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300409/Portfolio/Technologies/js_svztpb.webp"
     },
     {
-      title: "TaypeScript",
+      title: "TypeScript",
       image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300407/Portfolio/Technologies/ts_mrvayn.webp"
     },
     {
