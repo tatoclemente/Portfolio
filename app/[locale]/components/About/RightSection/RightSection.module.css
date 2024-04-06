@@ -90,6 +90,10 @@
   filter: sepia(0.7);
   z-index: 5;
   animation: input-image 1s linear;
+  mask-image: linear-gradient(
+    black 84%,
+    transparent
+  )
 }
 
 @keyframes input-image {
