@@ -2,7 +2,7 @@ const validations = (name, email, message, errorMsjs) => {
   const errors = {}
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-  const patron = /^.*?(\S)\1{2,}.*?$/
+  const patron = /^.*?(\S)\1{4,}.*?$/
 
   if (!name) errors.user_name = errorMsjs.nameError
   else if (patron.test(name)) errors.user_name = errorMsjs.nameErrorFormat

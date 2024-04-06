@@ -95,7 +95,9 @@ export default function Home() {
       <About leftText={leftText} contactIntl={contactIntl} />
       <Proyects proyectTexts={proyectTexts} proyectsList={proyectsList} />
       <CalendlyForm titleMeeting={contactIntl.meeting} />
-      <ContactUs contactIntl={contactIntl} />
+      <div className={style.contact}>
+        <ContactUs contactIntl={contactIntl} />
+      </div>
       <Footer />
     </div>
   )
