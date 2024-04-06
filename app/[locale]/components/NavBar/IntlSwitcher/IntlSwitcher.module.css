@@ -18,6 +18,7 @@
 .linksContainer {
   position: absolute;
   padding: 10px;
+  min-width: 100px;
   background-color: rgb(81, 139, 183);
   top: 105%;
   display: flex;

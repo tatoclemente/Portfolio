@@ -14,7 +14,7 @@ const IntlSwitcher = ({ locale }) => {
         <Link className={locale === 'en' ? style.active : style.inactive} href='/' locale='en'>
 
           <Image
-            width={30}
+            width={25}
             height={25}
             alt="usa flag"
             src="/images/united_states.png"
