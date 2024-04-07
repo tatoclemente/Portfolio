@@ -113,11 +113,13 @@
   box-shadow: 10px 10px 35px rgba(23, 88, 103, 0.409);
 }
 
-.wave {
+.waveTop {
   position: absolute;
-  bottom: -1px;
-  z-index: 2;
+  top: 0;
+  z-index: 1;
 }
+
+
 [data-theme="dark"] .wavePath {
   fill: #041d22;
 }
@@ -288,14 +290,26 @@
   .buttonLink {
     width: 100%;
     transition: all 0.5s ease-in-out;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .buttonLink:hover {
     background-color: #3755c4;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   [data-theme="dark"] .buttonLink:hover {
     background-color: #175867;
+  }
+}
+
+@media (max-width: 500px) {
+  .titleProyectContainerSelect {
+    height: 1.5rem;
+    width: 5.9rem;
+  }
+  .buttonLink {
+    font-size: .9rem;
+    margin: 0 auto;
+    cursor: pointer;
   }
 }

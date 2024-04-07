@@ -13,10 +13,12 @@
 }
 
 .modal {
-    height: 90vh;
+    height: fit-content;
+    padding: 50px 0;
     min-width: 45vw;
     background-color: #eef8ff;
     border-radius: 25px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,7 +58,7 @@
 .close {
     cursor: pointer;
     position: absolute;
-    top: -6rem;
+    top: -2.4rem;
     right: -1rem;
     font-size: 1.8rem;
     color: rgba(255, 0, 0, 0.469);
@@ -74,14 +76,21 @@
     color: rgb(254, 254, 254);
 }
 
+@media (min-width: 1500px) {
+    
+    .close {
+        right: -6rem;
+    }
+}
+
 @media (max-width: 1224px) {
     .modal {
         width: 85vw;
+        height: fit-content;
+        padding: 50px 0;
+        margin: 0 auto;
     }
 
-    .modalContent {
-        margin-top: 6rem;
-    }
     .close {
         top: -2.5rem;
         right: -6rem;
@@ -97,22 +106,20 @@
 @media (max-width: 978px) {
     .modal {
         width: 95vw;
-        height: 80vh;
+        height: fit-content;
+        padding: 50px 0;
+        margin: 0 auto;
     }
 
-    .modalContent {
-        margin-top: 12rem;
-    }
 }
 @media (max-width: 720px) {
     .modal {
         width: 95vw;
-        height: 80vh;
+        height: fit-content;
+        padding: 50px 0;
+        margin: 0 auto;
     }
 
-    .modalContent {
-        margin-top: 12rem;
-    }
     .close {
         right: 0;
     }
@@ -121,12 +128,11 @@
 @media (max-width: 376px) {
     .modal {
         width: 95vw;
-        height: 90vh;
+        height: fit-content;
+        padding: 50px 0;
+        margin: 0 auto;
     }
 
-    .modalContent {
-        margin-top: 10rem;
-    }
     .close {
         right: 0;
     }

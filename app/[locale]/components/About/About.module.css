@@ -43,10 +43,18 @@
     width: 150%;
   }
 }
+
+@media (min-width: 1200px) {
+  .wave {
+    bottom: -30%;
+  }
+}
 @media (max-width: 1200px) {
   .AboutContainer {
     display: flex;
   }
+
+ 
 
   .sectionLeft {
     width: 50%;

@@ -15,6 +15,8 @@ const Menu = (props) => {
   const [isMobile, setIsMobile] = useState(false);
   const [selectedLink, setSelectedLink] = useState('/');
 
+  console.log(selectedLink);
+
 
   const toggleMenu = () => {
     setMenu(!menu);
@@ -32,6 +34,7 @@ const Menu = (props) => {
   useEffect(() => {
     props.locale === 'en' ? handleLinkClick('About') : handleLinkClick('Sobre mí')
     setIsMobile(window.innerWidth <= 768);
+    // eslint-disable-next-line 
   }, []);
 
   const { about, projects, meeting, contact, allRight } = props.menuItems;
@@ -42,7 +45,7 @@ const Menu = (props) => {
     isMobile && toggleMenu();
     const section = document.querySelector(`#${sectionId}`);
     window.scrollTo({
-      top: section.offsetTop - 100,
+      top: sectionId === "meeting" ? section.offsetTop + 50 : section.offsetTop,
       behavior: 'smooth',
     });
   };

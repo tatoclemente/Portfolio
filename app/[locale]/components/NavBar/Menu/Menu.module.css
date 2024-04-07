@@ -42,6 +42,11 @@
   animation: intro 0.3s linear;
 }
 
+[data-theme="dark"] .navBarLinks a:hover 
+.underlined {
+  background-color: rgb(87, 151, 200);
+}
+
 .active {
   position: absolute;
   bottom: 0;
