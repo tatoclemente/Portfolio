@@ -92,7 +92,7 @@ const Technologies = () => {
     const clonedBack = [...back, ...back, ...back];
     setClonedTechnologyFront(clonedFront);
     setClonedTechnologyBack(clonedBack);
-  }, []);
+  }, [back, front]);
 
 
   return (
