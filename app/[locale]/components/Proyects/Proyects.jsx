@@ -62,16 +62,10 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
   const openModal = (imageUrl) => {
     console.log(imageUrl);
     setModalImageUrl(imageUrl)
-    // const modal = document.getElementById("myModal");
-    // const modalImage = document.getElementById("modalImage");
-    // modalImage.src = imageUrl;
-    // modal.style.display = "block";
   };
 
   const closeModal = () => {
     setModalImageUrl('')
-    // const modal = document.getElementById("myModal");
-    // modal.style.display = "none";
   };
 
   const handleLinkClick = (link) => {
@@ -128,36 +122,36 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
             <article key={index}>
               <Swiper
                 ref={swiperRef}
-                modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, Autoplay]}
-                effect={'coverflow'}
-                grabCursor={true}
-                centeredSlides={true}
-                slidesPerView={"auto"}
-                coverflowEffect={{
-                  rotate: 50,
-                  stretch: 0,
-                  depth: 100,
-                  modifier: 1,
-                  slideShadows: true,
-                }}
+                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                // grabCursor={true}
+                // centeredSlides={true}
+                slidesPerView={1.1}
                 navigation
-                spaceBetween={10}
+                spaceBetween={0}
                 autoplay={{
                   delay: 3000,
-                  disableOnInteraction: false,
+                  disableOnInteraction: true,
                 }}
                 breakpoints={{
                   640: {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
+                    slidesPerView: 1.2,
+                    spaceBetween: 5,
                   },
-                  768: {
-                    slidesPerView: 2,
-                    spaceBetween: 40,
+                  968: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 0,
                   },
                   1024: {
-                    slidesPerView: 2,
-                    spaceBetween: 50,
+                    slidesPerView: 1.3,
+                    spaceBetween: 5,
+                  },
+                  1100: {
+                    slidesPerView: 1.7,
+                    spaceBetween: 0,
+                  },
+                  1450: {
+                    slidesPerView: 2.3,
+                    spaceBetween: 0,
                   }
                 }}
                 pagination={{ clickable: true }}
@@ -186,7 +180,7 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
                   </button>
                   <Link href={proyect.githubLink} target='_blank' className={style.buttonLink} >
                     <BsGithub size={21} /> {proyectTexts.gitHubButton}
-                  </Link> 
+                  </Link>
                 </div>
               </div>
 
@@ -209,7 +203,7 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
       </div>
       <Technologies />
 
-      
+
     </div>
   )
 }
