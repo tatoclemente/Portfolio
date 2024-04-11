@@ -3,7 +3,7 @@
   width: 100vw;
   background-color: rgb(118, 83, 151);
   position: relative;
-  padding-top: 200px;
+  /* padding-top: 200px; */
   padding-bottom: 500px;
   position: relative;
   margin: 0 auto;
@@ -106,12 +106,6 @@
   box-shadow: 10px 10px 35px rgba(23, 88, 103, 0.409);
 }
 
-.waveTop {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-}
-
 
 [data-theme="dark"] .wavePath {
   fill: #041d22;
@@ -173,7 +167,7 @@
 }
 @media (min-width: 1400px) {
   .mainContainer {
-    padding-top: 300px;
+    /* padding-top: 300px; */
     padding-bottom: 600px;
   }
 
@@ -185,6 +179,7 @@
   .header {
     display: flex;
     margin-left: 12%;
+    max-width: 1200px;
   }
 
   .proyectsContainer {
@@ -193,11 +188,7 @@
     min-height: 70vh;
   }
 
-  .wave {
-    position: absolute;
-    bottom: -2px;
-    z-index: 2;
-  }
+
 }
 
 @media (max-width: 800px) {
