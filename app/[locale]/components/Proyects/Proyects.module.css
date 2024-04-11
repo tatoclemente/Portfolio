@@ -15,11 +15,11 @@
 .title {
   position: absolute;
   right: 6rem;
-  top: 9rem;
+  top: 13rem;
   color: #fff;
   font-family: "Ubuntu", sans-serif;
   letter-spacing: 1.3px;
-  font-size: 3.8rem;
+  font-size: 3rem;
   z-index: 50;
 }
 
@@ -172,8 +172,9 @@
   }
 
   .title {
-    right: 12rem;
-    top: 12rem;
+    right: 14rem;
+    top: 17rem;
+    font-size: 3.8rem;
   }
 
   .header {
@@ -196,10 +197,9 @@
     padding-bottom: 260px;
   }
   .title {
-    right: 50%;
-    transform: translateX(50%);
-    font-size: 3rem;
-    top: 8rem;
+    position: static;
+    font-size: 24px;
+    text-align: center;
   }
   .header {
     margin-left: 1rem;

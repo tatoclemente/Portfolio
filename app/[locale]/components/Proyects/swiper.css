@@ -116,15 +116,15 @@
 
 @media (max-width: 500px) {
   .swiper-slide img {
-    height: 200px;
-    width: 95% !important;
+    height: 175px !important;
+    width: 97% !important;
   }
 }
 
 
 @media (max-width: 350px) {
   .swiper-slide img {
-    height: 140px;
+    height: 140px !important;
     width: 96%;
   }
 }
