@@ -1,17 +1,26 @@
 'use client'
 import Link from 'next-intl/link'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Image from 'next/image'
 import style from './IntlSwitcher.module.css'
 import { AiOutlineGlobal } from 'react-icons/ai'
+import { useClickOutSide } from '@/app/[locale]/hooks/useClickOutSide'
 
 const IntlSwitcher = ({ locale }) => {
-  const [show, setShow] = useState(false)
+
+  const ref = useRef(null)
+  const { showModal, setShowModal } = useClickOutSide(ref)
+  
+
+
   return (
-    <div className={style.mainContainer}>
-      <AiOutlineGlobal onClick={() => setShow(!show)} className={style.global} />
-      <div style={show === false ? { display: 'none' } : {}} className={style.linksContainer}>
-        <Link className={locale === 'en' ? style.active : style.inactive} href='/' locale='en'>
+    <div className={style.mainContainer} ref={ref}>
+      <AiOutlineGlobal onClick={() => setShowModal(!showModal)} className={style.global} />
+      <div style={showModal === false ? { display: 'none' } : {}} className={style.linksContainer}>
+        <Link 
+          onClick={() => setShowModal(false)}
+          className={locale === 'en' ? style.active : style.inactive} href='/' locale='en'
+        >
 
           <Image
             width={25}
@@ -22,7 +31,10 @@ const IntlSwitcher = ({ locale }) => {
           />
           EN
         </Link>
-        <Link className={locale === 'es' ? style.active : style.inactive} href='/' locale='es'>
+        <Link 
+          onClick={() => setShowModal(false)}
+          className={locale === 'es' ? style.active : style.inactive} href='/' locale='es'
+        >
           <Image
             width={25}
             height={25}
