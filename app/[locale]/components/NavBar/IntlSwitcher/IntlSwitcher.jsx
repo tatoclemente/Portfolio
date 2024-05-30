@@ -1,10 +1,11 @@
 'use client'
-import Link from 'next-intl/link'
+
 import React, { useRef, useState } from 'react'
 import Image from 'next/image'
 import style from './IntlSwitcher.module.css'
 import { AiOutlineGlobal } from 'react-icons/ai'
 import { useClickOutSide } from '@/app/[locale]/hooks/useClickOutSide'
+import { Link } from '@/navigation'
 
 const IntlSwitcher = ({ locale }) => {
 
@@ -28,6 +29,7 @@ const IntlSwitcher = ({ locale }) => {
             alt="usa flag"
             src="/images/united_states.png"
             className={ style.flag }
+            priority={true}
           />
           EN
         </Link>
@@ -41,6 +43,7 @@ const IntlSwitcher = ({ locale }) => {
             alt="argentina flag"
             src="/images/argentina.png"
             className={ style.flag }
+            priority={true}
           />
           ES
         </Link>
