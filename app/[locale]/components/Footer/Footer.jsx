@@ -16,7 +16,7 @@ const Footer = () => {
         </Link>
       </div>
       <div className={style.footer}>
-        <p>© 2024 Gustavo Clemente</p>
+        <p>© 2025 Gustavo Clemente</p>
       </div>
     </div>
   )
