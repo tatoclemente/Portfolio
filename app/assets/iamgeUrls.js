@@ -1,5 +1,7 @@
 export const myPhoto = "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694117643/Portfolio/ph-portfolio_weeabo.webp"
 
+export const myPhotoOpenGraph = "https://res.cloudinary.com/dt2o36ezn/image/upload/v1749242598/Portfolio/perfil-ph-4_jboxkv_jf9wjb.jpg"
+
 
 export const elFestin = [
   "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694119472/Portfolio/el%20festin/ph1_dqx5st.webp",

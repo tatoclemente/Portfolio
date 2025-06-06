@@ -6,7 +6,7 @@ import Providers from './providers';
 import NavBar from './components/NavBar/NavBar';
 const inter = Inter({ subsets: ['latin'] })
 import { Analytics } from '@vercel/analytics/react';
-import { myPhoto } from '../assets/iamgeUrls';
+import { myPhotoOpenGraph } from '../assets/iamgeUrls';
 import { keywords } from './utils/keywords';
 
 export const metadata = {
@@ -39,12 +39,12 @@ export const metadata = {
   },
   openGraph: {
     title: 'Gustavo Clemente - Full Stack Developer',
-    description: 'Full Stack Developer especializado en React, Next.js y Node.js. Creando experiencias web modernas e innovadoras con código limpio y diseño centrado en el usuario.',
+    description: 'Desarrollador de software especializado en React, Next.js y Node.js. Creando experiencias web modernas e innovadoras con código limpio y diseño centrado en el usuario.',
     url: 'https://tatoclemente.dev',
-    siteName: "Gustavo Clemente Portfolio",
+    siteName: "Portfolio",
     images: [
       {
-        url: myPhoto,
+        url: myPhotoOpenGraph,
         width: 500,
         height: 500,
         alt: 'Gustavo Clemente - Full Stack Developer',
@@ -53,6 +53,7 @@ export const metadata = {
     ],
     locale: 'es_AR',
     type: 'website',
+    appId: "1449040649447191",
     emails: ['soytatoclemente@gmail.com'],
   },
   twitter: {
@@ -83,6 +84,13 @@ export default function RootLayout({ children, params }) {
   return (
     <html lang={locale}>
       <head>
+        <meta property="fb:app_id" content="1449040649447191" />
+        <meta property="og:title" content="Gustavo Clemente - Full Stack Developer" />
+        <meta property="og:description" content="Full Stack Developer especializado en React, Next.js, Angular y Node.js. Creando experiencias web modernas e innovadoras." />
+        <meta property="og:image" content={myPhotoOpenGraph} />
+        <meta property="og:url" content="https://tatoclemente.dev" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Portfolio" />
         {/* JSON-LD para datos estructurados */}
         <script
           type="application/ld+json"
@@ -94,7 +102,7 @@ export default function RootLayout({ children, params }) {
               "jobTitle": "Full Stack Developer",
               "description": "Full Stack Developer especializado en React, Next.js, Angular y Node.js",
               "url": "https://tatoclemente.dev",
-              "image": myPhoto,
+              "image": myPhotoOpenGraph,
               "sameAs": [
                 "https://linkedin.com/in/tatoclemente",
                 "https://github.com/tatoclemente",
