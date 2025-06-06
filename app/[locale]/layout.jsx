@@ -59,7 +59,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Gustavo Clemente - Full Stack Developer',
-    description: 'Full Stack Developer especializado en React, Next.js, Angular, y Node.js. Creando experiencias web modernas e innovadoras.',
+    description: 'Desarrollador de software especializado en React, Next.js, Angular, y Node.js. Creando experiencias web modernas e innovadoras.',
     images: [myPhotoOpenGraph],
     creator: '@tatoclemen',
   },
@@ -86,7 +86,7 @@ export default function RootLayout({ children, params }) {
       <head>
         <meta property="fb:app_id" content="1449040649447191" />
         <meta property="og:title" content="Gustavo Clemente - Full Stack Developer" />
-        <meta property="og:description" content="Full Stack Developer especializado en React, Next.js, Angular y Node.js. Creando experiencias web modernas e innovadoras." />
+        <meta property="og:description" content="Desarrollador de software especializado en React, Next.js, Angular y Node.js. Creando experiencias web modernas e innovadoras." />
         <meta property="og:image" content={myPhotoOpenGraph} />
         <meta property="og:url" content="https://www.tatoclemente.dev" />
         <meta property="og:type" content="website" />
@@ -100,7 +100,7 @@ export default function RootLayout({ children, params }) {
               "@type": "Person",
               "name": "Gustavo Clemente",
               "jobTitle": "Full Stack Developer",
-              "description": "Full Stack Developer especializado en React, Next.js, Angular y Node.js",
+              "description": "Desarrollador de software especializado en React, Next.js, Angular y Node.js",
               "url": "https://www.tatoclemente.dev",
               "image": myPhotoOpenGraph,
               "sameAs": [
