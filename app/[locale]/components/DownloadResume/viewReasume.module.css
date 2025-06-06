@@ -1,7 +1,7 @@
 .downloadResumeButton {
   margin: 0;
   font-weight: 500;
-  background-color: #064d37a8;
+  background-color:rgb(12, 118, 83);
   width: 5rem;
   padding: 0.3rem 0.5rem;
   text-align: center;
@@ -13,22 +13,22 @@
   border: none;
   align-items: center;
   gap: 0.5rem;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
   cursor: pointer;
 }
 .downloadResumeButton:hover {
-  background-color: #0f1457;
+  background-color:#0a6748;
 }
-[data-theme="dark"] .downloadResumeButton:hover {
-  background-color: rgb(78, 12, 122);
-}
-
 [data-theme="dark"] .downloadResumeButton {
   background-color: rgba(18, 86, 138, 0.982);
 }
 
+[data-theme="dark"] .downloadResumeButton:hover {
+  background-color: rgba(17, 68, 107, 0.98);
+}
+
 .icon {
-  color:rgb(250, 80, 86);
+  color:white;
   font-size: 1.1rem;
 }
 
