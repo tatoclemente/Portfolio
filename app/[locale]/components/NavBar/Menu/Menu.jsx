@@ -146,7 +146,7 @@ const Menu = (props) => {
           </Link>
         </div>
         <div className={style.footer}>
-          <p>© 2023 Gustavo Clemente</p>
+          <p>© 2025 Gustavo Clemente</p>
           <p>{allRight}</p>
         </div>
       </div>

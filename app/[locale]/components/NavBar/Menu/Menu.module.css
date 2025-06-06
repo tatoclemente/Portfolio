@@ -192,6 +192,7 @@
 
 .footer {
   display: flex;
+  gap: .5rem;
   justify-content: center;
   align-items: center;
   flex-direction: column;
