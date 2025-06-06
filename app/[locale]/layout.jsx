@@ -13,7 +13,7 @@ export const metadata = {
   title: 'Gustavo Clemente - Full Stack Developer',
   description: 'Full Stack Developer especializado en React, Next.js, Angular y Node.js. Creando experiencias web modernas e innovadoras.',
   keywords: keywords,
-  authors: [{ name: 'Gustavo Clemente', url: 'https://tatoclemente.dev' }],
+  authors: [{ name: 'Gustavo Clemente', url: 'https://www.tatoclemente.dev' }],
   creator: 'Gustavo Clemente',
   publisher: 'Gustavo Clemente',
   robots: {
@@ -40,7 +40,7 @@ export const metadata = {
   openGraph: {
     title: 'Gustavo Clemente - Full Stack Developer',
     description: 'Desarrollador de software especializado en React, Next.js y Node.js. Creando experiencias web modernas e innovadoras con código limpio y diseño centrado en el usuario.',
-    url: 'https://tatoclemente.dev',
+    url: 'https://www.tatoclemente.dev',
     siteName: "Portfolio",
     images: [
       {
@@ -64,7 +64,7 @@ export const metadata = {
     creator: '@tatoclemen',
   },
   alternates: {
-    canonical: 'https://tatoclemente.dev',
+    canonical: 'https://www.tatoclemente.dev',
     languages: {
       'en-US': '/en',
       'es-AR': '/es',
@@ -88,7 +88,7 @@ export default function RootLayout({ children, params }) {
         <meta property="og:title" content="Gustavo Clemente - Full Stack Developer" />
         <meta property="og:description" content="Full Stack Developer especializado en React, Next.js, Angular y Node.js. Creando experiencias web modernas e innovadoras." />
         <meta property="og:image" content={myPhotoOpenGraph} />
-        <meta property="og:url" content="https://tatoclemente.dev" />
+        <meta property="og:url" content="https://www.tatoclemente.dev" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Portfolio" />
         {/* JSON-LD para datos estructurados */}
@@ -101,7 +101,7 @@ export default function RootLayout({ children, params }) {
               "name": "Gustavo Clemente",
               "jobTitle": "Full Stack Developer",
               "description": "Full Stack Developer especializado en React, Next.js, Angular y Node.js",
-              "url": "https://tatoclemente.dev",
+              "url": "https://www.tatoclemente.dev",
               "image": myPhotoOpenGraph,
               "sameAs": [
                 "https://linkedin.com/in/tatoclemente",
