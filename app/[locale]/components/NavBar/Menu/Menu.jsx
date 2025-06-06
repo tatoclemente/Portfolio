@@ -8,15 +8,14 @@ import IntlSwitcher from '../IntlSwitcher/IntlSwitcher';
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { IoClose } from 'react-icons/io5';
-import DownloadResume from '../../DownloadResume/DonloadResume';
+import ViewResume from '../../DownloadResume/viewResume';
+import ModalPDF from '../../DownloadResume/modalPdf';
 
 const Menu = (props) => {
   const [menu, setMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [selectedLink, setSelectedLink] = useState('/');
-
-  console.log(selectedLink);
-
+  const [openViewResume, setOpenViewResume] = useState(false);
 
   const toggleMenu = () => {
     setMenu(!menu);
@@ -70,6 +69,14 @@ const Menu = (props) => {
     });
   };
 
+  const handleOpenViewResume = () => {
+    console.log('click');
+    setOpenViewResume(true);
+    if (isMobile) {
+      toggleMenu();
+    }
+  }
+
   return (
     <div className={style.mainContainer}>
       <div className={style.menuContent}>
@@ -90,7 +97,10 @@ const Menu = (props) => {
             {contact}
             <div className={`${style.underlined} ${selectedLink === contact ? style.active : ''}`}></div>
           </Link>
-          <DownloadResume downloadResume={props.downloadResume} width="10rem" />
+          <ViewResume 
+            btnLabel={"CV"} 
+            openViewResume={handleOpenViewResume} 
+          />
         </div>
         <div className={style.navBarSwetchers}>
           <IntlSwitcher locale={props.locale} />
@@ -121,7 +131,12 @@ const Menu = (props) => {
             {contact}
           </Link>
         </div>
-        <DownloadResume downloadResume={props.downloadResume} width="43rem" />
+
+        <ViewResume 
+          btnLabel={"CV"} 
+          openViewResume={handleOpenViewResume} 
+        />
+   
         <div className={style.socialMedia}>
           <Link href="https://www.github.com/tatoclemente/" rel="noreferrer" className={style.github}>
             <BsGithub className={style.github} />
@@ -135,6 +150,7 @@ const Menu = (props) => {
           <p>{allRight}</p>
         </div>
       </div>
+      <ModalPDF closePdfModal={() => setOpenViewResume(false)} isOpenPdf={openViewResume} pdfLink="./cv/Resume_Gustavo_Clemente_Dev_Fullstack_ES.pdf" />
     </div>
   );
 };

@@ -2,7 +2,7 @@
   margin: 0;
   font-weight: 500;
   background-color: #064d37a8;
-  width: 10rem;
+  width: 5rem;
   padding: 0.3rem 0.5rem;
   text-align: center;
   border-radius: 20px;
@@ -10,9 +10,11 @@
   color: #fff;
   display: flex;
   justify-content: center;
+  border: none;
   align-items: center;
   gap: 0.5rem;
   transition: 0.5s ease-in-out;
+  cursor: pointer;
 }
 .downloadResumeButton:hover {
   background-color: #0f1457;
@@ -26,7 +28,7 @@
 }
 
 .icon {
-  color: #ec1c24;
+  color:rgb(250, 80, 86);
   font-size: 1.1rem;
 }
 
