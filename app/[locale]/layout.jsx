@@ -60,7 +60,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Gustavo Clemente - Full Stack Developer',
     description: 'Full Stack Developer especializado en React, Next.js, Angular, y Node.js. Creando experiencias web modernas e innovadoras.',
-    images: [myPhoto],
+    images: [myPhotoOpenGraph],
     creator: '@tatoclemen',
   },
   alternates: {
