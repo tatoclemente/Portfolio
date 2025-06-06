@@ -58,6 +58,14 @@ export const technology = {
       image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300406/Portfolio/Technologies/next_rxayel.webp"
     },
     {
+      title: "Angular",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1749237539/Portfolio/Technologies/angular_q8im2u.webp"
+    },
+    {
+      title: "Tailwind",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1749237701/Portfolio/Technologies/Tailwind_CSS_Logo_fm2pei.png"
+    },
+    {
       title: "Redux",
       image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694300406/Portfolio/Technologies/redux_ncedzr.webp"
     },
@@ -82,6 +90,14 @@ export const technology = {
     {
       title: "Express",
       image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1694304306/Portfolio/Technologies/express_rhtzvn.webp"
+    },
+    {
+      title: "Python",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1749237545/Portfolio/Technologies/python_yj2g68.webp"
+    },
+    {
+      title: "FastAPI",
+      image: "https://res.cloudinary.com/dt2o36ezn/image/upload/v1749237812/Portfolio/Technologies/fastapi_dxq5mu.svg"
     },
     {
       title: "JWT",

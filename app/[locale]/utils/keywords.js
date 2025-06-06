@@ -1,0 +1,42 @@
+export const keywords = [
+  // Palabras clave principales
+  'Gustavo Clemente',
+  'Full Stack Developer',
+  'Desarrollador Full Stack',
+  'React Developer',
+  'Angular Developer',
+  'Next.js Developer',
+  'Node.js Developer',
+  // Tecnologías específicas
+  'React', 
+  'Next.js', 
+  'Angular', 
+  'Node.js', 
+  'JavaScript', 
+  'TypeScript', 
+  'HTML', 
+  'CSS', 
+  'Sass', 
+  'Tailwind CSS', 
+  'Redux', 
+  'Axios', 
+  'Express', 
+  'Python', 
+  'FastAPI', 
+  'JWT', 
+  'PostgreSQL', 
+  'Sequelize', 
+  'MongoDB', 
+  'Cloudinary', 
+  'Docker', 
+    // Servicios
+  'Desarrollo Web',
+  'Aplicaciones Web',
+  'Frontend Developer',
+  'Backend Developer',
+  'Portfolio Desarrollador',
+  'Web Development', 
+  // Ubicación
+  'Desarrollador Argentina', 
+  'Córdoba Developer'
+];
