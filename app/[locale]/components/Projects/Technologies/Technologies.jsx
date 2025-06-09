@@ -120,7 +120,8 @@ const Technologies = () => {
               alt='phProyect'
               width={100}
               height={100}
-              onClick={(e) => e.stopPropagation()} 
+              onClick={(e) => e.stopPropagation()}
+              lazyLoad={true} 
             />
             <span>{tech.title}</span>
           </div>

@@ -1,14 +1,14 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
-import style from './Proyects.module.css'
+import style from './Projects.module.css'
 import styleModal from './Modal.module.css'
-import './swiper.css'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, Autoplay } from 'swiper/modules';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch'
 
 // Import Swiper styles
+import './swiper.css'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -26,7 +26,7 @@ import { TbWorldShare } from "react-icons/tb";
 
 
 
-const Proyects = ({ proyectTexts, proyectsList }) => {
+const Projects = ({ projectTexts, projectsList }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [selectedTab, setSelectedTab] = useState('TesloShop'); // Inicialmente selecciona 'El Festin'
   const [modalImageUrl, setModalImageUrl] = useState(''); // Estado para la URL de la imagen en el modal
@@ -72,11 +72,11 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
     isMobile && link.includes('https://pf-front-end-grupo3.vercel.app/') ?
       Swal.fire({
         icon: 'info',
-        title: proyectTexts.alertTitle,
-        text: proyectTexts.alertText,
+        title: projectTexts.alertTitle,
+        text: projectTexts.alertText,
         showDenyButton: true,
-        confirmButtonText: proyectTexts.confirmButtonText,
-        denyButtonText: proyectTexts.denyButtonText,
+        confirmButtonText: projectTexts.confirmButtonText,
+        denyButtonText: projectTexts.denyButtonText,
       }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
@@ -92,33 +92,33 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
   return (
     <div className={style.mainContainer} id='projects'>
       <svg className={style.waveTop} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path className={style.wavePath} fill="#eefbfe" d="M0,224L80,224C160,224,320,224,480,197.3C640,171,800,117,960,90.7C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
-      <h1 className={style.title}>{proyectTexts.title}</h1>
+      <h1 className={style.title}>{projectTexts.title}</h1>
       <header className={style.header}>
         <div
-          className={`${style.titleProyectContainerSelect} ${selectedTab === 'TesloShop' ? style.selectedTab : ''
+          className={`${style.titleProjectContainerSelect} ${selectedTab === 'TesloShop' ? style.selectedTab : ''
             }`}
           onClick={() => handleTabClick('TesloShop')}
         >
-          <h3 className={style.titleProyect}>TesloShop</h3>
+          <h3 className={style.titleProject}>TesloShop</h3>
         </div>
         <div
-          className={`${style.titleProyectContainerSelect} ${selectedTab === 'El Festin' ? style.selectedTab : ''
+          className={`${style.titleProjectContainerSelect} ${selectedTab === 'El Festin' ? style.selectedTab : ''
             }`}
           onClick={() => handleTabClick('El Festin')}
         >
-          <h3 className={style.titleProyect}>El Festín</h3>
+          <h3 className={style.titleProject}>El Festín</h3>
         </div>
         <div
-          className={`${style.titleProyectContainerSelect} ${selectedTab === 'Henry Food' ? style.selectedTab : ''
+          className={`${style.titleProjectContainerSelect} ${selectedTab === 'Henry Food' ? style.selectedTab : ''
             }`}
           onClick={() => handleTabClick('Henry Food')}
         >
-          <h3 className={style.titleProyect}>Henry Food</h3>
+          <h3 className={style.titleProject}>Henry Food</h3>
         </div>
       </header>
-      <div className={style.proyectsContainer}>
-        {proyectsList.filter((proyect) => proyect.title === selectedTab)
-          .map((proyect, index) => (
+      <div className={style.projectsContainer}>
+        {projectsList.filter((project) => project.title === selectedTab)
+          .map((project, index) => (
             <article key={index}>
               <Swiper
                 ref={swiperRef}
@@ -157,12 +157,13 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
                 pagination={{ clickable: true }}
                 className='swiper'
               >
-                {proyect.images.map((image, index) => {
+                {project.images.map((image, index) => {
                   return (<SwiperSlide key={index}>
                     <CldImage onClick={() => openModal(image)}
                       as="image"
                       src={image}
-                      alt='phProyect'
+                      alt='phProject'
+                      lazyLoad={true}
                       width={580}
                       height={300} />
                   </SwiperSlide>
@@ -172,14 +173,14 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
 
               <div className={style.descriptionContainer}>
                 <div className={style.buttonContainer}>
-                  <p className={style.description}>{proyect.description}</p>
+                  <p className={style.description}>{project.description}</p>
                 </div>
                 <div className={style.buttonContainer}>
-                  <button onClick={(() => handleLinkClick(proyect.link))} className={style.buttonLink} target='_blank'>
-                    <TbWorldShare size={24} /> {proyectTexts.button}
+                  <button onClick={(() => handleLinkClick(project.link))} className={style.buttonLink} target='_blank'>
+                    <TbWorldShare size={24} /> {projectTexts.button}
                   </button>
-                  <Link href={proyect.githubLink} target='_blank' className={style.buttonLink} >
-                    <BsGithub size={21} /> {proyectTexts.gitHubButton}
+                  <Link href={project.githubLink} target='_blank' className={style.buttonLink} >
+                    <BsGithub size={21} /> {projectTexts.gitHubButton}
                   </Link>
                 </div>
               </div>
@@ -192,7 +193,16 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
               <span className={styleModal.close} onClick={closeModal}>x</span>
               <TransformWrapper defaultScale={1} defaultPositionX={200} defaultPositionY={200}>
                 <TransformComponent>
-                  <CldImage id="modalImage" src={modalImageUrl} as="image" className={styleModal.modalImage} alt='phProyect' width={isMobile ? 600 : 1150} height={isMobile ? 190 : 550} />
+                  <CldImage 
+                    id="modalImage" 
+                    src={modalImageUrl} 
+                    as="image" 
+                    className={styleModal.modalImage} 
+                    alt='phProject' 
+                    width={isMobile ? 600 : 1150} 
+                    height={isMobile ? 190 : 550}
+                    lazyLoad={true}
+                  />
                 </TransformComponent>
 
               </TransformWrapper>
@@ -208,4 +218,4 @@ const Proyects = ({ proyectTexts, proyectsList }) => {
   )
 }
 
-export default Proyects
+export default Projects

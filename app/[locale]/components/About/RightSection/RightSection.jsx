@@ -9,8 +9,8 @@ const RightSection = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [stylesClick, setStylesClick] = useState({
     imageMobile: '',
-    boobleLeft: '',
-    boobleRight: '',
+    bobbleLeft: '',
+    bobbleRight: '',
   });
 
 
@@ -35,14 +35,14 @@ const RightSection = () => {
     ? setStylesClick({
       ...stylesClick, 
       imageMobile : style.imageClick,
-      boobleLeft : style.boobleLeftClick,
-      boobleRight : style.boobleRightClick,
+      bobbleLeft : style.bobbleLeftClick,
+      bobbleRight : style.bobbleRightClick,
     }) 
     : setStylesClick({
       ...stylesClick, 
       imageMobile: '',
-      boobleLeft: '',
-      boobleRight: '',
+      bobbleLeft: '',
+      bobbleRight: '',
     });
   }
 
@@ -51,16 +51,22 @@ const RightSection = () => {
       {isMobile ? (
         // Renderizar contenido sin Atropos.js en dispositivos móviles
         <div className={style.atropos} onClick={hadleStylesClick}>
-          <div className={`${stylesClick.boobleLeft} ${style.boobleLeftMobile}`}></div>
-          <div className={`${stylesClick.boobleRight} ${style.boobleRightMobile}`}></div>
-          <Image className={`${stylesClick.imageMobile} ${isMobile && style.imageMobile}`} priority={true} as="image" src={ph} alt="ph-portfolio" />
+          <div className={`${stylesClick.bobbleLeft} ${style.bobbleLeftMobile}`}></div>
+          <div className={`${stylesClick.bobbleRight} ${style.bobbleRightMobile}`}></div>
+          <Image 
+            className={`${stylesClick.imageMobile} ${isMobile && style.imageMobile}`} 
+            priority={true} 
+            as="image" 
+            src={ph} 
+            alt="ph-portfolio" 
+          />
         </div>
       ) : (
         // Renderizar contenido con Atropos.js en dispositivos no móviles
         <Atropos
          className={style.atropos}>
-          <div className={style.boobleBackLeft}></div>
-          <div className={style.boobleBackRight}></div>
+          <div className={style.bobbleBackLeft}></div>
+          <div className={style.bobbleBackRight}></div>
           <Image data-atropos-offset="-5"  priority={true}  className={style.image} as="image" src={ph} alt="ph-portfolio" />
         </Atropos>
       )}

@@ -1,21 +1,21 @@
-.atropos:hover .boobleBackLeft {
+.atropos:hover .bobbleBackLeft {
   filter: brightness(1.5);
   box-shadow: 0 0 30px rgb(232, 184, 111);
   opacity: 0.7;
 }
-.atropos:hover .boobleBackRight {
+.atropos:hover .bobbleBackRight {
   filter: brightness(1.7);
   background-color: rgb(126, 125, 227);
   opacity: 0.7;
   box-shadow: 0 0 30px rgb(110, 108, 226);
 }
 
-[data-theme="dark"] .atropos:hover .boobleBackLeft {
+[data-theme="dark"] .atropos:hover .bobbleBackLeft {
   filter: brightness(1.5);
   opacity: 0.8;
   box-shadow: 0 0 30px rgb(118, 83, 151);
 }
-[data-theme="dark"] .atropos:hover .boobleBackRight {
+[data-theme="dark"] .atropos:hover .bobbleBackRight {
   filter: brightness(1.5);
   opacity: 0.9;
   background-color: rgb(232, 184, 111);
@@ -29,7 +29,7 @@
   filter: grayscale(0.3) brightness(1.1);
 }
 
-.boobleBackLeft {
+.bobbleBackLeft {
   position: absolute;
   background-color: rgb(232, 184, 111);
   width: 200px;
@@ -54,11 +54,11 @@
   }
 }
 
-[data-theme="dark"] .boobleBackLeft {
+[data-theme="dark"] .bobbleBackLeft {
   background-color: rgb(118, 83, 151);
 }
 
-.boobleBackRight {
+.bobbleBackRight {
   position: absolute;
   background-color: rgb(118, 83, 151);
   width: 220px;
@@ -82,7 +82,7 @@
   }
 }
 
-[data-theme="dark"] .boobleBackRight {
+[data-theme="dark"] .bobbleBackRight {
   background-color: rgb(232, 184, 111);
 }
 
@@ -121,7 +121,7 @@
 }
 
 @media (max-width: 1200px) {
-  .boobleBackLeft {
+  .bobbleBackLeft {
     position: absolute;
     background-color: rgb(232, 184, 111);
     width: 200px;
@@ -134,7 +134,7 @@
     animation: input-left 1s linear;
     transition: 0.5s ease-in-out;
   }
-  .boobleBackLeft {
+  .bobbleBackLeft {
     position: absolute;
     background-color: rgb(232, 184, 111);
     width: 200px;
@@ -147,7 +147,7 @@
 }
 
 @media (max-width: 768px) {
-  .boobleLeftMobile {
+  .bobbleLeftMobile {
     position: absolute;
     background-color: rgb(232, 184, 111);
     width: 130px;
@@ -160,22 +160,22 @@
     animation: input-left 1s linear;
     transition: 0.3s ease-in-out;
   }
-  [data-theme="dark"] .boobleLeftMobile {
+  [data-theme="dark"] .bobbleLeftMobile {
     background-color: rgb(118, 83, 151);
   }
 
-  .boobleLeftClick {
+  .bobbleLeftClick {
     filter: brightness(1.5);
     box-shadow: 0 0 30px rgb(232, 184, 111);
     opacity: 0.7;
   }
-  [data-theme="dark"] .boobleLeftClick {
+  [data-theme="dark"] .bobbleLeftClick {
     filter: brightness(1.5);
     opacity: 0.8;
     box-shadow: 0 0 30px rgb(118, 83, 151);
   }
 
-  .boobleRightMobile {
+  .bobbleRightMobile {
     position: absolute;
     background-color: rgb(118, 83, 151);
     width: 130px;
@@ -188,17 +188,17 @@
     animation: input-right 0.7s linear alternate;
     transition: 0.3s ease-in-out;
   }
-  [data-theme="dark"] .boobleRightMobile {
+  [data-theme="dark"] .bobbleRightMobile {
     background-color: rgb(232, 184, 111);
   }
 
-  .boobleRightClick {
+  .bobbleRightClick {
     filter: brightness(2);
     background-color: rgba(41, 18, 215) !important;
     opacity: 0.5;
     box-shadow: 0 0 30px rgb(81, 79, 199);
   }
-  [data-theme="dark"] .boobleRightClick {
+  [data-theme="dark"] .bobbleRightClick {
     filter: brightness(1.5);
     opacity: 0.9;
     background-color: rgb(232, 184, 111) !important;
@@ -258,7 +258,7 @@
 }
 
 @media (max-width: 400px) {
-  .boobleLeftMobile {
+  .bobbleLeftMobile {
     position: absolute;
     background-color: rgb(232, 184, 111);
     width: 110px;
@@ -268,7 +268,7 @@
     animation: input-left 1.3s linear alternate;
   }
 
-  .boobleRightMobile {
+  .bobbleRightMobile {
     position: absolute;
     background-color: rgb(156, 97, 212);
     width: 110px;

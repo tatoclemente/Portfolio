@@ -3,7 +3,7 @@ import About from './components/About/About'
 import CalendlyForm from './components/Calendly/Calendly'
 import Footer from './components/Footer/Footer'
 import { ContactUs } from './components/Form/ContactUs'
-import Proyects from './components/Proyects/Proyects'
+import Projects from './components/Projects/Projects'
 import style from './page.module.css'
 import { elFestin, piFood, rickAndMorty, tesloShop } from '@/app/assets/iamgeUrls'
 
@@ -39,7 +39,7 @@ export default function Home() {
     loadingText: tC("loadingText"),
   }
 
-  const proyectsList = [
+  const projectsList = [
     {
       title: 'TesloShop',
       images: tesloShop,
@@ -68,7 +68,7 @@ export default function Home() {
     //   link: 'https://rickandmorty-five-ruby.vercel.app/',
     // },
   ]
-  const proyectTexts = {
+  const projectTexts = {
     title: tP('title'),
     button: tP('button'),
     gitHubButton: tP('gitHubButton'),
@@ -93,7 +93,7 @@ export default function Home() {
   return (
     <div className={style.homeContainer}>
       <About leftText={leftText} contactIntl={contactIntl} />
-      <Proyects proyectTexts={proyectTexts} proyectsList={proyectsList} />
+      <Projects projectTexts={projectTexts} projectsList={projectsList} />
       <CalendlyForm titleMeeting={contactIntl.meeting} />
       <div className={style.contact}>
         <ContactUs contactIntl={contactIntl} />

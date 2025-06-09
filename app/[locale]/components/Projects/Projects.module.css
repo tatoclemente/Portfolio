@@ -30,7 +30,7 @@
   width: 95%;
   margin-left: 3rem;
 }
-.titleProyectContainerSelect {
+.titleProjectContainerSelect {
   background-color: rgb(227, 205, 172);
   display: flex;
   justify-content: center;
@@ -44,20 +44,20 @@
   transition: 0.3s ease-in-out;
   margin-right: 1px;
 }
-[data-theme="dark"] .titleProyectContainerSelect {
+[data-theme="dark"] .titleProjectContainerSelect {
   background-color: rgb(156, 127, 183);
   border-top: 4px solid #05424e;
 }
 
-.titleProyectContainerSelect:hover {
+.titleProjectContainerSelect:hover {
   background-color: #eefbfe;
   border-bottom: 0;
 }
-[data-theme="dark"] .titleProyectContainerSelect:hover {
+[data-theme="dark"] .titleProjectContainerSelect:hover {
   background-color: #041d22;
   border-bottom: 0;
 }
-.titleProyectContainerSelect:hover .titleProyect {
+.titleProjectContainerSelect:hover .titleProject {
   font-size: 1.7rem;
 }
 
@@ -71,19 +71,19 @@
   border: 4px solid rgb(118, 83, 151);
   border-bottom: 0;
 }
-.selectedTab .titleProyect {
+.selectedTab .titleProject {
   font-family: "Ubuntu", sans-serif;
   font-size: 1.7rem;
 }
-.titleProyect {
+.titleProject {
   font-family: "Ubuntu", sans-serif;
   font-size: 1.2rem;
   transition: 0.3s ease-in-out;
 }
 
-/* PROYECT CONTAINER */
+/* PROjECT CONTAINER */
 
-.proyectsContainer {
+.projectsContainer {
   margin: 0 auto;
   width: 95%;
   min-height: 80vh;
@@ -97,7 +97,7 @@
   line-height: 1.4
 }
 
-[data-theme="dark"] .proyectsContainer {
+[data-theme="dark"] .projectsContainer {
   background-color: #041d22;
   box-shadow: 10px 10px 35px rgba(13, 32, 37, 0.42);
 }
@@ -183,7 +183,7 @@
     max-width: 1200px;
   }
 
-  .proyectsContainer {
+  .projectsContainer {
     width: 90%;
     max-width: 1500px;
     min-height: 70vh;
@@ -205,7 +205,7 @@
     margin-left: 1rem;
   }
 
-  .titleProyectContainerSelect {
+  .titleProjectContainerSelect {
     height: 1.5rem;
     width: 6.8rem;
     border-radius: 7px 7px 0 0;
@@ -214,7 +214,7 @@
     border-top: 4px solid rgb(118, 83, 151);
     margin-right: 0.9px;
   }
-  [data-theme="dark"] .titleProyectContainerSelect {
+  [data-theme="dark"] .titleProjectContainerSelect {
     background-color: rgb(156, 127, 183);
     border-top: 4px solid #05424e;
   }
@@ -229,16 +229,16 @@
     border: 2px solid rgba(118, 83, 151);
     border-bottom: 0;
   }
-  .selectedTab .titleProyect {
+  .selectedTab .titleProject {
     font-family: "Ubuntu", sans-serif;
     font-size: 0.9rem !important;
   }
-  .titleProyect {
+  .titleProject {
     font-family: "Ubuntu", sans-serif;
     font-size: 0.6rem !important;
     transition: 0.3s ease-in-out;
   }
-  .proyectsContainer {
+  .projectsContainer {
     width: 97%;
     min-height: 62vh;
   }
@@ -276,7 +276,7 @@
 }
 
 @media (max-width: 500px) {
-  .titleProyectContainerSelect {
+  .titleProjectContainerSelect {
     height: 1.5rem;
     width: 5.9rem;
   }
