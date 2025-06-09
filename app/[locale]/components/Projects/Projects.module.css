@@ -4,7 +4,7 @@
   background-color: rgb(118, 83, 151);
   position: relative;
   /* padding-top: 200px; */
-  padding-bottom: 500px;
+  padding-bottom: 300px;
   position: relative;
   margin: 0 auto;
 }
@@ -168,7 +168,7 @@
 @media (min-width: 1400px) {
   .mainContainer {
     /* padding-top: 300px; */
-    padding-bottom: 600px;
+    /* padding-bottom: 400px; */
   }
 
   .title {

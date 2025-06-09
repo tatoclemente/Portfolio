@@ -121,7 +121,7 @@ const Technologies = () => {
               width={100}
               height={100}
               onClick={(e) => e.stopPropagation()}
-              lazyLoad={true} 
+              lazyload="true" 
             />
             <span>{tech.title}</span>
           </div>

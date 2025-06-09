@@ -163,7 +163,7 @@ const Projects = ({ projectTexts, projectsList }) => {
                       as="image"
                       src={image}
                       alt='phProject'
-                      lazyLoad={true}
+                      lazyload="true"
                       width={580}
                       height={300} />
                   </SwiperSlide>
@@ -201,7 +201,7 @@ const Projects = ({ projectTexts, projectsList }) => {
                     alt='phProject' 
                     width={isMobile ? 600 : 1150} 
                     height={isMobile ? 190 : 550}
-                    lazyLoad={true}
+                    lazyload="true"
                   />
                 </TransformComponent>
 
