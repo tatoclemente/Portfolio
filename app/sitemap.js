@@ -1,7 +1,7 @@
 export default function sitemap() {
   return [
     {
-      url: 'https://tatoclemente.dev',
+      url: 'https://www.tatoclemente.dev',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
