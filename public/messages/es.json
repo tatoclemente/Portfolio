@@ -43,14 +43,14 @@
     "gitHubButton": "Ver código en GitHub"
   },
   "Contact": {
-    "meeting": "Agenda un cita conmigo",
+    "meeting": "Agendá un cita conmigo",
     "contact": "Contactame",
     "subtitle": "Si tenés alguna consulta, no dudes en ponerte en contacto conmigo.",
-    "helpMessage": "Estoy aquí para ayudarte!",
+    "helpMessage": "Estoy acá para ayudarte!",
     "name": "Nombre",
     "nameError": "Debes ingresar tu nombre",
     "nameErrorFormat": "Debe ser un nombre válido",
-    "namePlaceholder": "Ingresa tu nombre aquí...",
+    "namePlaceholder": "Ingresá tu nombre...",
     "email": "Email",
     "emailError": "Debes ingresar tu email",
     "emailErrorFormat": "Debe ser un email válido",
