@@ -17,7 +17,7 @@
   cursor: pointer;
 }
 .downloadResumeButton:hover {
-  background-color:#0a6748;
+  background-color: #0a6748;
 }
 [data-theme="dark"] .downloadResumeButton {
   background-color: rgba(18, 86, 138, 0.982);

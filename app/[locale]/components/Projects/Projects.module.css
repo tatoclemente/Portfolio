@@ -57,9 +57,6 @@
   background-color: #041d22;
   border-bottom: 0;
 }
-.titleProjectContainerSelect:hover .titleProject {
-  font-size: 1.7rem;
-}
 
 .selectedTab {
   background-color: #eefbfe;
@@ -73,7 +70,7 @@
 }
 .selectedTab .titleProject {
   font-family: "Ubuntu", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
 }
 .titleProject {
   font-family: "Ubuntu", sans-serif;
@@ -138,7 +135,7 @@
   width: 350px;
   border: none;
   height: 2.5rem;
-  background-color: #3755c4;
+  background-color:rgb(12, 118, 83);
   color: #eefbfe;
   padding: 0.3rem 1.5rem;
   border-radius: 25px;
@@ -146,24 +143,25 @@
   justify-content: flex-start;
   gap: .5rem;
   align-items: center;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   font-size: 1.2rem;
   margin: 0 auto;
   cursor: pointer;
 }
 
 
+.buttonLink:hover {
+  background-color: #0a6748;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 [data-theme="dark"] .buttonLink {
-  background-color: #175867;
-}
-.buttonLink:hover {
-  background-color: #0f1457;
-  font-size: 1.25rem;
+  background-color:rgba(18, 86, 138, 0.982);
 }
 
 [data-theme="dark"] .buttonLink:hover {
-  background-color: rgb(78, 12, 122);
+  background-color: rgba(17, 68, 107, 0.98);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 @media (min-width: 1400px) {
   .mainContainer {

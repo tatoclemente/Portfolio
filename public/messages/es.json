@@ -4,17 +4,17 @@
     "Projects": "Proyectos",
     "Contact": "Contacto",
     "Meeting": "Agendar reunión",
-    "AllRight": "Todos los derechos resrvados",
+    "AllRight": "Todos los derechos reservados",
     "DownloadResume": "Descargar CV"
   },
   "Index": {
     "hello": "Hola, soy",
     "name": "Gustavo Clemente",
     "description": {
-      "header": "Desarrollador Web Full Stack",
+      "header": "Desarrollador de software - Amante del Front",
       "p1": "Actualmente, estoy cumpliendo mi sueño de crear mi propia empresa, cuento con 2 años experiencia en desarrollo Frontend y Backend. Me motiva crear soluciones visuales y funcionales que mejoren la experiencia del usuario, siempre con determinación y entusiasmo.",
       "p2": "Cuando no estoy programando o estudiando, disfruto escuchar podcasts sobre startups. Y cuando necesito recargar energías, toco la batería o juego pádel.",
-      "contact": "¡Contáctame aquí!",
+      "contact": "¡Contactame acá!",
       "modalContact1": "Quien toma decisiones y",
       "modalContact2": "elije sabiamente,",
       "modalContact3": "controla su destino."
@@ -37,15 +37,15 @@
       "description": "Te presento esta genial aplicación de recetas que incorpora información de una API y permite la creación de recetas personalizadas. Este proyecto ha sido desarrollada utilizando tecnologías como React, Express, Cloudinary y PostgreSQL. Forma parte de mi proyecto individual en el bootcamp de SoyHenry, donde pongo en práctica mis habilidades de desarrollo."
     },
     "rickAndMorty": {
-      "description": "Échale un ojo a esta Aplicación de Página Única (SPA) donde comencé mi aventura como desarrollador Fullstack. Incluye páginas de registro e inicio de sesión, y se conecta perfectamente con la API de Rick and Morty para mostrar tarjetas de personajes, permitiendo a los usuarios añadir a sus personajes favoritos a su colección."
+      "description": "Echale un ojo a esta SPA donde comencé mi aventura como desarrollador Fullstack. Incluye páginas de registro e inicio de sesión, y se conecta perfectamente con la API de Rick and Morty para mostrar tarjetas de personajes, permitiendo a los usuarios añadir a sus personajes favoritos a su colección."
     },
-    "button": "Ingresa a ver el sitio aquí",
+    "button": "Ingresá a ver el sitio acá",
     "gitHubButton": "Ver código en GitHub"
   },
   "Contact": {
     "meeting": "Agenda un cita conmigo",
-    "contact": "Contáctame",
-    "subtitle": "Si tienes alguna consulta, no dudes en ponerte en contacto conmigo.",
+    "contact": "Contactame",
+    "subtitle": "Si tenés alguna consulta, no dudes en ponerte en contacto conmigo.",
     "helpMessage": "Estoy aquí para ayudarte!",
     "name": "Nombre",
     "nameError": "Debes ingresar tu nombre",
@@ -54,11 +54,11 @@
     "email": "Email",
     "emailError": "Debes ingresar tu email",
     "emailErrorFormat": "Debe ser un email válido",
-    "emailPlaceHolder": "Ingresa tu mejor email...",
+    "emailPlaceHolder": "Ingresá tu mejor email...",
     "message":"Mensaje",
-    "messageError": "Debe escribir un mensaje",
+    "messageError": "Debes escribir un mensaje",
     "messageErrorFormat": "Debe ser un texto válido",
-    "messagePlaceHolder": "Escribe tu consulta aquí...",
+    "messagePlaceHolder": "Escribí tu consulta acá...",
     "buttonText": "Enviar",
     "alertTitleSuccess": "¡Genial!",
     "alertTextSuccess": "Tu mensaje fué enviado correctamente.",

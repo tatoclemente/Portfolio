@@ -49,13 +49,13 @@
   font-family: "Ubuntu", sans-serif;
 }
 .buttonSubmit {
-  background-color: #3755c4;
+  background-color:rgb(12, 118, 83);
   border: none !important;
   color: #e9e5ff;
   font-size: 1.1rem;
   border-radius: 18px;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .loadingButton {
   display: flex;
@@ -71,17 +71,17 @@
   cursor: not-allowed;
 }
 .buttonSubmit:hover {
-  background-color: #0f1457;
-  font-size: 1.3rem;
-}
-
-[data-theme="dark"] .buttonSubmit:hover {
-  background-color: rgb(78, 12, 122);
+  background-color: #0a6748;
 }
 
 [data-theme="dark"] .buttonSubmit {
-  background-color: #07363f;
+  background-color: rgba(18, 86, 138, 0.982);
 }
+
+[data-theme="dark"] .buttonSubmit:hover {
+  background-color: rgba(17, 68, 107, 0.98);
+}
+
 .docCharacters {
   position: absolute;
   bottom: 5px;

@@ -112,6 +112,7 @@ const Technologies = () => {
           <div
             key={index}
             className={style.carousel}
+            title={tech.title}
           >
             <CldImage
               className={style.carouselLogo}

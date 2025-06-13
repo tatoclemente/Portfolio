@@ -160,6 +160,7 @@
 .descriptionHeader {
   text-transform: uppercase;
   font-style: oblique;
+  padding: 0.1rem 0;
 }
 .description {
   font-size: 1rem;
@@ -168,35 +169,29 @@
 
 .button {
   padding: 0.6rem 1rem;
-  background-color: #3755c4;
+  background-color:rgb(12, 118, 83);
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 2rem auto;
   border-radius: 25px;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
   cursor: pointer;
-  color: #d1dcf3;
-}
-
-[data-theme="dark"] .button {
-  background-color: #07363f;
-}
-[data-theme="dark"] .button:hover {
-  background-color: rgb(78, 12, 122);
+  color: #ffffff;
 }
 
 .button:hover {
-  background-color: #0f1457;
-}
-.button span {
-  transition: 0.5s ease-in-out;
+  background-color: #0a6748;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.button:hover span {
-  transform: scale(1.1);
-  color: #ffffff;
+[data-theme="dark"] .button {
+  background-color: rgba(18, 86, 138, 0.982);
+}
+[data-theme="dark"] .button:hover {
+  background-color: rgba(17, 68, 107, 0.98);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 1200px) {

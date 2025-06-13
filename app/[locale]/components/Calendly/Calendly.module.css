@@ -12,6 +12,7 @@
   padding-bottom: 2rem;
 }
 .calendlyContainer {
+  background-color: #eefbfe;
   border-radius: 25px;
   width: fit-content;
   overflow: hidden;
@@ -19,6 +20,7 @@
 }
 [data-theme="dark"] .calendlyContainer {
   box-shadow: 5px 5px 35px rgba(145, 171, 177, 0.33);
+  background-color: #041d22;
 }
 .calendly {
   height: 390px;

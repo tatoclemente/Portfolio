@@ -13,6 +13,7 @@
 }
 
 .modal {
+    position: relative;
     height: fit-content;
     padding: 50px 0;
     min-width: 45vw;
@@ -59,7 +60,7 @@
     cursor: pointer;
     position: absolute;
     top: -2.4rem;
-    right: -1rem;
+    right: 0rem;
     font-size: 1.8rem;
     color: rgba(255, 0, 0, 0.469);
     transition: .3s ease-in-out;
