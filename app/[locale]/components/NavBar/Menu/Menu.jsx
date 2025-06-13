@@ -125,7 +125,7 @@ const Menu = ({ locale, menuItems: { about, projects, meeting, contact, allRight
           <p>{allRight}</p>
         </div>
       </div>
-      <ModalPDF closePdfModal={() => setOpenViewResume(false)} isOpenPdf={openViewResume} pdfLink="./cv/Resume_Gustavo_Clemente_Dev_Fullstack_ES.pdf" />
+      <ModalPDF closePdfModal={() => setOpenViewResume(false)} isOpenPdf={openViewResume} pdfLink="./cv/Resume_Gustavo_Clemente_Dev_Frontend.pdf" />
     </div>
   );
 };
