@@ -76,6 +76,8 @@
 @media (max-width: 768px) {
   .backButton {
     right: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
     top: 4rem;
   }
 }
