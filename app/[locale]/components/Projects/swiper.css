@@ -14,15 +14,16 @@
 
 .swiper-slide img {
   display: block;
-  box-shadow: 10px 10px 35px rgba(118, 83, 151, 0.338);
-  height: 100%;
-  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(118, 83, 151, 0.338);
+  width: 580px;
+  height: auto;
+  border-radius: 5px;
   margin: 0 auto;
   object-fit: cover;
 }
 
 [data-theme="dark"] .swiper-slide img {
-  box-shadow: 10px 10px 35px rgba(23, 88, 103, 0.409);
+  box-shadow: 5px 5px 10px rgba(23, 88, 103, 0.409);
 }
 .swiper:hover .swiper-button-next {
   opacity: 1;
@@ -93,7 +94,7 @@
   display: none !important;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
@@ -108,8 +109,8 @@
     margin-top: 0.8rem;
   }
   .swiper-slide img {
-    height: 300px;
-    width: 96%;
+    height: auto;
+    width: 100%;
     border-radius: 5px;
   }
 }

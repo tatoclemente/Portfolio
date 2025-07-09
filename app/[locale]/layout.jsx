@@ -132,7 +132,7 @@ export default function RootLayout({ children, params }) {
           }}
         />
       </head>
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning>
         <Providers locale={locale}>
           <NavBar locale={locale} />
           {children}

@@ -1,12 +1,13 @@
 import style from './viewReasume.module.css'
 import { FaFilePdf } from 'react-icons/fa';
+import Link from 'next/link';
 
-const ViewResume = ({ btnLabel, openViewResume}) => {
+const ViewResume = ({ btnLabel}) => {
   
   return (
-    <button onClick={openViewResume} className={style.downloadResumeButton}>
+    <Link href='/resume' className={style.downloadResumeButton}>
       <FaFilePdf className={style.icon} /> {btnLabel}
-    </button>
+    </Link>
   );
 };
 

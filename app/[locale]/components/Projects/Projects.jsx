@@ -14,9 +14,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-// import CldImage from 'next/cloudinary';
 import { CldImage } from 'next-cloudinary';
-
 
 import Technologies from './Technologies/Technologies';
 import Swal from 'sweetalert2'
@@ -125,7 +123,7 @@ const Projects = ({ projectTexts, projectsList }) => {
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                 // grabCursor={true}
                 // centeredSlides={true}
-                slidesPerView={1.1}
+                slidesPerView={1}
                 navigation
                 spaceBetween={0}
                 autoplay={{
@@ -134,7 +132,7 @@ const Projects = ({ projectTexts, projectsList }) => {
                 }}
                 breakpoints={{
                   640: {
-                    slidesPerView: 1.2,
+                    slidesPerView: 1,
                     spaceBetween: 5,
                   },
                   968: {
@@ -145,11 +143,15 @@ const Projects = ({ projectTexts, projectsList }) => {
                     slidesPerView: 1.3,
                     spaceBetween: 5,
                   },
-                  1100: {
-                    slidesPerView: 1.7,
+                  1080: {
+                    slidesPerView: 1.5,
                     spaceBetween: 0,
                   },
-                  1450: {
+                  1300: {
+                    slidesPerView: 2.1,
+                    spaceBetween: 2,
+                  },
+                  1550: {
                     slidesPerView: 2.3,
                     spaceBetween: 0,
                   }
@@ -159,13 +161,16 @@ const Projects = ({ projectTexts, projectsList }) => {
               >
                 {project.images.map((image, index) => {
                   return (<SwiperSlide key={index}>
-                    <CldImage onClick={() => openModal(image)}
+                    <CldImage 
+                      onClick={() => openModal(image)}
                       as="image"
                       src={image}
                       alt='phProject'
                       lazyload="true"
                       width={580}
-                      height={300} />
+                      height={300}
+                      className={style.projectImg}
+                    />
                   </SwiperSlide>
                   )
                 })}

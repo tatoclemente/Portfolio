@@ -1,0 +1,81 @@
+.mainContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+.resumeContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background: rgb(27, 27, 27);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+[data-theme="dark"] .resumeContainer {
+  background: rgb(224, 224, 224);
+}
+
+.iframeViewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.spinnerContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.backButton {
+  position: absolute;
+  top: 1rem;
+  right: 9rem;
+  z-index: 10;
+  font-weight: 500;
+  background-color:rgb(12, 118, 83);
+  padding: 0.3rem 1rem;
+  text-align: center;
+  border-radius: 20px;
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  border: none;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+[data-theme="dark"] .backButton {
+  background-color:rgb(2, 12, 30);
+  color: #cbd5e0;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.4);
+  border-top: 4px solid #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .backButton {
+    right: 4rem;
+    top: 4rem;
+  }
+}

@@ -53,7 +53,13 @@ const RightSection = () => {
         <div className={style.atropos} onClick={hadleStylesClick}>
           <div className={`${stylesClick.boobleLeft} ${style.boobleLeftMobile}`}></div>
           <div className={`${stylesClick.boobleRight} ${style.boobleRightMobile}`}></div>
-          <Image className={`${stylesClick.imageMobile} ${isMobile && style.imageMobile}`} src={ph} alt="ph-portfolio" />
+          <Image 
+            width={500} 
+            height={500} 
+            priority={true}
+            src={ph} alt="ph-portfolio" 
+            className={`${stylesClick.imageMobile} ${isMobile && style.imageMobile}`} 
+          />
         </div>
       ) : (
         // Renderizar contenido con Atropos.js en dispositivos no móviles
@@ -61,7 +67,15 @@ const RightSection = () => {
          className={style.atropos}>
           <div className={style.boobleBackLeft}></div>
           <div className={style.boobleBackRight}></div>
-          <Image data-atropos-offset="-5"  priority={true}  className={style.image} src={ph} alt="ph-portfolio" />
+          <Image 
+            data-atropos-offset="-5"  
+            width={500} 
+            height={500}
+            priority={true}  
+            className={style.image} 
+            src={ph} 
+            alt="ph-portfolio" 
+          />
         </Atropos>
       )}
     </>

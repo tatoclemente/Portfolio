@@ -6,7 +6,10 @@
   /* padding-top: 200px; */
   padding-bottom: 300px;
   position: relative;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 [data-theme="dark"] .mainContainer {
@@ -177,7 +180,7 @@
 
   .header {
     display: flex;
-    margin-left: 12%;
+    margin-left: -6%;
     max-width: 1200px;
   }
 
@@ -190,7 +193,7 @@
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .mainContainer {
     padding-bottom: 260px;
   }
@@ -237,8 +240,9 @@
     transition: 0.3s ease-in-out;
   }
   .projectsContainer {
-    width: 97%;
+
     min-height: 62vh;
+    padding: 0 0.7rem 1rem 0.7rem;
   }
   .descriptionContainer {
     flex-direction: column;
@@ -274,6 +278,9 @@
 }
 
 @media (max-width: 500px) {
+  .projectsContainer {
+    padding: 0 0.4rem 1rem 0.4rem;
+  }
   .titleProjectContainerSelect {
     height: 1.5rem;
     width: 5.9rem;

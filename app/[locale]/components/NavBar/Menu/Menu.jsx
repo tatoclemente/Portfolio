@@ -7,13 +7,11 @@ import IntlSwitcher from '../IntlSwitcher/IntlSwitcher';
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import ViewResume from '../../DownloadResume/viewResume';
-import ModalPDF from '../../DownloadResume/modalPdf';
 
 const Menu = ({ locale, menuItems: { about, projects, meeting, contact, allRight } }) => {
   const [menu, setMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [selectedLink, setSelectedLink] = useState(about);
-  const [openViewResume, setOpenViewResume] = useState(false);
 
   const toggleMenu = () => setMenu(prev => !prev);
   menu
@@ -37,7 +35,6 @@ const Menu = ({ locale, menuItems: { about, projects, meeting, contact, allRight
 
   const handleOpenViewResume = (e) => {
     e && e.preventDefault();
-    setOpenViewResume(true);
     if (isMobile) toggleMenu();
   };
 
@@ -125,7 +122,6 @@ const Menu = ({ locale, menuItems: { about, projects, meeting, contact, allRight
           <p>{allRight}</p>
         </div>
       </div>
-      <ModalPDF closePdfModal={() => setOpenViewResume(false)} isOpenPdf={openViewResume} pdfLink="./cv/Resume_Gustavo_Clemente_Dev_Frontend.pdf" />
     </div>
   );
 };

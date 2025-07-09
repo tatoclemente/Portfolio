@@ -25,5 +25,9 @@
     "react-zoom-pan-pinch": "^3.1.0",
     "sweetalert2": "^11.7.28",
     "swiper": "^10.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.0.12",
+    "@types/react": "19.1.8"
   }
 }
