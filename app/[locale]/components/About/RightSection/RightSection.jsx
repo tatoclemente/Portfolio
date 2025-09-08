@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import style from './RightSection.module.css'
-import ph from '@/public/images/ph-portfolio.webp'
+import ph from '@/public/images/profile-transparent-bg.avif'
 import Image from 'next/image'
 import Atropos from 'atropos/react'
 
@@ -67,7 +67,14 @@ const RightSection = () => {
          className={style.atropos}>
           <div className={style.bobbleBackLeft}></div>
           <div className={style.bobbleBackRight}></div>
-          <Image data-atropos-offset="-5"  priority={true}  className={style.image} as="image" src={ph} alt="ph-portfolio" />
+          <Image 
+            width={500}
+            height={500}
+            data-atropos-offset="-5"  
+            priority={true}  
+            className={style.image} as="image" 
+            src={ph} 
+            alt="ph-portfolio" />
         </Atropos>
       )}
     </>

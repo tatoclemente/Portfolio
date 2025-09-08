@@ -54,7 +54,7 @@ export const metadata = {
     locale: 'es_AR',
     type: 'website',
     appId: "1449040649447191",
-    emails: ['soytatoclemente@gmail.com'],
+    emails: ['hola@tatoclemente.dev'],
   },
   twitter: {
     card: 'summary_large_image',

@@ -23,7 +23,7 @@
 }
 
 .atropos:hover .image {
-  filter: grayscale(0.3) contrast(1.2);
+  filter: grayscale(0.3) contrast(1.1);
 }
 [data-theme="dark"] .atropos:hover .image {
   filter: grayscale(0.3) brightness(1.1);
@@ -91,15 +91,15 @@
   z-index: 5;
   animation: input-image 1s linear;
   mask-image: radial-gradient(
-    black 65%,
-    transparent
+    black 63%,
+    transparent 70%
   )
 }
 
 [data-theme="dark"] .image {
   mask-image: radial-gradient(
-    black 55%,
-    transparent
+    black 63%,
+    transparent 70%
   )
 }
 
@@ -153,7 +153,7 @@
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    top: 50%;
+    top: 47%;
     left: 50%;
     transform: translateX(-110%);
     z-index: -1;
@@ -210,17 +210,23 @@
     animation: input-image 1s linear;
     transform: scale(0.6);
     transition: filter 0.3s ease-in-out;
+    width: 600px;
+    height: auto;
+    mask-image: radial-gradient(
+      black 63%,
+      transparent 70%
+    )
   }
   [data-theme="dark"] .imageMobile {
     filter: grayscale();
   }
 
   .imageClick {
-    filter: grayscale(0.3) contrast(1.2) !important;
+    filter: sepia(0) contrast(1) !important;
   }
 
   [data-theme="dark"] .atropos:hover .image {
-    filter: grayscale(0.3) brightness(1.2) !important;
+    filter: grayscale(0) brightness(1) !important;
   }
 
   @keyframes input-left {
