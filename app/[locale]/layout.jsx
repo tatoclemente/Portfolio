@@ -35,7 +35,7 @@ export const metadata = {
     shortcut: '/favicon.ico',
   },
   other: {
-    'contact:email': 'soytatoclemente@gmail.com',
+    'contact:email': 'hola@tatoclemente.com',
   },
   openGraph: {
     title: 'Gustavo Clemente - Full Stack Developer',
