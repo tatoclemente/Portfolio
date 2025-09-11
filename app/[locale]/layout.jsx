@@ -2,7 +2,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { useLocale } from 'next-intl';
 import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
-import { myPhotoOpenGraph } from '../assets/imageUrls';
+import { myPhotoOpenGraph } from '../../public/images/profile-with-bg.jpg';
 import NavBar from './components/NavBar/NavBar';
 import './globals.css';
 import Providers from './providers';
@@ -48,7 +48,7 @@ export const metadata = {
         width: 500,
         height: 500,
         alt: 'Gustavo Clemente - Full Stack Developer',
-        type: 'image/avif',
+        type: 'image/jpg',
       },
     ],
     locale: 'es_AR',
