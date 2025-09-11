@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect } from 'react'
 
-import { technology } from '@/app/assets/iamgeUrls';
+import { technology } from '@/app/assets/imageUrls';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';

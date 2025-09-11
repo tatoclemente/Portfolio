@@ -1,11 +1,11 @@
 // 
+import { elFestin, piFood, tesloShop } from '@/app/assets/imageUrls'
 import About from './components/About/About'
 import CalendlyForm from './components/Calendly/Calendly'
 import Footer from './components/Footer/Footer'
 import { ContactUs } from './components/Form/ContactUs'
 import Projects from './components/Projects/Projects'
 import style from './page.module.css'
-import { elFestin, piFood, rickAndMorty, tesloShop } from '@/app/assets/iamgeUrls'
 
 import { useTranslations } from 'next-intl'
 

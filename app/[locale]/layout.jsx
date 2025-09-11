@@ -1,13 +1,13 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
-import { useLocale } from 'next-intl';
-import { notFound } from 'next/navigation';
-import Providers from './providers';
-import NavBar from './components/NavBar/NavBar';
-const inter = Inter({ subsets: ['latin'] })
 import { Analytics } from '@vercel/analytics/react';
-import { myPhotoOpenGraph } from '../assets/iamgeUrls';
+import { useLocale } from 'next-intl';
+import { Inter } from 'next/font/google';
+import { notFound } from 'next/navigation';
+import { myPhotoOpenGraph } from '../assets/imageUrls';
+import NavBar from './components/NavBar/NavBar';
+import './globals.css';
+import Providers from './providers';
 import { keywords } from './utils/keywords';
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Gustavo Clemente - Full Stack Developer',
@@ -48,7 +48,7 @@ export const metadata = {
         width: 500,
         height: 500,
         alt: 'Gustavo Clemente - Full Stack Developer',
-        type: 'image/webp',
+        type: 'image/avif',
       },
     ],
     locale: 'es_AR',
