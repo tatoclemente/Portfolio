@@ -48,7 +48,7 @@ export const metadata = {
         width: 500,
         height: 500,
         alt: 'Gustavo Clemente - Full Stack Developer',
-        type: 'image/jpg',
+        type: 'image/jpeg',
       },
     ],
     locale: 'es_AR',
@@ -87,7 +87,7 @@ export default function RootLayout({ children, params }) {
         <meta property="fb:app_id" content="1449040649447191" />
         <meta property="og:title" content="Gustavo Clemente - Full Stack Developer" />
         <meta property="og:description" content="Desarrollador de software especializado en React, Next.js, Angular y Node.js. Creando experiencias web modernas e innovadoras." />
-        <meta property='og:image:type' content='image/jpg' />
+        <meta property='og:image:type' content='image/jpeg' />
         <meta property="og:image" content={myPhotoOpenGraph} />
         <meta property="og:url" content="https://www.tatoclemente.dev" />
         <meta property="og:type" content="website" />
