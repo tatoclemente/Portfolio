@@ -2,7 +2,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { useLocale } from 'next-intl';
 import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
-import { myPhotoOpenGraph } from '../../public/images/profile-with-bg.jpg';
+import { myPhotoOpenGraph } from '../assets/imageUrls';
 import NavBar from './components/NavBar/NavBar';
 import './globals.css';
 import Providers from './providers';

@@ -1,6 +1,6 @@
 export const myPhoto = "https://res.cloudinary.com/dt2o36ezn/image/upload/v1757368543/Portfolio/profile-transparent-bg_y8vazq.avif"
 
-export const myPhotoOpenGraph = "https://res.cloudinary.com/dt2o36ezn/image/upload/v1757368512/Portfolio/profile-con-fondo_k6tb23.avif"
+export const myPhotoOpenGraph = "https://res.cloudinary.com/dt2o36ezn/image/upload/v1757630681/Portfolio/profile-with-bg_kwp9uw.jpg"
 
 
 export const elFestin = [
