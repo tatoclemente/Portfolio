@@ -16,7 +16,7 @@ const Resume = () => {
           </div>
         )}
         <iframe 
-          src="/cv/Resume_Gustavo_Clemente_Dev_Frontend_ES.pdf"
+          src="/cv/Resume_Gustavo_Clemente_Dev_Frontend.pdf"
           className={styles.iframeViewer} 
           title="Visor de PDF" 
           onLoad={handleIframeLoad}

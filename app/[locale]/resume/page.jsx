@@ -13,7 +13,7 @@ const ResumePage = () => {
           <Link href={'/'} className={styles.backButton}>
             <BiArrowBack /> { t('BackToPorfolio') }
           </Link>
-          <a className={styles.downloadButton} href="/cv/Resume_Gustavo_Clemente_Dev_Frontend_ES.pdf" download>
+          <a className={styles.downloadButton} href="/cv/Resume_Gustavo_Clemente_Dev_Frontend.pdf" download>
             <BiDownload /> { t('DownloadResume') }
           </a>
         </div>
