@@ -145,8 +145,12 @@
   justify-content: space-between;
 }
 .icon {
-  color: #096274;
+  color: #aa8d24ff;
   cursor: pointer;
+}
+
+[data-theme="dark"] .icon {
+  color: #ffdaa4ff;
 }
 
 .emojiPicker {
@@ -167,7 +171,7 @@
   top: -28px;
   transition: .3s ease-in-out;
   cursor: pointer;
-  color: #3755c4;
+  color: #2c3064ff;
   border: none;
   padding: 0;
   background-color: transparent;
@@ -194,3 +198,4 @@
     opacity: 1;
   }
 }
+

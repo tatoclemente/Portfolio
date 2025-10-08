@@ -9,11 +9,13 @@ import EmojiPicker from 'emoji-picker-react'
 import { BsFillEmojiSmileFill } from 'react-icons/bs'
 import { BiSolidKeyboard } from 'react-icons/bi'
 import { IoCloseCircle } from 'react-icons/io5'
+import { useTheme } from 'next-themes'
 
 export const ContactUs = ({ contactIntl }) => {
+  const themeData = useTheme()
   const [isMobile, setIsMobile] = useState(false)
   useEffect(() => {
-    setIsMobile(window.innerWidth <= 768);
+    setIsMobile(window.innerWidth <= 768);    
   }, [])
   
   const form = useRef();
@@ -130,6 +132,7 @@ export const ContactUs = ({ contactIntl }) => {
     })}
   };
 
+  const isDarkMode = themeData.theme === 'dark';
   return (
     <form ref={form} onSubmit={sendEmail} className={style.formContainer} id='contact'>
       <h1>{contactIntl.contact}</h1>
@@ -184,7 +187,7 @@ export const ContactUs = ({ contactIntl }) => {
           {showEmoji && 
             <div className={style.emojiPicker}>
               <button onClick={ handleShowEmoji } className={ style.closeIcons }><IoCloseCircle /></button>
-              <EmojiPicker onEmojiClick={onEmojiClick} />
+              <EmojiPicker theme={isDarkMode ? 'dark' : 'light'} onEmojiClick={onEmojiClick} />
             </div>}
           <textarea
             onChange={handleChange}
