@@ -1,6 +1,6 @@
 export function Atmosphere() {
   return (
-    <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-clip">
+    <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
       <div className="parallax absolute inset-x-0 -top-[520px] bottom-0">
         <div className="blob" style={{ width: 720, height: 720, left: -160, top: 400, background: "#b45cff", animation: "drift1 16s ease-in-out infinite" }} />
         <div className="blob" style={{ width: 640, height: 640, left: "55%", top: 580, background: "#f5a524", opacity: 0.35, animation: "drift2 20s ease-in-out infinite" }} />

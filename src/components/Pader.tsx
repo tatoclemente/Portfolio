@@ -18,8 +18,10 @@ export function Pader() {
           </a>
         }
       />
-      <div className="reveal relative grid grid-cols-1 gap-8 overflow-clip rounded-3xl border border-white/10 bg-ink-3 p-6 sm:p-8 lg:min-h-[680px] lg:grid-cols-12 lg:rounded-[32px] lg:p-14">
-        <div aria-hidden="true" className="pointer-events-none absolute -right-[200px] -top-[250px] h-[700px] w-[700px] rounded-full bg-pader opacity-35 blur-[140px]" />
+      <div
+        className="reveal relative grid grid-cols-1 gap-8 overflow-hidden rounded-3xl border border-white/10 bg-ink-3 p-6 sm:p-8 lg:min-h-[680px] lg:grid-cols-12 lg:rounded-[32px] lg:p-14"
+        style={{ backgroundImage: "radial-gradient(760px 760px at 92% -8%, rgba(255,26,110,0.40), rgba(255,26,110,0) 68%)" }}
+      >
 
         <div className="relative flex flex-col justify-between gap-8 lg:col-span-5">
           <div className="flex flex-col gap-4">
