@@ -154,8 +154,7 @@ export const contact = {
   types: ["Sistema a medida", "Agente de IA", "Automatización", "Landing o tienda", "App móvil", "Otra cosa"],
   fields: { name: "Nombre", email: "Email", message: "Qué tenés en mente, en pocas líneas" },
   submit: "Enviar",
-  autoNote: "Confirmación automática por mail.",
-  success: "Listo. Te mandé una confirmación por mail y te respondo dentro de las 24 horas.",
+  success: "Listo. Te mandé una confirmación por mail y te respondo dentro de las próximas 24 horas.",
   error: "No pude enviar el mensaje. Probá de nuevo o escribime por WhatsApp.",
 };
 

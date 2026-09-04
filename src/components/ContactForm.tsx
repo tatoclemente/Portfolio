@@ -81,8 +81,7 @@ export function ContactForm() {
         </p>
       )}
 
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <span className="text-[13px] text-dim">{contact.autoNote}</span>
+      <div className="flex justify-end">
         <button type="submit" disabled={status.state === "sending"} className="btn-primary inline-flex h-[52px] items-center justify-center rounded-full px-7 text-base font-semibold disabled:opacity-60">
           {status.state === "sending" ? "Enviando…" : contact.submit}
         </button>
