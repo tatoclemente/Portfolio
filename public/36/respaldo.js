@@ -181,6 +181,7 @@
     nativo.media = 'not all';
     estatico.media = 'not all';
     html.setAttribute('data-animaciones', forzado ? 'respaldo-qa' : 'respaldo');
+    html.classList.remove('anim-pendiente'); // en la misma tarea: no se pinta nada en el medio
     activo = true;
     sucio = true;
     return true;
@@ -197,6 +198,7 @@
     nativo.removeAttribute('media');
     estatico.removeAttribute('media');
     html.removeAttribute('data-animaciones');
+    html.classList.remove('anim-pendiente');
   }
 
   function iniciar() {
@@ -217,7 +219,7 @@
   }
 
   function arrancar() {
-    if (reducir.matches || !activar()) return;
+    if (reducir.matches || !activar()) { html.classList.remove('anim-pendiente'); return; }
     if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', iniciar);
     else iniciar();
   }

@@ -498,12 +498,25 @@ a:focus-visible { outline: 4px solid var(--pintura); outline-offset: 4px; }
       css('animation-range: entry 10% contain 100%')) return;
   if (!(w.CSS && CSS.registerProperty && w.ResizeObserver && w.requestAnimationFrame && w.matchMedia &&
         d.getAnimations && w.Element && Element.prototype.closest)) return;
-  var mq = w.matchMedia('(prefers-reduced-motion: reduce)');
+  var mq = w.matchMedia('(prefers-reduced-motion: reduce)'), h = d.documentElement;
+  function listo() { h.classList.remove('anim-pendiente'); }
+  // Mientras llega el respaldo, la estática esconde lo que el primer cuadro animado no muestra,
+  // para que el cambio no se note. Se destapa si el script falla, a los 3 s o al primer scroll.
+  function espera() {
+    var st = d.createElement('style');
+    st.textContent = 'html.anim-pendiente .hud,html.anim-pendiente .cielo,html.anim-pendiente .tow,html.anim-pendiente .avi-fondo{visibility:hidden}';
+    d.head.appendChild(st);
+    h.classList.add('anim-pendiente');
+    w.addEventListener('scroll', listo, { passive: true, once: true });
+    setTimeout(listo, 3000);
+  }
   function carga() {
     var s = d.createElement('script');
-    s.src = '/36/respaldo.js?v=c9626d603e';
+    s.src = '/36/respaldo.js?v=06882b470e';
     s.async = true;
+    s.onerror = listo;
     if (qa) s.setAttribute('data-forzado', '');
+    else espera();
     d.head.appendChild(s);
   }
   if (!mq.matches) return carga();
