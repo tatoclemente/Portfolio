@@ -370,7 +370,8 @@ a:focus-visible { outline: 4px solid var(--pintura); outline-offset: 4px; }
   .manga4h { right: calc(var(--ox) + 40 * var(--u)); top: calc(50 * var(--u)); width: calc(130 * var(--u)); height: calc(76 * var(--u)); }
   .avi-fondo { top: calc(36 * var(--u)); width: calc(120 * var(--u)); height: calc(50 * var(--u)); }
 }
-
+</style>
+<style id="anim-nativo">
 @supports (animation-timeline: view()) {
   .s1 { view-timeline: --s1 block; } .s3 { view-timeline: --s3 block; } .s4 { view-timeline: --s4 block; } .trk { view-timeline: --t4 block; }
   .s5 { view-timeline: --s5 block; } .s6 { view-timeline: --s6 block; } .s7 { view-timeline: --s7 block; }
@@ -429,6 +430,8 @@ a:focus-visible { outline: 4px solid var(--pintura); outline-offset: 4px; }
   .nube-cerca { animation: cerca linear both; animation-timeline: --s1; animation-range: contain 0% contain 100%; }
   .n18 { animation: sube linear both; animation-timeline: --s7; animation-range: entry 10% entry 80%; }
 }
+</style>
+<style>
 @keyframes hud-in { from { opacity: 0; } to { opacity: 1; } }
 @keyframes alt { 0%, 4.6% { --alt: 3600; } 44.3% { --alt: 0; } 100% { --alt: 0; } }
 @keyframes trazo { 0% { clip-path: inset(0 0 100% 0); } 100% { clip-path: inset(0 0 0 0); } }
@@ -472,6 +475,8 @@ a:focus-visible { outline: 4px solid var(--pintura); outline-offset: 4px; }
 .scroller *,.scroller *::before,.scroller *::after{animation:none!important}
 .s-am{height:auto}.s-am .st{height:100vh;min-height:680px}.sistema span{transition:opacity .25s linear;transform:none}.cooler .tapa{transform:rotate(-17deg) translateY(-5px)}.cabina .luz{opacity:1}.nube-cerca{display:none}
 }
+</style>
+<style id="anim-estatico">
 @supports not (animation-timeline: view()) {
 .s1{height:auto}.st{position:relative;height:auto}.s1 .st{display:flex;flex-direction:column;min-height:100vh}
 .poster{position:relative;inset:auto;left:auto;right:auto;top:auto;bottom:auto;margin:14px;height:calc(100vh - 88px);flex:none}
@@ -480,8 +485,33 @@ a:focus-visible { outline: 4px solid var(--pintura); outline-offset: 4px; }
 .scroller *,.scroller *::before,.scroller *::after{animation:none!important}
 .s-am{height:auto}.s-am .st{height:100vh;min-height:680px}.sistema span{transition:opacity .25s linear;transform:none}.cooler .tapa{transform:rotate(-17deg) translateY(-5px)}.cabina .luz{opacity:1}.nube-cerca{display:none}
 }
-
 </style>
+<script>
+(function () {
+  // Animaciones por scroll: nativas (timelines de scroll de CSS) o, si el navegador no las tiene,
+  // el respaldo /36/respaldo.js. Sin lo que el respaldo necesita, queda la versión estática.
+  var w = window, d = document;
+  var qa = /[?&]fallback(?:=1)?(?:&|$)/.test(location.search); // QA temporal: fuerza el respaldo
+  function css(q) { try { return CSS.supports(q); } catch (e) { return false; } }
+  if (!qa && css('animation-timeline: view()') && css('animation-timeline: scroll(root block)') &&
+      css('animation-timeline: --a') && css('view-timeline: --a block') &&
+      css('animation-range: entry 10% contain 100%')) return;
+  if (!(w.CSS && CSS.registerProperty && w.ResizeObserver && w.requestAnimationFrame && w.matchMedia &&
+        d.getAnimations && w.Element && Element.prototype.closest)) return;
+  var mq = w.matchMedia('(prefers-reduced-motion: reduce)');
+  function carga() {
+    var s = d.createElement('script');
+    s.src = '/36/respaldo.js?v=c9626d603e';
+    s.async = true;
+    if (qa) s.setAttribute('data-forzado', '');
+    d.head.appendChild(s);
+  }
+  if (!mq.matches) return carga();
+  if (mq.addEventListener) mq.addEventListener('change', function espera() {
+    if (!mq.matches) { mq.removeEventListener('change', espera); carga(); }
+  });
+})();
+</script>
 </head>
 <body>
 <div class="scroller">
