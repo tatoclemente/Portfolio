@@ -491,7 +491,7 @@ a:focus-visible { outline: 4px solid var(--pintura); outline-offset: 4px; }
   // Animaciones por scroll: nativas (timelines de scroll de CSS) o, si el navegador no las tiene,
   // el respaldo /36/respaldo.js. Sin lo que el respaldo necesita, queda la versión estática.
   var w = window, d = document;
-  var qa = /[?&]fallback(?:=1)?(?:&|$)/.test(location.search); // QA temporal: fuerza el respaldo
+  var qa = false;
   function css(q) { try { return CSS.supports(q); } catch (e) { return false; } }
   if (!qa && css('animation-timeline: view()') && css('animation-timeline: scroll(root block)') &&
       css('animation-timeline: --a') && css('view-timeline: --a block') &&
@@ -512,7 +512,7 @@ a:focus-visible { outline: 4px solid var(--pintura); outline-offset: 4px; }
   }
   function carga() {
     var s = d.createElement('script');
-    s.src = '/36/respaldo.js?v=06882b470e';
+    s.src = '/36/respaldo.js?v=733fa7730f';
     s.async = true;
     s.onerror = listo;
     if (qa) s.setAttribute('data-forzado', '');

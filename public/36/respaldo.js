@@ -2,7 +2,7 @@
  * Mis 36 pirulos (tatoclemente.dev/36): respaldo en JavaScript de las animaciones por scroll.
  *
  * Lo carga el aviso del final del <head> solo cuando el navegador no tiene las timelines de
- * scroll de CSS (por ejemplo Safari antes de iOS 26), o con ?fallback para QA.
+ * scroll de CSS (por ejemplo Safari antes de iOS 26), o con ?fallback si el exportador lo habilita (QA).
  * No define animaciones propias: aplica las reglas del bloque nativo (los mismos @keyframes y
  * los mismos rangos) como animaciones CSS pausadas y las adelanta con currentTime según el
  * scroll, con la misma cuenta de rangos que hace el navegador (cover, contain, entry, exit).
@@ -224,7 +224,7 @@
     else iniciar();
   }
 
-  // QA temporal (?fallback): un cartel confirma que corre el respaldo y muestra los fps al scrollear.
+  // QA (?fallback, solo si el exportador lo habilita): un cartel confirma que corre el respaldo y muestra los fps.
   function crearQa() {
     qa = doc.createElement('div');
     qa.id = 'anim-qa';
